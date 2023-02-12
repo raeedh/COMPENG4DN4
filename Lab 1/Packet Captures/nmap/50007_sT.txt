@@ -1,0 +1,49 @@
+nmap compeng4dn4.mooo.com -Pn -sT -p 50007
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-11 23:57 Eastern Standard Time
+Nmap scan report for compeng4dn4.mooo.com (99.236.34.223)
+Host is up (0.026s latency).
+rDNS record for 99.236.34.223: cpe382c4a5bff48-cm00fc8db8cbb0.cpe.net.cable.rogers.com
+
+PORT      STATE SERVICE
+50007/tcp open  unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 0.12 seconds
+
+
+windump -nnvvX -i 3 -S host compeng4dn4.mooo.com
+C:\WinDump\WinDump.exe: listening on \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}
+23:57:25.577821 IP (tos 0x0, ttl 255, id 57862, offset 0, flags [DF], proto: TCP (6), length: 52, bad cksum 0 (->5018)!) 192.168.2.49.45941 > 99.236.34.223.50007: S, cksum 0x49cb (incorrect (-> 0xddd2), 1661891276:1661891276(0) win 64240 <mss 1460,nop,wscale 8,nop,nop,sackOK>
+        0x0000:  4500 0034 e206 4000 ff06 0000 c0a8 0231  E..4..@........1
+        0x0010:  63ec 22df b375 c357 630e 72cc 0000 0000  c."..u.Wc.r.....
+        0x0020:  8002 faf0 49cb 0000 0204 05b4 0103 0308  ....I...........
+        0x0030:  0101 0402                                ....
+23:57:25.577826 IP (tos 0x0, ttl 255, id 57862, offset 0, flags [DF], proto: TCP (6), length: 52, bad cksum 0 (->5018)!) 192.168.2.49.45941 > 99.236.34.223.50007: S, cksum 0x49cb (incorrect (-> 0xddd2), 1661891276:1661891276(0) win 64240 <mss 1460,nop,wscale 8,nop,nop,sackOK>
+        0x0000:  4500 0034 e206 4000 ff06 0000 c0a8 0231  E..4..@........1
+        0x0010:  63ec 22df b375 c357 630e 72cc 0000 0000  c."..u.Wc.r.....
+        0x0020:  8002 faf0 49cb 0000 0204 05b4 0103 0308  ....I...........
+        0x0030:  0101 0402                                ....
+23:57:25.602721 IP (tos 0x0, ttl  53, id 0, offset 0, flags [DF], proto: TCP (6), length: 52) 99.236.34.223.50007 > 192.168.2.49.45941: S, cksum 0x77b9 (correct), 3466368884:3466368884(0) ack 1661891277 win 64240 <mss 1452,nop,nop,sackOK,nop,wscale 7>
+        0x0000:  4500 0034 0000 4000 3506 fc1f 63ec 22df  E..4..@.5...c.".
+        0x0010:  c0a8 0231 c357 b375 ce9c 9774 630e 72cd  ...1.W.u...tc.r.
+        0x0020:  8012 faf0 77b9 0000 0204 05ac 0101 0402  ....w...........
+        0x0030:  0103 0307                                ....
+23:57:25.602759 IP (tos 0x0, ttl 255, id 57863, offset 0, flags [DF], proto: TCP (6), length: 40, bad cksum 0 (->5023)!) 192.168.2.49.45941 > 99.236.34.223.50007: ., cksum 0x49bf (incorrect (-> 0xaf72), 1661891277:1661891277(0) ack 3466368885 win 1026
+        0x0000:  4500 0028 e207 4000 ff06 0000 c0a8 0231  E..(..@........1
+        0x0010:  63ec 22df b375 c357 630e 72cd ce9c 9775  c."..u.Wc.r....u
+        0x0020:  5010 0402 49bf 0000                      P...I...
+23:57:25.602763 IP (tos 0x0, ttl 255, id 57863, offset 0, flags [DF], proto: TCP (6), length: 40, bad cksum 0 (->5023)!) 192.168.2.49.45941 > 99.236.34.223.50007: ., cksum 0x49bf (incorrect (-> 0xaf72), 1661891277:1661891277(0) ack 3466368885 win 1026
+        0x0000:  4500 0028 e207 4000 ff06 0000 c0a8 0231  E..(..@........1
+        0x0010:  63ec 22df b375 c357 630e 72cd ce9c 9775  c."..u.Wc.r....u
+        0x0020:  5010 0402 49bf 0000                      P...I...
+23:57:25.602786 IP (tos 0x0, ttl 255, id 57864, offset 0, flags [DF], proto: TCP (6), length: 40, bad cksum 0 (->5022)!) 192.168.2.49.45941 > 99.236.34.223.50007: R, cksum 0x49bf (incorrect (-> 0xb370), 1661891277:1661891277(0) ack 3466368885 win 0
+        0x0000:  4500 0028 e208 4000 ff06 0000 c0a8 0231  E..(..@........1
+        0x0010:  63ec 22df b375 c357 630e 72cd ce9c 9775  c."..u.Wc.r....u
+        0x0020:  5014 0000 49bf 0000                      P...I...
+23:57:25.602791 IP (tos 0x0, ttl 255, id 57864, offset 0, flags [DF], proto: TCP (6), length: 40, bad cksum 0 (->5022)!) 192.168.2.49.45941 > 99.236.34.223.50007: R, cksum 0x49bf (incorrect (-> 0xb370), 1661891277:1661891277(0) ack 3466368885 win 0
+        0x0000:  4500 0028 e208 4000 ff06 0000 c0a8 0231  E..(..@........1
+        0x0010:  63ec 22df b375 c357 630e 72cd ce9c 9775  c."..u.Wc.r....u
+        0x0020:  5014 0000 49bf 0000                      P...I...
+
+7 packets captured
+2443 packets received by filter
+0 packets dropped by kernel

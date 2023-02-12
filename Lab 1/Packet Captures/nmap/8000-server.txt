@@ -1,0 +1,10 @@
+nmap localhost -Pn -sT -p 8000
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-11 23:43 Eastern Standard Time
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0010s latency).
+Other addresses for localhost (not scanned): ::1
+
+PORT     STATE SERVICE
+8000/tcp open  http-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 0.09 seconds

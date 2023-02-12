@@ -1,0 +1,1577 @@
+No.     Time           Source                Destination           Protocol Length Info
+      1 0.000000       192.168.2.49          99.236.34.223         TCP      66     18603 → 50008 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 1: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18603, Dst Port: 50008, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+      2 0.000006       192.168.2.49          99.236.34.223         TCP      66     [TCP Retransmission] [TCP Port numbers reused] 18603 → 50008 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 2: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18603, Dst Port: 50008, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+      3 0.022323       99.236.34.223         192.168.2.49          TCP      66     50008 → 18603 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1452 SACK_PERM WS=128
+
+Frame 3: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18603, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+      4 0.022373       192.168.2.49          99.236.34.223         TCP      54     18603 → 50008 [ACK] Seq=1 Ack=1 Win=132096 Len=0
+
+Frame 4: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18603, Dst Port: 50008, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+      5 0.022379       192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 4#1] 18603 → 50008 [ACK] Seq=1 Ack=1 Win=132096 Len=0
+
+Frame 5: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18603, Dst Port: 50008, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+      6 0.023272       192.168.2.49          99.236.34.223         TLSv1    571    Client Hello
+
+Frame 6: 571 bytes on wire (4568 bits), 571 bytes captured (4568 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18603, Dst Port: 50008, Seq: 1, Ack: 1, Len: 517
+Transport Layer Security
+
+No.     Time           Source                Destination           Protocol Length Info
+      7 0.023280       192.168.2.49          99.236.34.223         TCP      571    [TCP Retransmission] 18603 → 50008 [PSH, ACK] Seq=1 Ack=1 Win=132096 Len=517
+
+Frame 7: 571 bytes on wire (4568 bits), 571 bytes captured (4568 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18603, Dst Port: 50008, Seq: 1, Ack: 1, Len: 517
+
+No.     Time           Source                Destination           Protocol Length Info
+      8 0.048572       99.236.34.223         192.168.2.49          TCP      60     50008 → 18603 [ACK] Seq=1 Ack=518 Win=64128 Len=0
+
+Frame 8: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18603, Seq: 1, Ack: 518, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+      9 0.057238       99.236.34.223         192.168.2.49          HTTP     537    HTTP/1.1 400 Bad Request  (text/html)
+
+Frame 9: 537 bytes on wire (4296 bits), 537 bytes captured (4296 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18603, Seq: 1, Ack: 518, Len: 483
+Hypertext Transfer Protocol
+Line-based text data: text/html (10 lines)
+
+No.     Time           Source                Destination           Protocol Length Info
+     10 0.057239       99.236.34.223         192.168.2.49          TCP      60     50008 → 18603 [FIN, ACK] Seq=484 Ack=518 Win=64128 Len=0
+
+Frame 10: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18603, Seq: 484, Ack: 518, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     11 0.057278       192.168.2.49          99.236.34.223         TCP      54     18603 → 50008 [ACK] Seq=518 Ack=485 Win=131584 Len=0
+
+Frame 11: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18603, Dst Port: 50008, Seq: 518, Ack: 485, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     12 0.057288       192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 11#1] 18603 → 50008 [ACK] Seq=518 Ack=485 Win=131584 Len=0
+
+Frame 12: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18603, Dst Port: 50008, Seq: 518, Ack: 485, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     13 0.057303       192.168.2.49          99.236.34.223         TCP      61     18603 → 50008 [PSH, ACK] Seq=518 Ack=485 Win=131584 Len=7
+
+Frame 13: 61 bytes on wire (488 bits), 61 bytes captured (488 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18603, Dst Port: 50008, Seq: 518, Ack: 485, Len: 7
+
+No.     Time           Source                Destination           Protocol Length Info
+     14 0.057398       192.168.2.49          99.236.34.223         TCP      54     18603 → 50008 [RST, ACK] Seq=525 Ack=485 Win=0 Len=0
+
+Frame 14: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18603, Dst Port: 50008, Seq: 525, Ack: 485, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     15 0.057402       192.168.2.49          99.236.34.223         TCP      54     18603 → 50008 [RST, ACK] Seq=525 Ack=485 Win=0 Len=0
+
+Frame 15: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18603, Dst Port: 50008, Seq: 525, Ack: 485, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     16 3.545148       192.168.2.49          99.236.34.223         TCP      66     18604 → 50008 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 16: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     17 3.545156       192.168.2.49          99.236.34.223         TCP      66     [TCP Retransmission] [TCP Port numbers reused] 18604 → 50008 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 17: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     18 3.572087       99.236.34.223         192.168.2.49          TCP      66     50008 → 18604 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1452 SACK_PERM WS=128
+
+Frame 18: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18604, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     19 3.572135       192.168.2.49          99.236.34.223         TCP      54     18604 → 50008 [ACK] Seq=1 Ack=1 Win=132096 Len=0
+
+Frame 19: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     20 3.572141       192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 19#1] 18604 → 50008 [ACK] Seq=1 Ack=1 Win=132096 Len=0
+
+Frame 20: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     21 3.572288       192.168.2.49          99.236.34.223         HTTP     429    GET /photos/ HTTP/1.1 
+
+Frame 21: 429 bytes on wire (3432 bits), 429 bytes captured (3432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 1, Ack: 1, Len: 375
+Hypertext Transfer Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     22 3.572293       192.168.2.49          99.236.34.223         TCP      429    [TCP Retransmission] 18604 → 50008 [PSH, ACK] Seq=1 Ack=1 Win=132096 Len=375
+
+Frame 22: 429 bytes on wire (3432 bits), 429 bytes captured (3432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 1, Ack: 1, Len: 375
+
+No.     Time           Source                Destination           Protocol Length Info
+     23 3.597137       99.236.34.223         192.168.2.49          TCP      60     50008 → 18604 [ACK] Seq=1 Ack=376 Win=64128 Len=0
+
+Frame 23: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18604, Seq: 1, Ack: 376, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     24 3.603848       99.236.34.223         192.168.2.49          HTTP     969    HTTP/1.1 200 OK  (text/html)
+
+Frame 24: 969 bytes on wire (7752 bits), 969 bytes captured (7752 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18604, Seq: 1, Ack: 376, Len: 915
+Hypertext Transfer Protocol
+Line-based text data: text/html (35 lines)
+
+No.     Time           Source                Destination           Protocol Length Info
+     25 3.628921       192.168.2.49          99.236.34.223         HTTP     399    GET /icons/blank.gif HTTP/1.1 
+
+Frame 25: 399 bytes on wire (3192 bits), 399 bytes captured (3192 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 376, Ack: 916, Len: 345
+Hypertext Transfer Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     26 3.628929       192.168.2.49          99.236.34.223         TCP      399    [TCP Retransmission] 18604 → 50008 [PSH, ACK] Seq=376 Ack=916 Win=131072 Len=345
+
+Frame 26: 399 bytes on wire (3192 bits), 399 bytes captured (3192 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 376, Ack: 916, Len: 345
+
+No.     Time           Source                Destination           Protocol Length Info
+     27 3.629313       192.168.2.49          99.236.34.223         TCP      66     18605 → 50008 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 27: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18605, Dst Port: 50008, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     28 3.629318       192.168.2.49          99.236.34.223         TCP      66     [TCP Retransmission] [TCP Port numbers reused] 18605 → 50008 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 28: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18605, Dst Port: 50008, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     29 3.629486       192.168.2.49          99.236.34.223         TCP      66     18606 → 50008 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 29: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18606, Dst Port: 50008, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     30 3.629489       192.168.2.49          99.236.34.223         TCP      66     [TCP Retransmission] [TCP Port numbers reused] 18606 → 50008 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 30: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18606, Dst Port: 50008, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     31 3.651206       99.236.34.223         192.168.2.49          HTTP     485    HTTP/1.1 200 OK  (GIF89a)
+
+Frame 31: 485 bytes on wire (3880 bits), 485 bytes captured (3880 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18604, Seq: 916, Ack: 721, Len: 431
+Hypertext Transfer Protocol
+Compuserve GIF, Version: GIF89a
+
+No.     Time           Source                Destination           Protocol Length Info
+     32 3.651370       192.168.2.49          99.236.34.223         HTTP     398    GET /icons/back.gif HTTP/1.1 
+
+Frame 32: 398 bytes on wire (3184 bits), 398 bytes captured (3184 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 721, Ack: 1347, Len: 344
+Hypertext Transfer Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     33 3.651376       192.168.2.49          99.236.34.223         TCP      398    [TCP Retransmission] 18604 → 50008 [PSH, ACK] Seq=721 Ack=1347 Win=130560 Len=344
+
+Frame 33: 398 bytes on wire (3184 bits), 398 bytes captured (3184 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 721, Ack: 1347, Len: 344
+
+No.     Time           Source                Destination           Protocol Length Info
+     34 3.661030       99.236.34.223         192.168.2.49          TCP      66     50008 → 18605 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1452 SACK_PERM WS=128
+
+Frame 34: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18605, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     35 3.661073       192.168.2.49          99.236.34.223         TCP      54     18605 → 50008 [ACK] Seq=1 Ack=1 Win=132096 Len=0
+
+Frame 35: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18605, Dst Port: 50008, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     36 3.661079       192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 35#1] 18605 → 50008 [ACK] Seq=1 Ack=1 Win=132096 Len=0
+
+Frame 36: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18605, Dst Port: 50008, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     37 3.661174       192.168.2.49          99.236.34.223         HTTP     400    GET /icons/image2.gif HTTP/1.1 
+
+Frame 37: 400 bytes on wire (3200 bits), 400 bytes captured (3200 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18605, Dst Port: 50008, Seq: 1, Ack: 1, Len: 346
+Hypertext Transfer Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     38 3.661178       192.168.2.49          99.236.34.223         TCP      400    [TCP Retransmission] 18605 → 50008 [PSH, ACK] Seq=1 Ack=1 Win=132096 Len=346
+
+Frame 38: 400 bytes on wire (3200 bits), 400 bytes captured (3200 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18605, Dst Port: 50008, Seq: 1, Ack: 1, Len: 346
+
+No.     Time           Source                Destination           Protocol Length Info
+     39 3.665750       99.236.34.223         192.168.2.49          TCP      66     50008 → 18606 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1452 SACK_PERM WS=128
+
+Frame 39: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18606, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     40 3.665789       192.168.2.49          99.236.34.223         TCP      54     18606 → 50008 [ACK] Seq=1 Ack=1 Win=132096 Len=0
+
+Frame 40: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18606, Dst Port: 50008, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     41 3.665794       192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 40#1] 18606 → 50008 [ACK] Seq=1 Ack=1 Win=132096 Len=0
+
+Frame 41: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18606, Dst Port: 50008, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     42 3.673309       99.236.34.223         192.168.2.49          HTTP     553    HTTP/1.1 200 OK  (GIF89a)
+
+Frame 42: 553 bytes on wire (4424 bits), 553 bytes captured (4424 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18604, Seq: 1347, Ack: 1065, Len: 499
+Hypertext Transfer Protocol
+Compuserve GIF, Version: GIF89a
+
+No.     Time           Source                Destination           Protocol Length Info
+     43 3.684880       99.236.34.223         192.168.2.49          TCP      60     50008 → 18605 [ACK] Seq=1 Ack=347 Win=64128 Len=0
+
+Frame 43: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18605, Seq: 1, Ack: 347, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     44 3.691747       99.236.34.223         192.168.2.49          HTTP     648    HTTP/1.1 200 OK  (GIF89a)
+
+Frame 44: 648 bytes on wire (5184 bits), 648 bytes captured (5184 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18605, Seq: 1, Ack: 347, Len: 594
+Hypertext Transfer Protocol
+Compuserve GIF, Version: GIF89a
+
+No.     Time           Source                Destination           Protocol Length Info
+     45 3.697323       192.168.2.49          99.236.34.223         HTTP     395    GET /favicon.ico HTTP/1.1 
+
+Frame 45: 395 bytes on wire (3160 bits), 395 bytes captured (3160 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 1065, Ack: 1846, Len: 341
+Hypertext Transfer Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     46 3.697330       192.168.2.49          99.236.34.223         TCP      395    [TCP Retransmission] 18604 → 50008 [PSH, ACK] Seq=1065 Ack=1846 Win=132096 Len=341
+
+Frame 46: 395 bytes on wire (3160 bits), 395 bytes captured (3160 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 1065, Ack: 1846, Len: 341
+
+No.     Time           Source                Destination           Protocol Length Info
+     47 3.721812       99.236.34.223         192.168.2.49          HTTP     555    HTTP/1.1 404 Not Found  (text/html)
+
+Frame 47: 555 bytes on wire (4440 bits), 555 bytes captured (4440 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18604, Seq: 1846, Ack: 1406, Len: 501
+Hypertext Transfer Protocol
+Line-based text data: text/html (9 lines)
+
+No.     Time           Source                Destination           Protocol Length Info
+     48 3.741855       192.168.2.49          99.236.34.223         TCP      54     18605 → 50008 [ACK] Seq=347 Ack=595 Win=131328 Len=0
+
+Frame 48: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18605, Dst Port: 50008, Seq: 347, Ack: 595, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     49 3.741867       192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 48#1] 18605 → 50008 [ACK] Seq=347 Ack=595 Win=131328 Len=0
+
+Frame 49: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18605, Dst Port: 50008, Seq: 347, Ack: 595, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     50 3.773423       192.168.2.49          99.236.34.223         TCP      54     18604 → 50008 [ACK] Seq=1406 Ack=2347 Win=131584 Len=0
+
+Frame 50: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 1406, Ack: 2347, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     51 3.773431       192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 50#1] 18604 → 50008 [ACK] Seq=1406 Ack=2347 Win=131584 Len=0
+
+Frame 51: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 1406, Ack: 2347, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     52 8.685946       99.236.34.223         192.168.2.49          TCP      60     50008 → 18605 [FIN, ACK] Seq=595 Ack=347 Win=64128 Len=0
+
+Frame 52: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18605, Seq: 595, Ack: 347, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     53 8.685978       192.168.2.49          99.236.34.223         TCP      54     18605 → 50008 [ACK] Seq=347 Ack=596 Win=131328 Len=0
+
+Frame 53: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18605, Dst Port: 50008, Seq: 347, Ack: 596, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     54 8.685984       192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 53#1] 18605 → 50008 [ACK] Seq=347 Ack=596 Win=131328 Len=0
+
+Frame 54: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18605, Dst Port: 50008, Seq: 347, Ack: 596, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     55 8.686016       192.168.2.49          99.236.34.223         TCP      54     18605 → 50008 [FIN, ACK] Seq=347 Ack=596 Win=131328 Len=0
+
+Frame 55: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18605, Dst Port: 50008, Seq: 347, Ack: 596, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     56 8.711593       99.236.34.223         192.168.2.49          TCP      60     50008 → 18605 [ACK] Seq=596 Ack=348 Win=64128 Len=0
+
+Frame 56: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18605, Seq: 596, Ack: 348, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     57 8.725536       99.236.34.223         192.168.2.49          TCP      60     50008 → 18604 [FIN, ACK] Seq=2347 Ack=1406 Win=64128 Len=0
+
+Frame 57: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18604, Seq: 2347, Ack: 1406, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     58 8.725570       192.168.2.49          99.236.34.223         TCP      54     18604 → 50008 [ACK] Seq=1406 Ack=2348 Win=131584 Len=0
+
+Frame 58: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 1406, Ack: 2348, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     59 8.725578       192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 58#1] 18604 → 50008 [ACK] Seq=1406 Ack=2348 Win=131584 Len=0
+
+Frame 59: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 1406, Ack: 2348, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     60 8.725611       192.168.2.49          99.236.34.223         TCP      54     18604 → 50008 [FIN, ACK] Seq=1406 Ack=2348 Win=131584 Len=0
+
+Frame 60: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 1406, Ack: 2348, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     61 8.725616       192.168.2.49          99.236.34.223         TCP      54     [TCP Retransmission] 18604 → 50008 [FIN, ACK] Seq=1406 Ack=2348 Win=131584 Len=0
+
+Frame 61: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18604, Dst Port: 50008, Seq: 1406, Ack: 2348, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     62 8.751419       99.236.34.223         192.168.2.49          TCP      60     50008 → 18604 [ACK] Seq=2348 Ack=1407 Win=64128 Len=0
+
+Frame 62: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18604, Seq: 2348, Ack: 1407, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     63 9.529744       192.168.2.49          99.236.34.223         TCP      54     18606 → 50008 [FIN, ACK] Seq=1 Ack=1 Win=132096 Len=0
+
+Frame 63: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18606, Dst Port: 50008, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     64 9.529751       192.168.2.49          99.236.34.223         TCP      54     [TCP Retransmission] 18606 → 50008 [FIN, ACK] Seq=1 Ack=1 Win=132096 Len=0
+
+Frame 64: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18606, Dst Port: 50008, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     65 9.559300       99.236.34.223         192.168.2.49          TCP      60     50008 → 18606 [ACK] Seq=1 Ack=2 Win=64256 Len=0
+
+Frame 65: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18606, Seq: 1, Ack: 2, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     66 9.559300       99.236.34.223         192.168.2.49          TCP      60     50008 → 18606 [FIN, ACK] Seq=1 Ack=2 Win=64256 Len=0
+
+Frame 66: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18606, Seq: 1, Ack: 2, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     67 9.559317       192.168.2.49          99.236.34.223         TCP      54     18606 → 50008 [ACK] Seq=2 Ack=2 Win=132096 Len=0
+
+Frame 67: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18606, Dst Port: 50008, Seq: 2, Ack: 2, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     68 9.559321       192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 67#1] 18606 → 50008 [ACK] Seq=2 Ack=2 Win=132096 Len=0
+
+Frame 68: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18606, Dst Port: 50008, Seq: 2, Ack: 2, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     69 18.702819      192.168.2.49          99.236.34.223         TCP      66     18607 → 50008 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 69: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     70 18.702830      192.168.2.49          99.236.34.223         TCP      66     [TCP Retransmission] [TCP Port numbers reused] 18607 → 50008 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 70: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     71 18.734945      99.236.34.223         192.168.2.49          TCP      66     50008 → 18607 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1452 SACK_PERM WS=128
+
+Frame 71: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     72 18.734982      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=1 Ack=1 Win=132096 Len=0
+
+Frame 72: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     73 18.734986      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 72#1] 18607 → 50008 [ACK] Seq=1 Ack=1 Win=132096 Len=0
+
+Frame 73: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     74 18.735064      192.168.2.49          99.236.34.223         HTTP     390    GET /photos/2.jpeg HTTP/1.1 
+
+Frame 74: 390 bytes on wire (3120 bits), 390 bytes captured (3120 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 1, Ack: 1, Len: 336
+Hypertext Transfer Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     75 18.735069      192.168.2.49          99.236.34.223         TCP      390    [TCP Retransmission] 18607 → 50008 [PSH, ACK] Seq=1 Ack=1 Win=132096 Len=336
+
+Frame 75: 390 bytes on wire (3120 bits), 390 bytes captured (3120 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 1, Ack: 1, Len: 336
+
+No.     Time           Source                Destination           Protocol Length Info
+     76 18.761616      99.236.34.223         192.168.2.49          TCP      60     50008 → 18607 [ACK] Seq=1 Ack=337 Win=64128 Len=0
+
+Frame 76: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 1, Ack: 337, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     77 18.768355      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=1 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 77: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 1, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+     78 18.770853      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=1453 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 78: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 1453, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+     79 18.770854      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=2905 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 79: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 2905, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+     80 18.770855      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=4357 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 80: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 4357, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+     81 18.770855      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=5809 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 81: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 5809, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+     82 18.770902      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=7261 Win=132096 Len=0
+
+Frame 82: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 7261, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     83 18.770908      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 82#1] 18607 → 50008 [ACK] Seq=337 Ack=7261 Win=132096 Len=0
+
+Frame 83: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 7261, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     84 18.775150      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=7261 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 84: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 7261, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+     85 18.775169      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=8713 Win=132096 Len=0
+
+Frame 85: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 8713, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     86 18.775173      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 85#1] 18607 → 50008 [ACK] Seq=337 Ack=8713 Win=132096 Len=0
+
+Frame 86: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 8713, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     87 18.775272      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=8713 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 87: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 8713, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+     88 18.775390      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=10165 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 88: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 10165, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+     89 18.775403      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=11617 Win=132096 Len=0
+
+Frame 89: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 11617, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     90 18.775406      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 89#1] 18607 → 50008 [ACK] Seq=337 Ack=11617 Win=132096 Len=0
+
+Frame 90: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 11617, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     91 18.775512      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=11617 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 91: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 11617, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+     92 18.775634      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=13069 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 92: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 13069, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+     93 18.775643      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=14521 Win=132096 Len=0
+
+Frame 93: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 14521, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     94 18.775645      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 93#1] 18607 → 50008 [ACK] Seq=337 Ack=14521 Win=132096 Len=0
+
+Frame 94: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 14521, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     95 18.793297      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=14521 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 95: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 14521, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+     96 18.793471      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=15973 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 96: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 15973, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+     97 18.793491      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=17425 Win=132096 Len=0
+
+Frame 97: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 17425, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     98 18.793495      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 97#1] 18607 → 50008 [ACK] Seq=337 Ack=17425 Win=132096 Len=0
+
+Frame 98: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 17425, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     99 18.793542      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=17425 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 99: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 17425, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    100 18.795305      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=18877 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 100: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 18877, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    101 18.795313      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=20329 Win=132096 Len=0
+
+Frame 101: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 20329, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    102 18.795316      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 101#1] 18607 → 50008 [ACK] Seq=337 Ack=20329 Win=132096 Len=0
+
+Frame 102: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 20329, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    103 18.795515      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=20329 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 103: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 20329, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    104 18.796297      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=21781 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 104: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 21781, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    105 18.796308      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=23233 Win=132096 Len=0
+
+Frame 105: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 23233, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    106 18.796310      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 105#1] 18607 → 50008 [ACK] Seq=337 Ack=23233 Win=132096 Len=0
+
+Frame 106: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 23233, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    107 18.797885      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=23233 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 107: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 23233, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    108 18.798008      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=24685 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 108: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 24685, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    109 18.798014      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=26137 Win=132096 Len=0
+
+Frame 109: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 26137, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    110 18.798016      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 109#1] 18607 → 50008 [ACK] Seq=337 Ack=26137 Win=132096 Len=0
+
+Frame 110: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 26137, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    111 18.798135      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=26137 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 111: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 26137, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    112 18.798253      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=27589 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 112: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 27589, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    113 18.798261      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=29041 Win=132096 Len=0
+
+Frame 113: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 29041, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    114 18.798263      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 113#1] 18607 → 50008 [ACK] Seq=337 Ack=29041 Win=132096 Len=0
+
+Frame 114: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 29041, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    115 18.799048      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=29041 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 115: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 29041, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    116 18.799172      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=30493 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 116: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 30493, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    117 18.799178      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=31945 Win=132096 Len=0
+
+Frame 117: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 31945, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    118 18.799180      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 117#1] 18607 → 50008 [ACK] Seq=337 Ack=31945 Win=132096 Len=0
+
+Frame 118: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 31945, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    119 18.799293      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=31945 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 119: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 31945, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    120 18.800143      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=33397 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 120: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 33397, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    121 18.800150      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=34849 Win=132096 Len=0
+
+Frame 121: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 34849, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    122 18.800152      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 121#1] 18607 → 50008 [ACK] Seq=337 Ack=34849 Win=132096 Len=0
+
+Frame 122: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 34849, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    123 18.800266      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=34849 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 123: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 34849, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    124 18.800388      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=36301 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 124: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 36301, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    125 18.800395      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=37753 Win=132096 Len=0
+
+Frame 125: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 37753, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    126 18.800397      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 125#1] 18607 → 50008 [ACK] Seq=337 Ack=37753 Win=132096 Len=0
+
+Frame 126: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 37753, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    127 18.801501      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=37753 Ack=337 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 127: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 37753, Ack: 337, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    128 18.801509      99.236.34.223         192.168.2.49          HTTP     366    HTTP/1.1 200 OK  (JPEG JFIF image)
+
+Frame 128: 366 bytes on wire (2928 bits), 366 bytes captured (2928 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 39205, Ack: 337, Len: 312
+[28 Reassembled TCP Segments (39516 bytes): #77(1452), #78(1452), #79(1452), #80(1452), #81(1452), #84(1452), #87(1452), #88(1452), #91(1452), #92(1452), #95(1452), #96(1452), #99(1452), #100(1452), #103(1452), #104(1452), #107(1452), #108(]
+Hypertext Transfer Protocol
+JPEG File Interchange Format
+
+No.     Time           Source                Destination           Protocol Length Info
+    129 18.801512      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=337 Ack=39517 Win=132096 Len=0
+
+Frame 129: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 39517, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    130 18.801514      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 129#1] 18607 → 50008 [ACK] Seq=337 Ack=39517 Win=132096 Len=0
+
+Frame 130: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 39517, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    131 21.780572      192.168.2.49          99.236.34.223         HTTP     489    GET /photos/351.jpeg HTTP/1.1 
+
+Frame 131: 489 bytes on wire (3912 bits), 489 bytes captured (3912 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 39517, Len: 435
+Hypertext Transfer Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    132 21.780581      192.168.2.49          99.236.34.223         TCP      489    [TCP Retransmission] 18607 → 50008 [PSH, ACK] Seq=337 Ack=39517 Win=132096 Len=435
+
+Frame 132: 489 bytes on wire (3912 bits), 489 bytes captured (3912 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 337, Ack: 39517, Len: 435
+
+No.     Time           Source                Destination           Protocol Length Info
+    133 21.807910      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=39517 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 133: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 39517, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    134 21.808958      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=40969 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 134: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 40969, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    135 21.808980      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=42421 Win=132096 Len=0
+
+Frame 135: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 42421, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    136 21.808987      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 135#1] 18607 → 50008 [ACK] Seq=772 Ack=42421 Win=132096 Len=0
+
+Frame 136: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 42421, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    137 21.811918      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=42421 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 137: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 42421, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    138 21.815197      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=43873 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 138: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 43873, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    139 21.815221      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=45325 Win=132096 Len=0
+
+Frame 139: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 45325, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    140 21.815227      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 139#1] 18607 → 50008 [ACK] Seq=772 Ack=45325 Win=132096 Len=0
+
+Frame 140: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 45325, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    141 21.816217      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=45325 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 141: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 45325, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    142 21.817433      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=46777 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 142: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 46777, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    143 21.817450      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=48229 Win=132096 Len=0
+
+Frame 143: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 48229, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    144 21.817454      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 143#1] 18607 → 50008 [ACK] Seq=772 Ack=48229 Win=132096 Len=0
+
+Frame 144: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 48229, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    145 21.819741      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=48229 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 145: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 48229, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    146 21.821925      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=49681 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 146: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 49681, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    147 21.821949      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=51133 Win=132096 Len=0
+
+Frame 147: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 51133, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    148 21.821954      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 147#1] 18607 → 50008 [ACK] Seq=772 Ack=51133 Win=132096 Len=0
+
+Frame 148: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 51133, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    149 21.823121      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=51133 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 149: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 51133, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    150 21.824257      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=52585 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 150: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 52585, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    151 21.824275      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=54037 Win=132096 Len=0
+
+Frame 151: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 54037, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    152 21.824280      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 151#1] 18607 → 50008 [ACK] Seq=772 Ack=54037 Win=132096 Len=0
+
+Frame 152: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 54037, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    153 21.830622      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=54037 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 153: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 54037, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    154 21.830738      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=55489 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 154: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 55489, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    155 21.830758      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=56941 Win=132096 Len=0
+
+Frame 155: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 56941, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    156 21.830763      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 155#1] 18607 → 50008 [ACK] Seq=772 Ack=56941 Win=132096 Len=0
+
+Frame 156: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 56941, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    157 21.831659      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=56941 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 157: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 56941, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    158 21.832800      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=58393 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 158: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 58393, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    159 21.832831      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=59845 Win=132096 Len=0
+
+Frame 159: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 59845, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    160 21.832838      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 159#1] 18607 → 50008 [ACK] Seq=772 Ack=59845 Win=132096 Len=0
+
+Frame 160: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 59845, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    161 21.836100      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=59845 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 161: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 59845, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    162 21.837206      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=61297 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 162: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 61297, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    163 21.837218      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=62749 Win=132096 Len=0
+
+Frame 163: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 62749, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    164 21.837223      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 163#1] 18607 → 50008 [ACK] Seq=772 Ack=62749 Win=132096 Len=0
+
+Frame 164: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 62749, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    165 21.838454      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=62749 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 165: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 62749, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    166 21.840847      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=64201 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 166: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 64201, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    167 21.840866      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=65653 Win=132096 Len=0
+
+Frame 167: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 65653, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    168 21.840871      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 167#1] 18607 → 50008 [ACK] Seq=772 Ack=65653 Win=132096 Len=0
+
+Frame 168: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 65653, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    169 21.843330      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=65653 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 169: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 65653, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    170 21.844463      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=67105 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 170: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 67105, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    171 21.844479      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=68557 Win=132096 Len=0
+
+Frame 171: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 68557, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    172 21.844483      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 171#1] 18607 → 50008 [ACK] Seq=772 Ack=68557 Win=132096 Len=0
+
+Frame 172: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 68557, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    173 21.845557      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=68557 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 173: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 68557, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    174 21.846817      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=70009 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 174: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 70009, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    175 21.846831      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=71461 Win=132096 Len=0
+
+Frame 175: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 71461, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    176 21.846835      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 175#1] 18607 → 50008 [ACK] Seq=772 Ack=71461 Win=132096 Len=0
+
+Frame 176: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 71461, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    177 21.848633      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=71461 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 177: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 71461, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    178 21.849868      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=72913 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 178: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 72913, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    179 21.849880      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=74365 Win=132096 Len=0
+
+Frame 179: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 74365, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    180 21.849884      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 179#1] 18607 → 50008 [ACK] Seq=772 Ack=74365 Win=132096 Len=0
+
+Frame 180: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 74365, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    181 21.851037      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=74365 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 181: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 74365, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    182 21.852194      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [PSH, ACK] Seq=75817 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 182: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 75817, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    183 21.852210      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=77269 Win=132096 Len=0
+
+Frame 183: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 77269, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    184 21.852214      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 183#1] 18607 → 50008 [ACK] Seq=772 Ack=77269 Win=132096 Len=0
+
+Frame 184: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 77269, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    185 21.854633      99.236.34.223         192.168.2.49          TCP      1506   50008 → 18607 [ACK] Seq=77269 Ack=772 Win=64128 Len=1452 [TCP segment of a reassembled PDU]
+
+Frame 185: 1506 bytes on wire (12048 bits), 1506 bytes captured (12048 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 77269, Ack: 772, Len: 1452
+
+No.     Time           Source                Destination           Protocol Length Info
+    186 21.856793      99.236.34.223         192.168.2.49          HTTP     154    HTTP/1.1 200 OK  (JPEG JFIF image)
+
+Frame 186: 154 bytes on wire (1232 bits), 154 bytes captured (1232 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 78721, Ack: 772, Len: 100
+[28 Reassembled TCP Segments (39304 bytes): #133(1452), #134(1452), #137(1452), #138(1452), #141(1452), #142(1452), #145(1452), #146(1452), #149(1452), #150(1452), #153(1452), #154(1452), #157(1452), #158(1452), #161(1452), #162(1452), #165]
+Hypertext Transfer Protocol
+JPEG File Interchange Format
+
+No.     Time           Source                Destination           Protocol Length Info
+    187 21.856802      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=78821 Win=132096 Len=0
+
+Frame 187: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 78821, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    188 21.856805      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 187#1] 18607 → 50008 [ACK] Seq=772 Ack=78821 Win=132096 Len=0
+
+Frame 188: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 78821, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    189 26.817544      99.236.34.223         192.168.2.49          TCP      60     50008 → 18607 [FIN, ACK] Seq=78821 Ack=772 Win=64128 Len=0
+
+Frame 189: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 78821, Ack: 772, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    190 26.817579      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [ACK] Seq=772 Ack=78822 Win=132096 Len=0
+
+Frame 190: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 78822, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    191 26.817589      192.168.2.49          99.236.34.223         TCP      54     [TCP Dup ACK 190#1] 18607 → 50008 [ACK] Seq=772 Ack=78822 Win=132096 Len=0
+
+Frame 191: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 78822, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    192 26.817634      192.168.2.49          99.236.34.223         TCP      54     18607 → 50008 [FIN, ACK] Seq=772 Ack=78822 Win=132096 Len=0
+
+Frame 192: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 78822, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    193 26.817639      192.168.2.49          99.236.34.223         TCP      54     [TCP Retransmission] 18607 → 50008 [FIN, ACK] Seq=772 Ack=78822 Win=132096 Len=0
+
+Frame 193: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Transmission Control Protocol, Src Port: 18607, Dst Port: 50008, Seq: 772, Ack: 78822, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    194 26.842987      99.236.34.223         192.168.2.49          TCP      60     50008 → 18607 [ACK] Seq=78822 Ack=773 Win=64128 Len=0
+
+Frame 194: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 0
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 99.236.34.223, Dst: 192.168.2.49
+Transmission Control Protocol, Src Port: 50008, Dst Port: 18607, Seq: 78822, Ack: 773, Len: 0

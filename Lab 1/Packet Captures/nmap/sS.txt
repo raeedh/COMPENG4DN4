@@ -1,0 +1,19 @@
+nmap compeng4dn4.mooo.com -Pn -sS -p 50000-50009
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-11 22:51 Eastern Standard Time
+Nmap scan report for compeng4dn4.mooo.com (99.236.34.223)
+Host is up (0.032s latency).
+rDNS record for 99.236.34.223: cpe382c4a5bff48-cm00fc8db8cbb0.cpe.net.cable.rogers.com
+
+PORT      STATE    SERVICE
+50000/tcp filtered ibm-db2
+50001/tcp filtered unknown
+50002/tcp filtered iiimsf
+50003/tcp filtered unknown
+50004/tcp filtered unknown
+50005/tcp filtered unknown
+50006/tcp filtered unknown
+50007/tcp open     unknown
+50008/tcp open     unknown
+50009/tcp filtered unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 1.50 seconds

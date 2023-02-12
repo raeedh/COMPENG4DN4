@@ -1,0 +1,16 @@
+nmap localhost -Pn -sT
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-11 23:39 Eastern Standard Time
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00015s latency).
+Other addresses for localhost (not scanned): ::1
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+445/tcp  open  microsoft-ds
+2179/tcp open  vmrdp
+5357/tcp open  wsdapi
+9010/tcp open  sdr
+9080/tcp open  glrpc
+9100/tcp open  jetdirect
+
+Nmap done: 1 IP address (1 host up) scanned in 44.45 seconds
