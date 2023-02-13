@@ -5,3 +5,5 @@
 **/report/*.out
 **/report/*.synctex.gz
 **/report/*.log
+
+.idea
