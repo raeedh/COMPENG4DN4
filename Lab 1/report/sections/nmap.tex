@@ -89,9 +89,9 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 
 
 The capture displayed in WireShark is shown below in Figure~\ref{fig:wireshark_50007}. The first four packets (1-4) are from the standard TCP connection scan on port 50007. The last three packets (5-7) are from the TCP SYN scan on port 50007.
 
-The first four packets shows the \href{https://nmap.org/book/scan-methods-connect-scan.html#scan-methods-fig-connect-scan-open}{expected behaviour of a TCP connection scan on an open port}. The host (192.168.2.55) sends a SYN signal to the destination (port 50007 on 99.236.34.223). The destination lets the host know that the port is open by returning a SYN/ACK signal. The host then establishes the connection and sends an ACK signal. Finally, the host will kill the connection with a RST signal.
+The first four packets shows the \href{https://nmap.org/book/scan-methods-connect-scan.html#scan-methods-fig-connect-scan-open}{expected behaviour of a TCP connection scan on an open port}. The client (192.168.2.55) sends a SYN signal to the destination (port 50007 on 99.236.34.223). The destination lets the client know that the port is open by returning a SYN/ACK signal. The client then establishes the connection and sends an ACK signal. Finally, the client will kill the connection with a RST signal.
 
-The last three packets shows the \href{https://nmap.org/book/synscan.html#scan-methods-fig-syn-scan-open}{expected behaviour of a TCP SYN scan on an open port}. The first two packets are the same as before, however the host sends a RST signal on the third packet to let the destination know it will not be establishing a connection.
+The last three packets shows the \href{https://nmap.org/book/synscan.html#scan-methods-fig-syn-scan-open}{expected behaviour of a TCP SYN scan on an open port}. The first two packets are the same as before, however the client sends a RST signal on the third packet to let the destination know it will not be establishing a connection.
 
 \begin{figure}[htp]
 \centering
@@ -139,7 +139,7 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 
 
 The capture displayed in WireShark is shown below in Figure~\ref{fig:wireshark_50009}. The first two packets (1-2) are from the standard TCP connection scan on port 50009. The last two packets (3-4) are from the TCP SYN scan on port 50009.
 
-The first two packets and last two packets both show the \href{https://nmap.org/book/synscan.html#scan-methods-fig-syn-scan-filtered}{expected behaviour of a Nmap scan on a filtered port}. The host (192.168.2.55) sends a SYN signal to the destination (port 50009 on 99.236.34.223) but does not receive a reply. After waiting some time (around 1 second in this capture), the host sends another SYN signal to try again. If the timeout period is again exceeded, Nmap will give up and mark the port as filtered.
+The first two packets and last two packets both show the \href{https://nmap.org/book/synscan.html#scan-methods-fig-syn-scan-filtered}{expected behaviour of a Nmap scan on a filtered port}. The client (192.168.2.55) sends a SYN signal to the destination (port 50009 on 99.236.34.223) but does not receive a reply. After waiting some time (around 1 second in this capture), the client sends another SYN signal to try again. If the timeout period is again exceeded, Nmap will give up and mark the port as filtered.
 
 \begin{figure}[htp]
 \centering
