@@ -1,0 +1,27 @@
+sudo nmap compeng4dn4.mooo.com -Pn -sT -p 50009
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-02-12 21:31 EST
+Nmap scan report for compeng4dn4.mooo.com (99.236.34.223)
+Host is up.
+rDNS record for 99.236.34.223: cpe382c4a5bff48-cm00fc8db8cbb0.cpe.net.cable.rogers.com
+
+PORT      STATE    SERVICE
+50009/tcp filtered unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 2.12 seconds
+
+sudo nmap compeng4dn4.mooo.com -Pn -sS -p 50009
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-02-12 21:32 EST
+Nmap scan report for compeng4dn4.mooo.com (99.236.34.223)
+Host is up.
+rDNS record for 99.236.34.223: cpe382c4a5bff48-cm00fc8db8cbb0.cpe.net.cable.rogers.com
+
+PORT      STATE    SERVICE
+50009/tcp filtered unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 2.18 seconds
+
+sudo tcpdump -nnvvX -i 1 -S host compeng4dn4.mooo.com -w 50009.pcap
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+4 packets captured
+10 packets received by filter
+0 packets dropped by kernel
