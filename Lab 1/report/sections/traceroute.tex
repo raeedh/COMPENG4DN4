@@ -1,5 +1,5 @@
 \section*{Traceroute}
-The tracert terminal output is shown below in Listing~\ref{list:tracert}. We can see that the traceroute begins first with a hoop to the local router at 192.168.2.1, then takes 10 hops to route to 24.156.158.102, with all subsequent hops timing out.
+The traceroute terminal output is shown below in Listing~\ref{list:tracert}. We can see that the traceroute begins first with a hoop to the local router at 192.168.2.1, then takes 10 hops to route to 24.156.158.102, with all subsequent hops timing out.
 
 \begin{lstlisting}[caption=Traceroute Terminal Output,label=list:tracert]
 tracert compeng4dn4.mooo.com
@@ -41,4 +41,10 @@ over a maximum of 30 hops:
 Trace complete.
 \end{lstlisting}
 
-The WireShark capture
+The WireShark capture was done with a capture filter of \texttt{icmp}. The WireShark capture for traceroute is shown below in Figure~\ref{fig:tracert}. We can see that what the traceroute command does is continually send ICMP echo requests to the targeted hostname (99.236.34.223) from 192.168.2.49 (the \texttt{localhost}). We can also follow the hops in the traceroute by checking the source destination of the "Time-to-live exceeded" ICMP packets, with the first two hops of the traceroute (192.168.2.1 and 10.11.2.49) appearing in the figure.
+
+\begin{figure}[htp]
+\centering
+\caption[tracert]{Traceroute WireShark Capture}\label{fig:tracert}
+\includegraphics[width=\textwidth]{traceroute_wireshark.png}
+\end{figure}
