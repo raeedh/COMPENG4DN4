@@ -1,5 +1,5 @@
 No.     Time           Source                Destination           Protocol Length Info
-      1 0.000000       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=62/15872, ttl=1 (no response found!)
+      1 0.000000       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=236/60416, ttl=1 (no response found!)
 
 Frame 1: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -7,7 +7,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-      2 0.000007       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=62/15872, ttl=1 (no response found!)
+      2 0.000016       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=236/60416, ttl=1 (no response found!)
 
 Frame 2: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -15,15 +15,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-      3 0.005387       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=63/16128, ttl=1 (no response found!)
+      3 0.005391       192.168.2.1           192.168.2.49          ICMP     134    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 3: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 3: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 192.168.2.1, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-      4 0.005392       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=63/16128, ttl=1 (no response found!)
+      4 0.006001       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=237/60672, ttl=1 (no response found!)
 
 Frame 4: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -31,7 +31,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-      5 0.008816       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=64/16384, ttl=1 (no response found!)
+      5 0.006013       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=237/60672, ttl=1 (no response found!)
 
 Frame 5: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -39,15 +39,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-      6 0.008819       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=64/16384, ttl=1 (no response found!)
+      6 0.011327       192.168.2.1           192.168.2.49          ICMP     134    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 6: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 6: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 192.168.2.1, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-      7 1.031270       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=65/16640, ttl=2 (no response found!)
+      7 0.011721       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=238/60928, ttl=1 (no response found!)
 
 Frame 7: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -55,7 +55,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-      8 1.031282       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=65/16640, ttl=2 (no response found!)
+      8 0.011727       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=238/60928, ttl=1 (no response found!)
 
 Frame 8: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -63,15 +63,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-      9 1.053553       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=66/16896, ttl=2 (no response found!)
+      9 0.017607       192.168.2.1           192.168.2.49          ICMP     134    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 9: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 9: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 192.168.2.1, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     10 1.053558       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=66/16896, ttl=2 (no response found!)
+     10 1.022108       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=239/61184, ttl=2 (no response found!)
 
 Frame 10: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -79,7 +79,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     11 1.067796       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=67/17152, ttl=2 (no response found!)
+     11 1.022119       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=239/61184, ttl=2 (no response found!)
 
 Frame 11: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -87,15 +87,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     12 1.067801       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=67/17152, ttl=2 (no response found!)
+     12 1.044148       10.11.2.49            192.168.2.49          ICMP     134    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 12: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 12: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 10.11.2.49, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     13 7.027204       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=68/17408, ttl=3 (no response found!)
+     13 1.044623       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=240/61440, ttl=2 (no response found!)
 
 Frame 13: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -103,7 +103,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     14 7.027208       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=68/17408, ttl=3 (no response found!)
+     14 1.044629       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=240/61440, ttl=2 (no response found!)
 
 Frame 14: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -111,15 +111,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     15 10.917064      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=69/17664, ttl=3 (no response found!)
+     15 1.060458       10.11.2.49            192.168.2.49          ICMP     134    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 15: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 15: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 10.11.2.49, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     16 10.917069      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=69/17664, ttl=3 (no response found!)
+     16 1.061046       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=241/61696, ttl=2 (no response found!)
 
 Frame 16: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -127,7 +127,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     17 14.917243      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=70/17920, ttl=3 (no response found!)
+     17 1.061062       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=241/61696, ttl=2 (no response found!)
 
 Frame 17: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -135,15 +135,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     18 14.917250      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=70/17920, ttl=3 (no response found!)
+     18 1.080493       10.11.2.49            192.168.2.49          ICMP     134    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 18: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 18: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 10.11.2.49, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     19 18.916933      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=71/18176, ttl=4 (no response found!)
+     19 7.026845       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=242/61952, ttl=3 (no response found!)
 
 Frame 19: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -151,7 +151,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     20 18.916943      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=71/18176, ttl=4 (no response found!)
+     20 7.026854       192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=242/61952, ttl=3 (no response found!)
 
 Frame 20: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -159,7 +159,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     21 18.929386      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=72/18432, ttl=4 (no response found!)
+     21 10.974409      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=243/62208, ttl=3 (no response found!)
 
 Frame 21: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -167,7 +167,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     22 18.929390      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=72/18432, ttl=4 (no response found!)
+     22 10.974426      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=243/62208, ttl=3 (no response found!)
 
 Frame 22: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -175,7 +175,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     23 18.943428      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=73/18688, ttl=4 (no response found!)
+     23 14.969557      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=244/62464, ttl=3 (no response found!)
 
 Frame 23: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -183,7 +183,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     24 18.943431      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=73/18688, ttl=4 (no response found!)
+     24 14.969568      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=244/62464, ttl=3 (no response found!)
 
 Frame 24: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -191,7 +191,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     25 22.916705      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=74/18944, ttl=5 (no response found!)
+     25 18.972363      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=245/62720, ttl=4 (no response found!)
 
 Frame 25: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -199,7 +199,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     26 22.916711      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=74/18944, ttl=5 (no response found!)
+     26 18.972373      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=245/62720, ttl=4 (no response found!)
 
 Frame 26: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -207,15 +207,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     27 26.914480      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=75/19200, ttl=5 (no response found!)
+     27 18.986496      142.124.127.44        192.168.2.49          ICMP     182    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 27: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 27: 182 bytes on wire (1456 bits), 182 bytes captured (1456 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 142.124.127.44, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     28 26.914487      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=75/19200, ttl=5 (no response found!)
+     28 18.986993      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=246/62976, ttl=4 (no response found!)
 
 Frame 28: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -223,7 +223,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     29 26.932157      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=76/19456, ttl=5 (no response found!)
+     29 18.987000      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=246/62976, ttl=4 (no response found!)
 
 Frame 29: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -231,15 +231,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     30 26.932161      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=76/19456, ttl=5 (no response found!)
+     30 19.007930      142.124.127.44        192.168.2.49          ICMP     182    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 30: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 30: 182 bytes on wire (1456 bits), 182 bytes captured (1456 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 142.124.127.44, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     31 27.949854      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=77/19712, ttl=6 (no response found!)
+     31 19.008368      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=247/63232, ttl=4 (no response found!)
 
 Frame 31: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -247,7 +247,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     32 27.949861      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=77/19712, ttl=6 (no response found!)
+     32 19.008374      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=247/63232, ttl=4 (no response found!)
 
 Frame 32: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -255,7 +255,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     33 27.963315      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=78/19968, ttl=6 (no response found!)
+     33 22.976229      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=248/63488, ttl=5 (no response found!)
 
 Frame 33: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -263,7 +263,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     34 27.963319      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=78/19968, ttl=6 (no response found!)
+     34 22.976243      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=248/63488, ttl=5 (no response found!)
 
 Frame 34: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -271,15 +271,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     35 27.973677      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=79/20224, ttl=6 (no response found!)
+     35 22.985943      142.124.127.159       192.168.2.49          ICMP     182    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 35: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 35: 182 bytes on wire (1456 bits), 182 bytes captured (1456 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 142.124.127.159, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     36 27.973681      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=79/20224, ttl=6 (no response found!)
+     36 22.986515      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=249/63744, ttl=5 (no response found!)
 
 Frame 36: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -287,7 +287,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     37 28.985101      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=80/20480, ttl=7 (no response found!)
+     37 22.986526      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=249/63744, ttl=5 (no response found!)
 
 Frame 37: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -295,15 +295,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     38 28.985108      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=80/20480, ttl=7 (no response found!)
+     38 23.004443      142.124.127.159       192.168.2.49          ICMP     182    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 38: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 38: 182 bytes on wire (1456 bits), 182 bytes captured (1456 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 142.124.127.159, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     39 28.997028      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=81/20736, ttl=7 (no response found!)
+     39 23.005127      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=250/64000, ttl=5 (no response found!)
 
 Frame 39: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -311,7 +311,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     40 28.997032      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=81/20736, ttl=7 (no response found!)
+     40 23.005137      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=250/64000, ttl=5 (no response found!)
 
 Frame 40: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -319,15 +319,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     41 29.006167      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=82/20992, ttl=7 (no response found!)
+     41 23.027846      142.124.127.159       192.168.2.49          ICMP     182    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 41: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 41: 182 bytes on wire (1456 bits), 182 bytes captured (1456 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 142.124.127.159, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     42 29.006172      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=82/20992, ttl=7 (no response found!)
+     42 24.021897      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=251/64256, ttl=6 (no response found!)
 
 Frame 42: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -335,7 +335,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     43 30.020693      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=83/21248, ttl=8 (no response found!)
+     43 24.021917      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=251/64256, ttl=6 (no response found!)
 
 Frame 43: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -343,15 +343,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     44 30.020700      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=83/21248, ttl=8 (no response found!)
+     44 24.044004      64.230.52.229         192.168.2.49          ICMP     70     Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 44: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 44: 70 bytes on wire (560 bits), 70 bytes captured (560 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 64.230.52.229, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     45 30.039054      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=84/21504, ttl=8 (no response found!)
+     45 24.044666      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=252/64512, ttl=6 (no response found!)
 
 Frame 45: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -359,7 +359,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     46 30.039057      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=84/21504, ttl=8 (no response found!)
+     46 24.044678      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=252/64512, ttl=6 (no response found!)
 
 Frame 46: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -367,15 +367,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     47 30.058198      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=85/21760, ttl=8 (no response found!)
+     47 24.071145      64.230.52.229         192.168.2.49          ICMP     70     Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 47: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 47: 70 bytes on wire (560 bits), 70 bytes captured (560 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 64.230.52.229, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     48 30.058202      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=85/21760, ttl=8 (no response found!)
+     48 24.071554      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=253/64768, ttl=6 (no response found!)
 
 Frame 48: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -383,7 +383,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     49 36.043440      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=86/22016, ttl=9 (no response found!)
+     49 24.071562      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=253/64768, ttl=6 (no response found!)
 
 Frame 49: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -391,15 +391,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     50 36.043447      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=86/22016, ttl=9 (no response found!)
+     50 24.095916      64.230.52.229         192.168.2.49          ICMP     70     Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 50: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 50: 70 bytes on wire (560 bits), 70 bytes captured (560 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 64.230.52.229, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     51 36.060141      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=87/22272, ttl=9 (no response found!)
+     51 25.084564      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=254/65024, ttl=7 (no response found!)
 
 Frame 51: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -407,7 +407,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     52 36.060146      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=87/22272, ttl=9 (no response found!)
+     52 25.084583      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=254/65024, ttl=7 (no response found!)
 
 Frame 52: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -415,15 +415,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     53 36.078316      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=88/22528, ttl=9 (no response found!)
+     53 25.113519      184.150.158.205       192.168.2.49          ICMP     70     Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 53: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 53: 70 bytes on wire (560 bits), 70 bytes captured (560 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 184.150.158.205, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     54 36.078322      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=88/22528, ttl=9 (no response found!)
+     54 25.113924      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=255/65280, ttl=7 (no response found!)
 
 Frame 54: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -431,7 +431,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     55 37.093494      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=89/22784, ttl=10 (no response found!)
+     55 25.113931      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=255/65280, ttl=7 (no response found!)
 
 Frame 55: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -439,15 +439,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     56 37.093503      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=89/22784, ttl=10 (no response found!)
+     56 25.142041      184.150.158.205       192.168.2.49          ICMP     70     Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 56: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 56: 70 bytes on wire (560 bits), 70 bytes captured (560 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 184.150.158.205, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     57 37.107612      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=90/23040, ttl=10 (no response found!)
+     57 25.142609      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=256/1, ttl=7 (no response found!)
 
 Frame 57: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -455,7 +455,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     58 37.107616      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=90/23040, ttl=10 (no response found!)
+     58 25.142617      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=256/1, ttl=7 (no response found!)
 
 Frame 58: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -463,15 +463,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     59 37.129398      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=91/23296, ttl=10 (no response found!)
+     59 25.163151      184.150.158.205       192.168.2.49          ICMP     70     Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 59: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 59: 70 bytes on wire (560 bits), 70 bytes captured (560 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 184.150.158.205, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     60 37.129401      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=91/23296, ttl=10 (no response found!)
+     60 26.150663      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=257/257, ttl=8 (no response found!)
 
 Frame 60: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -479,7 +479,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     61 43.115263      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=92/23552, ttl=11 (no response found!)
+     61 26.150673      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=257/257, ttl=8 (no response found!)
 
 Frame 61: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -487,15 +487,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     62 43.115269      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=92/23552, ttl=11 (no response found!)
+     62 26.172873      209.148.235.221       192.168.2.49          ICMP     110    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 62: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 62: 110 bytes on wire (880 bits), 110 bytes captured (880 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 209.148.235.221, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     63 46.911636      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=93/23808, ttl=11 (no response found!)
+     63 26.173737      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=258/513, ttl=8 (no response found!)
 
 Frame 63: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -503,7 +503,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     64 46.911643      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=93/23808, ttl=11 (no response found!)
+     64 26.173747      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=258/513, ttl=8 (no response found!)
 
 Frame 64: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -511,15 +511,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     65 50.910419      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=94/24064, ttl=11 (no response found!)
+     65 26.193712      209.148.235.221       192.168.2.49          ICMP     110    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 65: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 65: 110 bytes on wire (880 bits), 110 bytes captured (880 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 209.148.235.221, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     66 50.910425      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=94/24064, ttl=11 (no response found!)
+     66 26.194199      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=259/769, ttl=8 (no response found!)
 
 Frame 66: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -527,7 +527,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     67 54.913279      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=95/24320, ttl=12 (no response found!)
+     67 26.194206      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=259/769, ttl=8 (no response found!)
 
 Frame 67: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -535,15 +535,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     68 54.913286      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=95/24320, ttl=12 (no response found!)
+     68 26.215928      209.148.235.221       192.168.2.49          ICMP     110    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 68: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 68: 110 bytes on wire (880 bits), 110 bytes captured (880 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 209.148.235.221, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     69 58.910088      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=96/24576, ttl=12 (no response found!)
+     69 32.154888      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=260/1025, ttl=9 (no response found!)
 
 Frame 69: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -551,7 +551,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     70 58.910095      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=96/24576, ttl=12 (no response found!)
+     70 32.154898      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=260/1025, ttl=9 (no response found!)
 
 Frame 70: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -559,15 +559,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     71 62.909997      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=97/24832, ttl=12 (no response found!)
+     71 32.177860      209.148.237.94        192.168.2.49          ICMP     110    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 71: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 71: 110 bytes on wire (880 bits), 110 bytes captured (880 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 209.148.237.94, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     72 62.910028      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=97/24832, ttl=12 (no response found!)
+     72 32.178441      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=261/1281, ttl=9 (no response found!)
 
 Frame 72: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -575,7 +575,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     73 66.911542      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=98/25088, ttl=13 (no response found!)
+     73 32.178451      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=261/1281, ttl=9 (no response found!)
 
 Frame 73: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -583,15 +583,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     74 66.911551      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=98/25088, ttl=13 (no response found!)
+     74 32.191468      209.148.237.94        192.168.2.49          ICMP     110    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 74: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 74: 110 bytes on wire (880 bits), 110 bytes captured (880 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 209.148.237.94, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     75 70.908737      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=99/25344, ttl=13 (no response found!)
+     75 32.192115      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=262/1537, ttl=9 (no response found!)
 
 Frame 75: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -599,7 +599,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     76 70.908747      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=99/25344, ttl=13 (no response found!)
+     76 32.192124      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=262/1537, ttl=9 (no response found!)
 
 Frame 76: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -607,15 +607,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     77 74.909106      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=100/25600, ttl=13 (no response found!)
+     77 32.207910      209.148.237.94        192.168.2.49          ICMP     110    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 77: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 77: 110 bytes on wire (880 bits), 110 bytes captured (880 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 209.148.237.94, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     78 74.909110      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=100/25600, ttl=13 (no response found!)
+     78 33.206238      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=263/1793, ttl=10 (no response found!)
 
 Frame 78: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -623,7 +623,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     79 78.908446      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=101/25856, ttl=14 (no response found!)
+     79 33.206246      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=263/1793, ttl=10 (no response found!)
 
 Frame 79: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -631,15 +631,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     80 78.908453      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=101/25856, ttl=14 (no response found!)
+     80 33.229972      24.156.158.102        192.168.2.49          ICMP     134    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 80: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 80: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 24.156.158.102, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     81 82.924043      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=102/26112, ttl=14 (no response found!)
+     81 33.230564      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=264/2049, ttl=10 (no response found!)
 
 Frame 81: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -647,7 +647,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     82 82.924050      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=102/26112, ttl=14 (no response found!)
+     82 33.230572      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=264/2049, ttl=10 (no response found!)
 
 Frame 82: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -655,15 +655,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     83 86.913131      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=103/26368, ttl=14 (no response found!)
+     83 33.264059      24.156.158.102        192.168.2.49          ICMP     134    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 83: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 83: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 24.156.158.102, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     84 86.913140      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=103/26368, ttl=14 (no response found!)
+     84 33.264549      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=265/2305, ttl=10 (no response found!)
 
 Frame 84: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -671,7 +671,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     85 90.915496      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=104/26624, ttl=15 (no response found!)
+     85 33.264556      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=265/2305, ttl=10 (no response found!)
 
 Frame 85: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -679,15 +679,15 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     86 90.915502      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=104/26624, ttl=15 (no response found!)
+     86 33.283308      24.156.158.102        192.168.2.49          ICMP     134    Time-to-live exceeded (Time to live exceeded in transit)
 
-Frame 86: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
-Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
-Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Frame 86: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0), Dst: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77)
+Internet Protocol Version 4, Src: 24.156.158.102, Dst: 192.168.2.49
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     87 94.911096      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=105/26880, ttl=15 (no response found!)
+     87 39.230536      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=266/2561, ttl=11 (no response found!)
 
 Frame 87: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -695,7 +695,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     88 94.911103      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=105/26880, ttl=15 (no response found!)
+     88 39.230546      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=266/2561, ttl=11 (no response found!)
 
 Frame 88: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -703,7 +703,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     89 98.920561      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=106/27136, ttl=15 (no response found!)
+     89 42.972162      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=267/2817, ttl=11 (no response found!)
 
 Frame 89: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -711,7 +711,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     90 98.920567      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=106/27136, ttl=15 (no response found!)
+     90 42.972172      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=267/2817, ttl=11 (no response found!)
 
 Frame 90: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -719,7 +719,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     91 102.920418     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=107/27392, ttl=16 (no response found!)
+     91 46.974063      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=268/3073, ttl=11 (no response found!)
 
 Frame 91: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -727,7 +727,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     92 102.920424     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=107/27392, ttl=16 (no response found!)
+     92 46.974073      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=268/3073, ttl=11 (no response found!)
 
 Frame 92: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -735,7 +735,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     93 106.919962     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=108/27648, ttl=16 (no response found!)
+     93 50.976243      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=269/3329, ttl=12 (no response found!)
 
 Frame 93: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -743,7 +743,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     94 106.919967     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=108/27648, ttl=16 (no response found!)
+     94 50.976259      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=269/3329, ttl=12 (no response found!)
 
 Frame 94: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -751,7 +751,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     95 110.920055     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=109/27904, ttl=16 (no response found!)
+     95 54.966295      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=270/3585, ttl=12 (no response found!)
 
 Frame 95: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -759,7 +759,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     96 110.920062     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=109/27904, ttl=16 (no response found!)
+     96 54.966320      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=270/3585, ttl=12 (no response found!)
 
 Frame 96: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -767,7 +767,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     97 114.919975     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=110/28160, ttl=17 (no response found!)
+     97 58.964432      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=271/3841, ttl=12 (no response found!)
 
 Frame 97: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -775,7 +775,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     98 114.919982     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=110/28160, ttl=17 (no response found!)
+     98 58.964441      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=271/3841, ttl=12 (no response found!)
 
 Frame 98: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -783,7 +783,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-     99 118.926514     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=111/28416, ttl=17 (no response found!)
+     99 62.966917      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=272/4097, ttl=13 (no response found!)
 
 Frame 99: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -791,7 +791,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    100 118.926522     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=111/28416, ttl=17 (no response found!)
+    100 62.966930      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=272/4097, ttl=13 (no response found!)
 
 Frame 100: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -799,7 +799,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    101 122.920587     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=112/28672, ttl=17 (no response found!)
+    101 66.975210      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=273/4353, ttl=13 (no response found!)
 
 Frame 101: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -807,7 +807,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    102 122.920593     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=112/28672, ttl=17 (no response found!)
+    102 66.975224      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=273/4353, ttl=13 (no response found!)
 
 Frame 102: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -815,7 +815,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    103 126.919479     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=113/28928, ttl=18 (no response found!)
+    103 70.967129      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=274/4609, ttl=13 (no response found!)
 
 Frame 103: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -823,7 +823,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    104 126.919486     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=113/28928, ttl=18 (no response found!)
+    104 70.967154      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=274/4609, ttl=13 (no response found!)
 
 Frame 104: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -831,7 +831,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    105 130.919077     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=114/29184, ttl=18 (no response found!)
+    105 74.974927      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=275/4865, ttl=14 (no response found!)
 
 Frame 105: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -839,7 +839,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    106 130.919086     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=114/29184, ttl=18 (no response found!)
+    106 74.974943      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=275/4865, ttl=14 (no response found!)
 
 Frame 106: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -847,7 +847,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    107 134.912670     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=115/29440, ttl=18 (no response found!)
+    107 78.970018      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=276/5121, ttl=14 (no response found!)
 
 Frame 107: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -855,7 +855,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    108 134.912681     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=115/29440, ttl=18 (no response found!)
+    108 78.970032      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=276/5121, ttl=14 (no response found!)
 
 Frame 108: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -863,7 +863,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    109 138.910376     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=116/29696, ttl=19 (no response found!)
+    109 82.965926      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=277/5377, ttl=14 (no response found!)
 
 Frame 109: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -871,7 +871,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    110 138.910381     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=116/29696, ttl=19 (no response found!)
+    110 82.965943      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=277/5377, ttl=14 (no response found!)
 
 Frame 110: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -879,7 +879,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    111 142.909456     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=117/29952, ttl=19 (no response found!)
+    111 86.969020      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=278/5633, ttl=15 (no response found!)
 
 Frame 111: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -887,7 +887,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    112 142.909467     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=117/29952, ttl=19 (no response found!)
+    112 86.969034      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=278/5633, ttl=15 (no response found!)
 
 Frame 112: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -895,7 +895,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    113 146.908687     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=118/30208, ttl=19 (no response found!)
+    113 90.972949      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=279/5889, ttl=15 (no response found!)
 
 Frame 113: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -903,7 +903,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    114 146.908692     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=118/30208, ttl=19 (no response found!)
+    114 90.972959      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=279/5889, ttl=15 (no response found!)
 
 Frame 114: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -911,7 +911,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    115 150.910665     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=119/30464, ttl=20 (no response found!)
+    115 94.971152      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=280/6145, ttl=15 (no response found!)
 
 Frame 115: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -919,7 +919,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    116 150.910668     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=119/30464, ttl=20 (no response found!)
+    116 94.971162      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=280/6145, ttl=15 (no response found!)
 
 Frame 116: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -927,7 +927,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    117 154.914882     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=120/30720, ttl=20 (no response found!)
+    117 98.971285      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=281/6401, ttl=16 (no response found!)
 
 Frame 117: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -935,7 +935,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    118 154.914890     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=120/30720, ttl=20 (no response found!)
+    118 98.971296      192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=281/6401, ttl=16 (no response found!)
 
 Frame 118: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -943,7 +943,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    119 158.916849     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=121/30976, ttl=20 (no response found!)
+    119 102.968736     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=282/6657, ttl=16 (no response found!)
 
 Frame 119: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -951,7 +951,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    120 158.916856     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=121/30976, ttl=20 (no response found!)
+    120 102.968746     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=282/6657, ttl=16 (no response found!)
 
 Frame 120: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -959,7 +959,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    121 162.919472     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=122/31232, ttl=21 (no response found!)
+    121 106.968154     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=283/6913, ttl=16 (no response found!)
 
 Frame 121: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -967,7 +967,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    122 162.919479     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=122/31232, ttl=21 (no response found!)
+    122 106.968163     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=283/6913, ttl=16 (no response found!)
 
 Frame 122: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -975,7 +975,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    123 166.921270     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=123/31488, ttl=21 (no response found!)
+    123 110.967494     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=284/7169, ttl=17 (no response found!)
 
 Frame 123: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -983,7 +983,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    124 166.921279     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=123/31488, ttl=21 (no response found!)
+    124 110.967504     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=284/7169, ttl=17 (no response found!)
 
 Frame 124: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -991,7 +991,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    125 170.909134     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=124/31744, ttl=21 (no response found!)
+    125 114.964560     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=285/7425, ttl=17 (no response found!)
 
 Frame 125: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -999,7 +999,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    126 170.909141     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=124/31744, ttl=21 (no response found!)
+    126 114.964577     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=285/7425, ttl=17 (no response found!)
 
 Frame 126: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1007,7 +1007,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    127 174.909320     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=125/32000, ttl=22 (no response found!)
+    127 118.972873     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=286/7681, ttl=17 (no response found!)
 
 Frame 127: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1015,7 +1015,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    128 174.909328     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=125/32000, ttl=22 (no response found!)
+    128 118.972887     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=286/7681, ttl=17 (no response found!)
 
 Frame 128: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1023,7 +1023,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    129 178.919432     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=126/32256, ttl=22 (no response found!)
+    129 122.972332     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=287/7937, ttl=18 (no response found!)
 
 Frame 129: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1031,7 +1031,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    130 178.919436     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=126/32256, ttl=22 (no response found!)
+    130 122.972345     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=287/7937, ttl=18 (no response found!)
 
 Frame 130: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1039,7 +1039,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    131 182.919790     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=127/32512, ttl=22 (no response found!)
+    131 126.964044     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=288/8193, ttl=18 (no response found!)
 
 Frame 131: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1047,7 +1047,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    132 182.919797     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=127/32512, ttl=22 (no response found!)
+    132 126.964055     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=288/8193, ttl=18 (no response found!)
 
 Frame 132: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1055,7 +1055,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    133 186.919407     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=128/32768, ttl=23 (no response found!)
+    133 130.976651     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=289/8449, ttl=18 (no response found!)
 
 Frame 133: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1063,7 +1063,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    134 186.919417     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=128/32768, ttl=23 (no response found!)
+    134 130.976664     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=289/8449, ttl=18 (no response found!)
 
 Frame 134: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1071,7 +1071,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    135 190.917855     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=129/33024, ttl=23 (no response found!)
+    135 134.964799     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=290/8705, ttl=19 (no response found!)
 
 Frame 135: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1079,7 +1079,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    136 190.917866     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=129/33024, ttl=23 (no response found!)
+    136 134.964809     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=290/8705, ttl=19 (no response found!)
 
 Frame 136: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1087,7 +1087,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    137 194.918239     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=130/33280, ttl=23 (no response found!)
+    137 138.974418     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=291/8961, ttl=19 (no response found!)
 
 Frame 137: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1095,7 +1095,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    138 194.918248     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=130/33280, ttl=23 (no response found!)
+    138 138.974432     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=291/8961, ttl=19 (no response found!)
 
 Frame 138: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1103,7 +1103,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    139 198.918340     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=131/33536, ttl=24 (no response found!)
+    139 142.969156     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=292/9217, ttl=19 (no response found!)
 
 Frame 139: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1111,7 +1111,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    140 198.918348     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=131/33536, ttl=24 (no response found!)
+    140 142.969174     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=292/9217, ttl=19 (no response found!)
 
 Frame 140: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1119,7 +1119,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    141 202.916269     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=132/33792, ttl=24 (no response found!)
+    141 146.967295     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=293/9473, ttl=20 (no response found!)
 
 Frame 141: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1127,7 +1127,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    142 202.916277     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=132/33792, ttl=24 (no response found!)
+    142 146.967317     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=293/9473, ttl=20 (no response found!)
 
 Frame 142: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1135,7 +1135,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    143 206.907837     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=133/34048, ttl=24 (no response found!)
+    143 150.976160     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=294/9729, ttl=20 (no response found!)
 
 Frame 143: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1143,7 +1143,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    144 206.907847     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=133/34048, ttl=24 (no response found!)
+    144 150.976169     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=294/9729, ttl=20 (no response found!)
 
 Frame 144: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1151,7 +1151,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    145 210.921802     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=134/34304, ttl=25 (no response found!)
+    145 154.973148     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=295/9985, ttl=20 (no response found!)
 
 Frame 145: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1159,7 +1159,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    146 210.921810     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=134/34304, ttl=25 (no response found!)
+    146 154.973161     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=295/9985, ttl=20 (no response found!)
 
 Frame 146: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1167,7 +1167,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    147 214.913618     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=135/34560, ttl=25 (no response found!)
+    147 158.967477     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=296/10241, ttl=21 (no response found!)
 
 Frame 147: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1175,7 +1175,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    148 214.913625     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=135/34560, ttl=25 (no response found!)
+    148 158.967486     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=296/10241, ttl=21 (no response found!)
 
 Frame 148: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1183,7 +1183,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    149 218.922619     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=136/34816, ttl=25 (no response found!)
+    149 162.967089     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=297/10497, ttl=21 (no response found!)
 
 Frame 149: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1191,7 +1191,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    150 218.922628     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=136/34816, ttl=25 (no response found!)
+    150 162.967105     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=297/10497, ttl=21 (no response found!)
 
 Frame 150: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1199,7 +1199,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    151 222.916470     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=137/35072, ttl=26 (no response found!)
+    151 166.966063     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=298/10753, ttl=21 (no response found!)
 
 Frame 151: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1207,7 +1207,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    152 222.916478     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=137/35072, ttl=26 (no response found!)
+    152 166.966082     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=298/10753, ttl=21 (no response found!)
 
 Frame 152: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1215,7 +1215,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    153 226.916318     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=138/35328, ttl=26 (no response found!)
+    153 170.967748     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=299/11009, ttl=22 (no response found!)
 
 Frame 153: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1223,7 +1223,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    154 226.916326     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=138/35328, ttl=26 (no response found!)
+    154 170.967758     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=299/11009, ttl=22 (no response found!)
 
 Frame 154: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1231,7 +1231,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    155 230.917335     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=139/35584, ttl=26 (no response found!)
+    155 174.974021     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=300/11265, ttl=22 (no response found!)
 
 Frame 155: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1239,7 +1239,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    156 230.917342     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=139/35584, ttl=26 (no response found!)
+    156 174.974036     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=300/11265, ttl=22 (no response found!)
 
 Frame 156: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1247,7 +1247,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    157 234.909287     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=140/35840, ttl=27 (no response found!)
+    157 178.972925     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=301/11521, ttl=22 (no response found!)
 
 Frame 157: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1255,7 +1255,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    158 234.909295     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=140/35840, ttl=27 (no response found!)
+    158 178.972934     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=301/11521, ttl=22 (no response found!)
 
 Frame 158: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1263,7 +1263,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    159 238.908480     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=141/36096, ttl=27 (no response found!)
+    159 182.969009     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=302/11777, ttl=23 (no response found!)
 
 Frame 159: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1271,7 +1271,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    160 238.908511     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=141/36096, ttl=27 (no response found!)
+    160 182.969023     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=302/11777, ttl=23 (no response found!)
 
 Frame 160: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1279,7 +1279,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    161 242.907839     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=142/36352, ttl=27 (no response found!)
+    161 186.976651     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=303/12033, ttl=23 (no response found!)
 
 Frame 161: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1287,7 +1287,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    162 242.907846     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=142/36352, ttl=27 (no response found!)
+    162 186.976662     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=303/12033, ttl=23 (no response found!)
 
 Frame 162: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1295,7 +1295,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    163 246.923200     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=143/36608, ttl=28 (no response found!)
+    163 190.978152     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=304/12289, ttl=23 (no response found!)
 
 Frame 163: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1303,7 +1303,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    164 246.923208     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=143/36608, ttl=28 (no response found!)
+    164 190.978164     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=304/12289, ttl=23 (no response found!)
 
 Frame 164: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1311,7 +1311,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    165 250.921853     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=144/36864, ttl=28 (no response found!)
+    165 194.971404     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=305/12545, ttl=24 (no response found!)
 
 Frame 165: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1319,7 +1319,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    166 250.921857     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=144/36864, ttl=28 (no response found!)
+    166 194.971414     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=305/12545, ttl=24 (no response found!)
 
 Frame 166: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1327,7 +1327,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    167 254.922474     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=145/37120, ttl=28 (no response found!)
+    167 198.973754     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=306/12801, ttl=24 (no response found!)
 
 Frame 167: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1335,7 +1335,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    168 254.922481     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=145/37120, ttl=28 (no response found!)
+    168 198.973764     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=306/12801, ttl=24 (no response found!)
 
 Frame 168: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1343,7 +1343,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    169 258.922838     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=146/37376, ttl=29 (no response found!)
+    169 202.976541     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=307/13057, ttl=24 (no response found!)
 
 Frame 169: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1351,7 +1351,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    170 258.922848     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=146/37376, ttl=29 (no response found!)
+    170 202.976552     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=307/13057, ttl=24 (no response found!)
 
 Frame 170: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1359,7 +1359,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    171 262.923157     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=147/37632, ttl=29 (no response found!)
+    171 206.969132     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=308/13313, ttl=25 (no response found!)
 
 Frame 171: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1367,7 +1367,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    172 262.923164     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=147/37632, ttl=29 (no response found!)
+    172 206.969143     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=308/13313, ttl=25 (no response found!)
 
 Frame 172: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1375,7 +1375,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    173 266.924174     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=148/37888, ttl=29 (no response found!)
+    173 210.969791     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=309/13569, ttl=25 (no response found!)
 
 Frame 173: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1383,7 +1383,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    174 266.924179     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=148/37888, ttl=29 (no response found!)
+    174 210.969799     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=309/13569, ttl=25 (no response found!)
 
 Frame 174: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1391,7 +1391,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    175 270.921854     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=149/38144, ttl=30 (no response found!)
+    175 214.971280     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=310/13825, ttl=25 (no response found!)
 
 Frame 175: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1399,7 +1399,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    176 270.921858     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=149/38144, ttl=30 (no response found!)
+    176 214.971289     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=310/13825, ttl=25 (no response found!)
 
 Frame 176: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1407,7 +1407,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    177 274.920655     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=150/38400, ttl=30 (no response found!)
+    177 218.974462     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=311/14081, ttl=26 (no response found!)
 
 Frame 177: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1415,7 +1415,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    178 274.920664     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=150/38400, ttl=30 (no response found!)
+    178 218.974487     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=311/14081, ttl=26 (no response found!)
 
 Frame 178: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1423,7 +1423,7 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    179 278.919857     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=151/38656, ttl=30 (no response found!)
+    179 222.964164     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=312/14337, ttl=26 (no response found!)
 
 Frame 179: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
@@ -1431,9 +1431,217 @@ Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
 
 No.     Time           Source                Destination           Protocol Length Info
-    180 278.919866     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=151/38656, ttl=30 (no response found!)
+    180 222.964173     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=312/14337, ttl=26 (no response found!)
 
 Frame 180: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    181 226.963572     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=313/14593, ttl=26 (no response found!)
+
+Frame 181: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    182 226.963588     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=313/14593, ttl=26 (no response found!)
+
+Frame 182: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    183 230.965527     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=314/14849, ttl=27 (no response found!)
+
+Frame 183: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    184 230.965540     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=314/14849, ttl=27 (no response found!)
+
+Frame 184: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    185 234.972628     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=315/15105, ttl=27 (no response found!)
+
+Frame 185: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    186 234.972638     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=315/15105, ttl=27 (no response found!)
+
+Frame 186: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    187 238.967822     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=316/15361, ttl=27 (no response found!)
+
+Frame 187: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    188 238.967831     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=316/15361, ttl=27 (no response found!)
+
+Frame 188: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    189 242.979380     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=317/15617, ttl=28 (no response found!)
+
+Frame 189: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    190 242.979390     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=317/15617, ttl=28 (no response found!)
+
+Frame 190: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    191 246.973658     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=318/15873, ttl=28 (no response found!)
+
+Frame 191: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    192 246.973668     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=318/15873, ttl=28 (no response found!)
+
+Frame 192: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    193 250.967959     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=319/16129, ttl=28 (no response found!)
+
+Frame 193: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    194 250.967981     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=319/16129, ttl=28 (no response found!)
+
+Frame 194: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    195 254.977743     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=320/16385, ttl=29 (no response found!)
+
+Frame 195: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    196 254.977756     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=320/16385, ttl=29 (no response found!)
+
+Frame 196: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    197 258.976944     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=321/16641, ttl=29 (no response found!)
+
+Frame 197: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    198 258.976953     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=321/16641, ttl=29 (no response found!)
+
+Frame 198: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    199 262.971726     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=322/16897, ttl=29 (no response found!)
+
+Frame 199: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    200 262.971738     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=322/16897, ttl=29 (no response found!)
+
+Frame 200: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    201 266.966361     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=323/17153, ttl=30 (no response found!)
+
+Frame 201: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    202 266.966376     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=323/17153, ttl=30 (no response found!)
+
+Frame 202: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    203 270.970667     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=324/17409, ttl=30 (no response found!)
+
+Frame 203: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    204 270.970676     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=324/17409, ttl=30 (no response found!)
+
+Frame 204: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    205 274.964727     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=325/17665, ttl=30 (no response found!)
+
+Frame 205: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
+Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
+Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
+Internet Control Message Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    206 274.964738     192.168.2.49          99.236.34.223         ICMP     106    Echo (ping) request  id=0x0001, seq=325/17665, ttl=30 (no response found!)
+
+Frame 206: 106 bytes on wire (848 bits), 106 bytes captured (848 bits) on interface \Device\NPF_{F3023D06-108F-4190-A8B5-7A0A1D9213BD}, id 2
 Ethernet II, Src: Micro-St_92:7c:77 (d8:bb:c1:92:7c:77), Dst: Sagemcom_fc:fd:c0 (98:42:65:fc:fd:c0)
 Internet Protocol Version 4, Src: 192.168.2.49, Dst: 99.236.34.223
 Internet Control Message Protocol
