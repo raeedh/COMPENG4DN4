@@ -1,7 +1,6 @@
 import argparse
 import csv
 import socket
-from socket import socket
 from typing import Dict
 
 from cryptography.fernet import Fernet
@@ -19,7 +18,7 @@ class Server:
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
         self.process_csv_file()
-        # self.start_listening()
+        self.start_listening()
 
     def process_csv_file(self):
         with open('course_grades_2023.csv', 'r') as csvfile:
