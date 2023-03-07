@@ -171,14 +171,14 @@ class Client:
     # Set the server to connect to. If the server and client are running on the same machine, we can use the current hostname.
     SERVER_HOSTNAME = "localhost"
     # List of valid commands
-    CMDS = {"GMA" : "Fetching Midterm average:",
+    CMDS = {"GMA": "Fetching Midterm average:",
             "GL1A": "Fetching Lab 1 average:",
             "GL2A": "Fetching Lab 2 average:",
             "GL3A": "Fetching Lab 3 average:",
             "GL4A": "Fetching Lab 4 average:",
-            "GEA" : "Fetching Exam average:",
-            "GG"  : "Getting Grades:"
-    }
+            "GEA": "Fetching Exam average:",
+            "GG": "Getting Grades:"
+            }
 
     def __init__(self):
         print("Client object created!")
@@ -279,6 +279,7 @@ class Client:
                 # print("The message received back from the server is:", recvd_bytes)
                 print(decrypted_message)
                 print()
+
             self.socket.close()
         except Exception as msg:
             print(msg)
