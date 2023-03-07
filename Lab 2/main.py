@@ -49,6 +49,7 @@ class Server:
             # Set socket to listen state.
             self.socket.listen(MAX_CONNECTION_BACKLOG)
             print(f"Listening for connections on port {PORT}")
+            print()
         except Exception as msg:
             print(msg)
             sys.exit(1)
@@ -268,6 +269,7 @@ class Client:
                 decrypted_message = decrypted_message_bytes.decode(MSG_ENCODING)
                 print("The message received back from the server is:", recvd_bytes)
                 print("The decrypted message is:", decrypted_message)
+                print()
             self.socket.close()
         except Exception as msg:
             print(msg)
