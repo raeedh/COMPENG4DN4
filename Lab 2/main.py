@@ -141,10 +141,14 @@ class Client:
     def get_console_input(self):
         while True:
             self.user_input = input("Enter the student ID number, followed by an applicable command (e.g. 1234567 GMA): ")
-            student_id, cmd = self.user_input.split()
+            try:
+                student_id, cmd = self.user_input.split()
+            except Exception as msg:
+                print("The input is invalid, please try again.")
+                continue
 
             if (not student_id.isdigit()) or (len(student_id) != 7) or (cmd not in Client.CMDS):
-                print("The student ID or command is invalid")
+                print("The student ID or command is invalid.")
                 continue
 
             print("Student ID:", student_id)
