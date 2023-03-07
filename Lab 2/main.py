@@ -4,18 +4,25 @@ import socket
 from cryptography.fernet import Fernet
 import csv
 
-fernet = Fernet()
+fernet = Fernet(Fernet.generate_key())
+PORT = 50007
 
 class Server:
     def __init__(self):
-        print("We have created a Server object: ", self)
+        print("Server object created!")
 
         with open('course_grades_2023.csv', 'r') as csvfile:
-            self.course_grades = csv.reader(csvfile)
+            reader = csv.reader(csvfile)
 
-        self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.bind(('', 50007))
-        self.socket.listen(1)
+            print("Data read from CSV file: ")
+
+            for row in reader:
+                print(row)
+
+        # self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # self.socket.bind(('', PORT))
+        # self.socket.listen(1)
+        print(f"Listening for connections on port {PORT}")
 
     def send_message(self, message: str):
         encrypted_message_bytes = fernet.encrypt(message.encode('utf-8'))
