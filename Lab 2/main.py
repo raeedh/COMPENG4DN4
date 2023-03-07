@@ -13,8 +13,6 @@ RECV_BUFFER_SIZE = 1024
 MAX_CONNECTION_BACKLOG = 1
 SOCKET_ADDRESS = (HOSTNAME, PORT)
 
-fernet = None
-
 
 class Server:
     def __init__(self):
@@ -97,19 +95,17 @@ class Server:
     def parse_data(self, data: bytes) -> bytes:
         match data.decode(MSG_ENCODING).split():
             case student_id, cmd:
-                global fernet
                 student: Dict = self.student_dict.get(student_id)
 
                 print(f"Received {cmd} command from client.")
 
                 if not student:
-                    fernet = None
                     print("User not found.")
                     return b""
 
                 print("User found.")
                 # Re-assign the fernet encryption object based on the student id
-                fernet = Fernet(student.get("Key").encode(MSG_ENCODING))
+                self.fernet = Fernet(student.get("Key").encode(MSG_ENCODING))
 
                 return self.parse_cmd(cmd, student)
             case _:
@@ -160,8 +156,7 @@ class Server:
         return self.send_message(f"{key} Average: {average}")
 
     def send_message(self, message: str):
-        global fernet
-        encrypted_message_bytes = fernet.encrypt(message.encode(MSG_ENCODING))
+        encrypted_message_bytes = self.fernet.encrypt(message.encode(MSG_ENCODING))
         print("encrypted_message_bytes = ", encrypted_message_bytes)
         return encrypted_message_bytes
 
@@ -173,24 +168,34 @@ class Client:
     CMDS = ["GMA", "GL1A", "GL2A", "GL3A", "GL4A", "GEA", "GG"]
 
     def __init__(self):
-        print("We have created a Client object: ", self)
+        print("Client object created!")
+        self.student_dict = {}
+        
+        self.process_csv_file()
         self.get_console_input()
+
+    def process_csv_file(self):
+        with open('course_grades_2023.csv', 'r') as csvfile:
+            reader = csv.DictReader(csvfile)
+
+            for row in reader:
+                self.student_dict[row["ID Number"]] = row
 
     def get_console_input(self):
         while True:
             self.user_input = input("Enter the student ID number, followed by an applicable command (e.g. 1234567 GMA): ")
 
             try:
-                student_id, cmd = self.user_input.split()
+                self.student_id, cmd = self.user_input.split()
             except Exception:
                 print("The input is invalid, please try again.")
                 continue
 
-            if (not student_id.isdigit()) or (len(student_id) != 7) or (cmd not in Client.CMDS):
+            if (not self.student_id.isdigit()) or (len(self.student_id) != 7) or (cmd not in Client.CMDS):
                 print("The student ID or command is invalid.")
                 continue
 
-            print("Student ID:", student_id)
+            print("Student ID:", self.student_id)
             print("Command received:", cmd)
             print()
 
@@ -237,14 +242,15 @@ class Client:
             # that case, close the connection on this end and exit.
             if len(recvd_bytes) == 0:
                 print("Did not receive message from server, closing server connection ... ")
-                self.socket.close()
             else:
-                global fernet
+                student: Dict = self.student_dict.get(self.student_id)
+                fernet = Fernet(student.get("Key").encode(MSG_ENCODING))
+
                 decrypted_message_bytes = fernet.decrypt(recvd_bytes)
                 decrypted_message = decrypted_message_bytes.decode(MSG_ENCODING)
-                print("decrypted_message = ", decrypted_message)
-
-            print("Received: ", recvd_bytes.decode(MSG_ENCODING))
+                print("The message received back from the server is:", recvd_bytes)
+                print("The decrypted message is:", decrypted_message)
+            self.socket.close()
         except Exception as msg:
             print(msg)
             print("Error receiving message from server, please try again.")
