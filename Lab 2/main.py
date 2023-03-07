@@ -172,10 +172,10 @@ class Client:
     SERVER_HOSTNAME = "localhost"
     # List of valid commands
     CMDS = {"GMA" : "Fetching Midterm average:",
-            "GL1A": "Fetching Lab average:",
-            "GL2A": "Fetching Lab average:",
-            "GL3A": "Fetching Lab average:",
-            "GL4A": "Fetching Lab average:",
+            "GL1A": "Fetching Lab 1 average:",
+            "GL2A": "Fetching Lab 2 average:",
+            "GL3A": "Fetching Lab 3 average:",
+            "GL4A": "Fetching Lab 4 average:",
             "GEA" : "Fetching Exam average:",
             "GG"  : "Getting Grades:"
     }
