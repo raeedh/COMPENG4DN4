@@ -270,6 +270,7 @@ class Client:
             # that case, close the connection on this end and exit.
             if len(recvd_bytes) == 0:
                 print("Did not receive message from server, closing server connection ... ")
+                print()
             else:
                 fernet = Fernet(self.encryption_key_dict.get(self.student_id).encode(MSG_ENCODING))
 
