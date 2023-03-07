@@ -52,7 +52,7 @@ class Server:
                         break
 
     def parse_data(self, data: bytes) -> bool:
-        match data.split():
+        match data.decode(MSG_ENCODING).split():
             case student_id, cmd:
                 global fernet
                 student: Dict = self.student_dict.get(student_id)
@@ -73,43 +73,44 @@ class Server:
                 print("The provided data is improperly formatted!")
                 return False
 
-    def parse_cmd(self, cmd: bytes, student: Dict) -> bool:
+    def parse_cmd(self, cmd: str, student: Dict) -> bool:
         match cmd:
-            case b"GMA":
+            case "GMA":
                 self.return_average("Midterm")
                 return True
-            case b"GL1A":
+            case "GL1A":
                 self.return_average("Lab 1")
                 return True
-            case b"GL2A":
+            case "GL2A":
                 self.return_average("Lab 2")
                 return True
-            case b"GL3A":
+            case "GL3A":
                 self.return_average("Lab 3")
                 return True
-            case b"GL4A":
+            case "GL4A":
                 self.return_average("Lab 4")
                 return True
-            case b"GEA":
+            case "GEA":
                 values = self.student_dict.values()
 
                 exam1_sum, exam2_sum, exam3_sum, exam4_sum = 0, 0, 0, 0
 
                 for value in values:
-                    exam1_sum += value["Exam 1"]
-                    exam2_sum += value["Exam 2"]
-                    exam3_sum += value["Exam 3"]
-                    exam4_sum += value["Exam 4"]
+                    exam1_sum += int(value["Exam 1"])
+                    exam2_sum += int(value["Exam 2"])
+                    exam3_sum += int(value["Exam 3"])
+                    exam4_sum += int(value["Exam 4"])
 
                 ret_msg = f"Exam 1 Average: {exam1_sum / len(values)}, Exam 2 Average: {exam2_sum / len(values)}, Exam 3 Average: " \
                           f"{exam3_sum / len(values)}, Exam 4 Average: {exam4_sum / len(values)}"
 
                 self.send_message(ret_msg)
                 return True
-            case b"GG":
-                ret_msg = f"Lab 1: {student.get('Lab 1')}, Lab 2: {student.get('Lab 2')}, Lab 3: {student.get('Lab 3')}, Lab 4: " \
-                          f"{student.get('Lab 4')}, Midterm: {student.get('Midterm')}, Exam 1: {student.get('Exam 1')}, Exam 2: " \
-                          f"{student.get('Exam 2')}, Exam 3: {student.get('Exam 3')}, Exam 4: {student.get('Exam 4')}"
+            case "GG":
+                ret_msg = f"Lab 1: {int(student.get('Lab 1'))}, Lab 2: {int(student.get('Lab 2'))}, Lab 3: {int(student.get('Lab 3'))}, " \
+                          f"Lab 4: {int(student.get('Lab 4'))}, Midterm: {int(student.get('Midterm'))}, Exam 1: " \
+                          f"{int(student.get('Exam 1'))}, Exam 2: {int(student.get('Exam 2'))}, Exam 3: {int(student.get('Exam 3'))}, " \
+                          f"Exam 4: {int(student.get('Exam 4'))}"
 
                 self.send_message(ret_msg)
                 return True
@@ -119,7 +120,7 @@ class Server:
 
     def return_average(self, key: str):
         values = self.student_dict.values()
-        average = sum([value[key] for value in values]) / len(values)
+        average = sum([int(value[key]) for value in values]) / len(values)
         self.send_message(f"{key} Average: {average}")
 
     def send_message(self, message: str):
