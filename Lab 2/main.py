@@ -13,14 +13,13 @@ RECV_BUFFER_SIZE = 1024
 MAX_CONNECTION_BACKLOG = 1
 SOCKET_ADDRESS = (HOSTNAME, PORT)
 
-fernet = None
-
 
 class Server:
     def __init__(self):
         print("Server object created!")
         self.student_dict = {}
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.fernet = None
 
         self.process_csv_file()
         self.create_listen_socket()
@@ -97,19 +96,18 @@ class Server:
     def parse_data(self, data: bytes) -> bytes:
         match data.decode(MSG_ENCODING).split():
             case student_id, cmd:
-                global fernet
                 student: Dict = self.student_dict.get(student_id)
 
                 print(f"Received {cmd} command from client.")
 
                 if not student:
-                    fernet = None
+                    self.fernet = None
                     print("User not found.")
                     return b""
 
                 print("User found.")
                 # Re-assign the fernet encryption object based on the student id
-                fernet = Fernet(student.get("Key").encode(MSG_ENCODING))
+                self.fernet = Fernet(student.get("Key").encode(MSG_ENCODING))
 
                 return self.parse_cmd(cmd, student)
             case _:
@@ -160,8 +158,7 @@ class Server:
         return self.send_message(f"{key} Average: {average}")
 
     def send_message(self, message: str):
-        global fernet
-        encrypted_message_bytes = fernet.encrypt(message.encode(MSG_ENCODING))
+        encrypted_message_bytes = self.fernet.encrypt(message.encode(MSG_ENCODING))
         print("encrypted_message_bytes = ", encrypted_message_bytes)
         return encrypted_message_bytes
 
