@@ -175,7 +175,7 @@ class Client:
     def __init__(self):
         print("Client object created!")
 
-        self.student_dict = {
+        self.encryption_key_dict = {
             "1803933":	"M7E8erO15CIh902P8DQsHxKbOADTgEPGHdiY0MplTuY=",
             "1884159":	"PWMKkdXW4VJ3pXBpr9UwjefmlIxYwPzk11Aw9TQ2wZQ=",
             "1853847":	"UVpoR9emIZDrpQ6pCLYopzE2Qm8bCrVyGEzdOOo2wXw=",
@@ -262,8 +262,7 @@ class Client:
             if len(recvd_bytes) == 0:
                 print("Did not receive message from server, closing server connection ... ")
             else:
-                encrpytion_key: Dict = self.student_dict.get(self.student_id)
-                fernet = Fernet(encrpytion_key.encode(MSG_ENCODING))
+                fernet = Fernet(self.encryption_key_dict.get(self.student_id).encode(MSG_ENCODING))
 
                 decrypted_message_bytes = fernet.decrypt(recvd_bytes)
                 decrypted_message = decrypted_message_bytes.decode(MSG_ENCODING)
