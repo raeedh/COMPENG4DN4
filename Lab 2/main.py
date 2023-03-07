@@ -171,7 +171,14 @@ class Client:
     # Set the server to connect to. If the server and client are running on the same machine, we can use the current hostname.
     SERVER_HOSTNAME = "localhost"
     # List of valid commands
-    CMDS = ["GMA", "GL1A", "GL2A", "GL3A", "GL4A", "GEA", "GG"]
+    CMDS = {"GMA" : "Fetching Midterm average:",
+            "GL1A": "Fetching Lab average:",
+            "GL2A": "Fetching Lab average:",
+            "GL3A": "Fetching Lab average:",
+            "GL4A": "Fetching Lab average:",
+            "GEA" : "Fetching Exam average:",
+            "GG"  : "Getting Grades:"
+    }
 
     def __init__(self):
         print("Client object created!")
@@ -206,17 +213,17 @@ class Client:
             self.user_input = input("Enter the student ID number, followed by an applicable command (e.g. 1234567 GMA): ")
 
             try:
-                self.student_id, cmd = self.user_input.split()
+                self.student_id, self.cmd = self.user_input.split()
             except Exception:
                 print("The input is invalid, please try again.")
                 continue
 
-            if (not self.student_id.isdigit()) or (len(self.student_id) != 7) or (cmd not in Client.CMDS):
+            if (not self.student_id.isdigit()) or (len(self.student_id) != 7) or (self.cmd not in Client.CMDS):
                 print("The student ID or command is invalid.")
                 continue
 
             print("Student ID:", self.student_id)
-            print("Command received:", cmd)
+            print("Command received:", self.cmd)
             print()
 
             try:
@@ -255,6 +262,7 @@ class Client:
 
     def connection_receive(self):
         try:
+            print(Client.CMDS.get(self.cmd))
             # Receive and print out text. The received bytes objects must be decoded into string objects.
             recvd_bytes = self.socket.recv(RECV_BUFFER_SIZE)
 
@@ -267,8 +275,8 @@ class Client:
 
                 decrypted_message_bytes = fernet.decrypt(recvd_bytes)
                 decrypted_message = decrypted_message_bytes.decode(MSG_ENCODING)
-                print("The message received back from the server is:", recvd_bytes)
-                print("The decrypted message is:", decrypted_message)
+                # print("The message received back from the server is:", recvd_bytes)
+                print(decrypted_message)
                 print()
             self.socket.close()
         except Exception as msg:
