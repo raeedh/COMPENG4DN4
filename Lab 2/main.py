@@ -79,18 +79,21 @@ class Server:
                     # WAIT 2 and we are in CLOSE WAIT.). If so, close the server end of the connection and get the next client connection.
                     if not data:
                         print("Closing client connection ... ")
+                        print()
                         break
 
                     result = self.parse_data(data)
 
                     if not result:
                         print("Closing client connection ... ")
+                        print()
                         break
 
                     conn.sendall(result)
                 except:
                     print()
                     print("Closing client connection ... ")
+                    print()
                     break
 
     def parse_data(self, data: bytes) -> bytes:
