@@ -19,6 +19,7 @@ class Server:
         print("Server object created!")
         self.student_dict = {}
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.fernet = None
 
         self.process_csv_file()
         self.create_listen_socket()
@@ -100,6 +101,7 @@ class Server:
                 print(f"Received {cmd} command from client.")
 
                 if not student:
+                    self.fernet = None
                     print("User not found.")
                     return b""
 
