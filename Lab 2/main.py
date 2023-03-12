@@ -18,7 +18,6 @@ class Server:
     def __init__(self):
         print("Server object created!")
         self.student_dict = {}
-        self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.fernet = None
 
         self.process_csv_file()

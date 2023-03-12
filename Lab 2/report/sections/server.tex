@@ -1,0 +1,10 @@
+\section*{Server Class}
+The server class code is run from the terminal and will listen for client requests made with TCP connections and respond with student grade information. When the server class initializes itself, it will open and parse the \texttt{course\_grades\_2023.csv} file containing the student grade information using the \texttt{csv} python package. The student grade information will be printed on the command line for the server host.
+
+The server client will then create an IPv4 TCP socket, and bind the socket to \texttt{localhost} (as the client will be running on the same host) on port 50007. The server socket is set to the listen state, and will be listening for any attempted TCP connections from the client. The server will block while waiting for accepting incoming connections, and will pass the socket to a connection handler function when a connection is accepted.
+
+The connection handler will attempt to receive bytes over the TCP connection. If no bytes are received from the connection, then we close the connection. Otherwise, we receive a command input from the client that we can use to parse the appropriate student grade information. If the student number received does not match to any in the CSV file, we will close the connection. 
+
+If the student number received does match any entry from the CSV file, we will match the student with the appropriate information requested by the command and encrypt the information. The encryption is done using the \texttt{cryptography} package and its \texttt{Fernet} method, using the encryption key found in the CSV file matching each student. The encrypted message is sent to client through the TCP connection, and then we close the connection.
+
+When we close the connection after responding to the student, or if we close the connection due to a non-matching student or not receiving a message through the connection, the server will return to listening for any new incoming connections and will repeat the process described above until the program is stopped.

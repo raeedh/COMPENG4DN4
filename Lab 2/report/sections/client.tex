@@ -1,0 +1,7 @@
+\section*{Client Class}
+The client class code is run from the terminal and will accept terminal inputs from the user, check if the input commands are valid and attempt to establish a TCP connection with the server to request student grade information from. When the client class initializes itself, it creates a dictionary of the student number and encryption key pairs which will be later used to decrypted student grade information responded by the server.
+
+The client will prompt the user for a valid input command (student ID followed by command), and will check if the input is valid. If the input is invalid (incorrect format, invalid command, or invalid student number) the host will prompt the user to retry. When a valid input is received, the client will attempt to connect to the server by creating an IPv4 TCP socket, and connecting it to the server at \texttt{localhost} on port 50007.
+
+If the TCP connection is established, the client will send the user input to the server, and wait for a response. If the client receives a response from the server, it will decrypt the message using the dictionary which was previously initialized in the client class, and the decrypted message to the user. The client will close the connection afterwards, whether or not it receives a response from the server. The client will return to prompting the user for an input when it has closed the TCP connection at any point.
+
