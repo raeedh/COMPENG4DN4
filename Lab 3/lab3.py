@@ -20,7 +20,11 @@ FILESIZE_FIELD_LEN       = 8 # 8 byte file size field.
 # be a 1-byte integer. For now, we only define the "GET" command,
 # which tells the server to send a file.
 
-CMD = {"GET" : 2}
+CMD = {
+    "get"  : b'\x01',
+    "put"  : b'\x02',
+    "list" : b'\x03'
+}
 
 MSG_ENCODING = "utf-8"
 SOCKET_TIMEOUT = 4
