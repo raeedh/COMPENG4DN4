@@ -1,0 +1,44 @@
+
+
+[
+  {
+  "first name" : "John",
+      "last name": "Smith",
+      "location" : "JHE 420",
+      "personal info" : {
+          "age": 30,
+          "gender": "male",
+          "marital status" : "single",
+          "address" : {
+              "number": "1280",
+              "street": "Main Street W",
+              "city": "Hamilton",
+              "province": "Ontario",
+              "country" : "Canada",
+              "phone number" : "905 555-0100"
+          }
+   }
+  },
+  {
+  "first name" : "Jane",
+      "last name": "Smith",
+      "location" : "JHE 421",
+      "personal info" : {
+          "age": 25,
+          "gender": "female",
+          "marital status" : "single",
+          "address" : {
+              "number": "1281",
+              "street": "Main Street W",
+              "city": "Hamilton",
+              "province": "Ontario",
+              "country" : "Canada",
+              "phone number" : "905 555-0101"
+          }
+     }
+  }
+]
+
+
+
+
