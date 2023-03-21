@@ -17,8 +17,7 @@ FILENAME_SIZE_FIELD_LEN  = 1 # 1 byte file name size field.
 FILESIZE_FIELD_LEN       = 8 # 8 byte file size field.
     
 # Define a dictionary of commands. The actual command field value must
-# be a 1-byte integer. For now, we only define the "GET" command,
-# which tells the server to send a file.
+# be a 1-byte integer.
 
 CMD = {
     "get"  : b'\x01',
@@ -128,6 +127,7 @@ class Server:
 class Client:
 
     FILE_DIRECTORY = "client_directory/"
+    FILE_NOT_FOUND_MSG = "Error: Requested file is not available!\n"
 
     SCAN_RECV_SIZE = 1024
     MSG_ENCODING = "utf-8"    
@@ -261,6 +261,41 @@ class Client:
                 self.llist()
                 continue
 
+            if (self.send_input == "rlist"):
+                try:
+                    self.rlist()
+                    continue
+                except Exception as msg:
+                    print(msg)
+                    print("Error getting remote file list from server, please try again.\n")
+                    continue
+
+            try:
+                connection_cmd, self.filename, = self.send_input.split()
+            except Exception:
+                print("The input is invalid, please try again.\n")
+                continue
+
+            if (connection_cmd == "get"):
+                try:
+                    self.get_file()
+                except Exception as msg:
+                    print(msg)
+                    print("Error getting file from server, please try again.\n")
+                    continue
+
+            if (connection_cmd == "put"):
+                if (not os.path.isfile(Client.FILE_DIRECTORY + self.filename)):
+                    print(Client.FILE_NOT_FOUND_MSG)
+                    continue
+
+                try:
+                    self.put_file()
+                except Exception as msg:
+                    print(msg)
+                    print("Error putting file on server, please try again.\n")
+                    continue
+
     def llist(self):
         try:
             if (not os.listdir(Client.FILE_DIRECTORY)): print("The client directory is empty.\n")
@@ -269,9 +304,148 @@ class Client:
             print(Server.FILE_NOT_FOUND_MSG)
             print("Client file directory does not exist!\n")
 
+    def rlist(self):
+        # Create the packet cmd field.
+        cmd_field = CMD["list"].to_bytes(CMD_FIELD_LEN, byteorder='big')
 
+        # Send the request packet to the server.
+        self.socket.sendall(cmd_field)
 
+        ################################################################
+        # Process the list repsonse from the server
 
+        # Read the response size returned by the server.
+        status, response_size_bytes = recv_bytes(self.socket, FILESIZE_FIELD_LEN)
+        if not status:
+            print("No listing size returned by server...\n")            
+            return
+
+        print("Response size bytes = ", response_size_bytes.hex())
+        if len(response_size_bytes) == 0:
+            return
+
+        # Make sure that you interpret it in host byte order.
+        listing_size = int.from_bytes(response_size_bytes, byteorder='big')
+        print("Listing size = ", listing_size)
+
+        # self.socket.settimeout(4)                                  
+        status, recvd_bytes_total = recv_bytes(self.socket, listing_size)
+        if not status:
+            print("No listing returned by server...\n")            
+            return
+        try:
+            print(recvd_bytes_total.decode(MSG_ENCODING))
+        except KeyboardInterrupt:
+            print()
+
+    def get_file(self):
+        ################################################################
+        # Generate a file transfer request to the server
+        
+        # Create the packet cmd field.
+        cmd_field = CMD["get"].to_bytes(CMD_FIELD_LEN, byteorder='big')
+
+        # Create the packet filename field.
+        filename_field_bytes = self.filename.encode(MSG_ENCODING)
+
+        # Create the packet filename size field.
+        filename_size_field = len(filename_field_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
+
+        # Create the packet.
+        print("CMD field: ", cmd_field.hex())
+        print("Filename_size_field: ", filename_size_field.hex())
+        print("Filename field: ", filename_field_bytes.hex())
+        
+        pkt = cmd_field + filename_size_field + filename_field_bytes
+
+        # Send the request packet to the server.
+        self.socket.sendall(pkt)
+
+        ################################################################
+        # Process the file transfer repsonse from the server
+        
+        # Read the file size field returned by the server.
+        status, file_size_bytes = recv_bytes(self.socket, FILESIZE_FIELD_LEN)
+        if not status:
+            print("No file size returned by server...\n")            
+            return
+
+        print("File size bytes = ", file_size_bytes.hex())
+        if len(file_size_bytes) == 0:
+            return
+
+        # Make sure that you interpret it in host byte order.
+        file_size = int.from_bytes(file_size_bytes, byteorder='big')
+        print("File size = ", file_size)
+
+        # self.socket.settimeout(4)                                  
+        status, recvd_bytes_total = recv_bytes(self.socket, file_size)
+        if not status:
+            print("No file returned by server...\n")            
+            return
+        # print("recvd_bytes_total = ", recvd_bytes_total)
+        # Receive the file itself.
+        try:
+            # Create a file using the received filename and store the
+            # data.
+            print("Received {} bytes. Creating file: {}" \
+                .format(len(recvd_bytes_total), self.filename))
+
+            with open(self.filename, 'w') as f:
+                recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
+                f.write(recvd_file)
+            print(recvd_file)
+        except KeyboardInterrupt:
+            print()
+
+    def put_file(self):
+        ################################################################
+        # Generate a file transfer request to the server
+        
+        # Create the packet cmd field.
+        cmd_field = CMD["put"].to_bytes(CMD_FIELD_LEN, byteorder='big')
+
+        # Create the packet filename field.
+        filename_field_bytes = self.filename.encode(MSG_ENCODING)
+
+        # Create the packet filename size field.
+        filename_size_field = len(filename_field_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
+
+        # Create the packet.
+        print("CMD field: ", cmd_field.hex())
+        print("Filename_size_field: ", filename_size_field.hex())
+        print("Filename field: ", filename_field_bytes.hex())
+
+        ################################################################
+        # See if we can open the requested file. If so, send it.
+        
+        # If we can't find the requested file, exit function
+        try:
+            file = open(Client.FILE_DIRECTORY + self.filename, 'r').read()
+        except FileNotFoundError:
+            print(Client.FILE_NOT_FOUND_MSG)
+            return
+
+        # Encode the file contents into bytes, record its size and
+        # generate the file size field used for transmission.
+        file_bytes = file.encode(MSG_ENCODING)
+        file_size_bytes = len(file_bytes)
+        file_size_field = file_size_bytes.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
+
+        # Create the packet to be sent with the header field.
+        pkt = cmd_field + filename_field_bytes + filename_size_field + file_size_field + file_bytes
+
+        try:
+            # Send the packet to the connected server.
+            self.socket.sendall(pkt)
+            print("Sending file: ", self.filename)
+            print("file size field: ", file_size_field.hex(), "\n")
+            # time.sleep(20)
+        except socket.error:
+            print("Error occuring sending file to server...\n")
+            return
+        finally:
+            return
 
 ########################################################################
 # Process command line arguments if run directly.
