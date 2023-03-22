@@ -172,13 +172,16 @@ class Server:
         # Convert the command to our native byte order.
         cmd = int.from_bytes(cmd_field, byteorder='big')
         # Give up if we don't get a GET command.
-        if cmd != CMD["GET"]:
-            print("GET command not received. Closing connection ...")
+        if cmd == CMD["get"]:
+            self.get_file(connection)
+        elif cmd == CMD["put"]:
+            self.put_file(connection)
+        elif cmd == CMD["list"]:
+            self.list(connection)
+        else:
+            print("Valid command not received. Closing connection ...")
             connection.close()
             return
-
-        self.get_file(connection)
-
 
     def get_file(self, connection):
         # GET command is good. Read the filename size (bytes).
