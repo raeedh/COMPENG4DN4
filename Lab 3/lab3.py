@@ -190,6 +190,7 @@ class Server:
             print("Closing connection ...")
             connection.close()
             return
+
         filename_size_bytes = int.from_bytes(filename_size_field, byteorder='big')
         if not filename_size_bytes:
             print("Connection is closed!")
@@ -242,6 +243,77 @@ class Server:
             print("Closing client connection ...")
             connection.close()
             return
+
+    def put_file(self, connection):
+        # PUT command is good. Read the filename size (bytes).
+        status, filename_size_field = recv_bytes(connection, FILENAME_SIZE_FIELD_LEN)
+        if not status:
+            print("Closing connection ...")
+            connection.close()
+            return
+
+        filename_size_bytes = int.from_bytes(filename_size_field, byteorder='big')
+        if not filename_size_bytes:
+            print("Connection is closed!")
+            connection.close()
+            return
+
+        print('Filename size (bytes) = ', filename_size_bytes)
+
+        # Now read and decode the requested filename.
+        status, filename_bytes = recv_bytes(connection, filename_size_bytes)
+        if not status:
+            print("Closing connection ...")
+            connection.close()
+            return
+        if not filename_bytes:
+            print("Connection is closed!")
+            connection.close()
+            return
+
+        filename = filename_bytes.decode(MSG_ENCODING)
+        print('Requested filename = ', filename)
+
+        ################################################################
+        # Process the file transfer response from the client
+
+        # Read the file size field returned by the server.
+        status, file_size_bytes = recv_bytes(connection, FILESIZE_FIELD_LEN)
+        if not status:
+            print("Closing connection ...")
+            connection.close()
+            return
+
+        print("File size bytes = ", file_size_bytes.hex())
+        if len(file_size_bytes) == 0:
+            connection.close()
+            return
+
+        # Make sure that you interpret it in host byte order.
+        file_size = int.from_bytes(file_size_bytes, byteorder='big')
+        print("File size = ", file_size)
+
+        status, recvd_bytes_total = recv_bytes(connection, file_size)
+        if not status:
+            print("Closing connection ...")
+            connection.close()
+            return
+
+        # Receive the file itself.
+        try:
+            # Create a file using the received filename and store the data.
+            print(f"Received {len(recvd_bytes_total)} bytes. Creating file: {filename}")
+
+            with open(filename, 'w') as f:
+                recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
+                f.write(recvd_file)
+        except KeyboardInterrupt:
+            print()
+            exit(1)
+
+    def list(self, connection):
+
+        pass
 
 ########################################################################
 # CLIENT
