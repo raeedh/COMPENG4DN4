@@ -312,7 +312,7 @@ class Server:
             print(f"Received {len(recvd_bytes_total)} bytes. Creating file: {filename}")
             # recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
 
-            with open(filename, 'wb') as f:
+            with open(Server.FILE_DIRECTORY + filename, 'wb') as f:
                 f.write(recvd_bytes_total)
         except KeyboardInterrupt:
             print()
