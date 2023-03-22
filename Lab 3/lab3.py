@@ -65,7 +65,6 @@ def recv_bytes(sock, bytecount_target):
 ########################################################################
 # SERVER
 ########################################################################
-
 class Server:
     ALL_IF_ADDRESS = "0.0.0.0"
     SERVICE_SCAN_PORT = 30000
@@ -143,7 +142,6 @@ class Server:
             self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             self.socket.bind(Server.LISTEN_ADDRESS_PORT)
             self.socket.listen(Server.BACKLOG)
-            # print("Listening on port {} ...".format(Server.LISTEN_PORT))
         except Exception as msg:
             print(msg)
             exit()
@@ -164,7 +162,6 @@ class Server:
 
         ################################################################
         # Process a connection and see if the client wants a file that we have.
-
         try:
             while True:
                 # Read the command and see if it is a GET command.
@@ -176,7 +173,8 @@ class Server:
                     return
                 # Convert the command to our native byte order.
                 cmd = int.from_bytes(cmd_field, byteorder='big')
-                # Give up if we don't get a GET command.
+
+                # Give up if we don't get a valid command.
                 if cmd == CMD["get"]:
                     self.get_file(connection)
                 elif cmd == CMD["put"]:
@@ -232,7 +230,6 @@ class Server:
             return
 
         # Encode the file contents into bytes, record its size and generate the file size field used for transmission.
-        # file_bytes = file.encode(MSG_ENCODING)
         file_size_bytes = len(file)
         file_size_field = file_size_bytes.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
 
@@ -244,7 +241,6 @@ class Server:
             connection.sendall(pkt)
             print("Sending file: ", filename)
             print("file size field: ", file_size_field.hex(), "\n")
-            # time.sleep(20)
         except socket.error:
             # If the client has closed the connection, close the socket on this end.
             print("Closing client connection ...")
@@ -310,7 +306,6 @@ class Server:
         try:
             # Create a file using the received filename and store the data.
             print(f"Received {len(recvd_bytes_total)} bytes. Creating file: {filename}")
-            # recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
 
             with open(Server.FILE_DIRECTORY + filename, 'wb') as f:
                 f.write(recvd_bytes_total)
@@ -342,7 +337,6 @@ class Server:
 ########################################################################
 # CLIENT
 ########################################################################
-
 class Client:
     FILE_DIRECTORY = "client_directory/"
     FILE_NOT_FOUND_MSG = "Error: Requested file is not available!\n"
@@ -425,8 +419,7 @@ class Client:
         # Arrange to send a broadcast service discovery packet.
         self.scan_socket.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
 
-        # Set the socket for a socket.timeout if a scanning recv
-        # fails.
+        # Set the socket for a socket.timeout if a scanning recv fails.
         self.scan_socket.settimeout(Client.SCAN_TIMEOUT)
 
     def scan_for_service(self):
@@ -441,10 +434,8 @@ class Client:
             self.scan_socket.sendto(Client.SCAN_CMD_ENCODED, Client.ADDRESS_PORT)
 
             while True:
-                # Listen for service responses. So long as we keep
-                # receiving responses, keep going. Timeout if none are
-                # received and terminate the listening for this scan
-                # cycle.
+                # Listen for service responses. So long as we keep receiving responses, keep going. Timeout if none are received and
+                # terminate the listening for this scan cycle.
                 try:
                     recvd_bytes, address = self.scan_socket.recvfrom(Client.SCAN_RECV_SIZE)
                     recvd_msg = recvd_bytes.decode(Client.MSG_ENCODING)
@@ -453,8 +444,7 @@ class Client:
                     if (recvd_msg, address) not in scan_results:
                         scan_results.append((recvd_msg, address))
                         continue
-                # If we timeout listening for a new response, we are
-                # finished.
+                # If we timeout listening for a new response, we are finished.
                 except socket.timeout:
                     break
 
@@ -547,7 +537,7 @@ class Client:
         self.socket.sendall(cmd_field)
 
         ################################################################
-        # Process the list repsonse from the server
+        # Process the list response from the server
 
         # Read the response size returned by the server.
         status, response_size_bytes = recv_bytes(self.socket, FILESIZE_FIELD_LEN)
@@ -596,7 +586,7 @@ class Client:
         self.socket.sendall(pkt)
 
         ################################################################
-        # Process the file transfer repsonse from the server
+        # Process the file transfer response from the server
 
         # Read the file size field returned by the server.
         status, file_size_bytes = recv_bytes(self.socket, FILESIZE_FIELD_LEN)
@@ -612,23 +602,18 @@ class Client:
         file_size = int.from_bytes(file_size_bytes, byteorder='big')
         print("File size = ", file_size)
 
-        # self.socket.settimeout(4)                                  
         status, recvd_bytes_total = recv_bytes(self.socket, file_size)
         if not status:
             print("No file returned by server...\n")
             return
-        # print("recvd_bytes_total = ", recvd_bytes_total)
+
         # Receive the file itself.
         try:
-            # Create a file using the received filename and store the
-            # data.
-            print("Received {} bytes. Creating file: {}" \
-                  .format(len(recvd_bytes_total), self.filename))
+            # Create a file using the received filename and store the data.
+            print(f"Received {len(recvd_bytes_total)} bytes. Creating file: {self.filename}")
 
             with open(Client.FILE_DIRECTORY + self.filename, 'wb') as f:
-                # recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
                 f.write(recvd_bytes_total)
-            # print(recvd_bytes_total.decode(MSG_ENCODING))
         except KeyboardInterrupt:
             print()
 
@@ -651,18 +636,14 @@ class Client:
         print("Filename field: ", filename_field_bytes.hex())
 
         ################################################################
-        # See if we can open the requested file. If so, send it.
-
-        # If we can't find the requested file, exit function
+        # See if we can open the requested file. If so, send it. If we can't find the requested file, exit function
         try:
             file = open(Client.FILE_DIRECTORY + self.filename, 'rb').read()
         except FileNotFoundError:
             print(Client.FILE_NOT_FOUND_MSG)
             return
 
-        # Encode the file contents into bytes, record its size and
-        # generate the file size field used for transmission.
-        # file_bytes = file.encode(MSG_ENCODING)
+        # Encode the file contents into bytes, record its size and generate the file size field used for transmission.
         file_size_bytes = len(file)
         file_size_field = file_size_bytes.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
 
@@ -674,7 +655,6 @@ class Client:
             self.socket.sendall(pkt)
             print("Sending file: ", self.filename)
             print("file size field: ", file_size_field.hex(), "\n")
-            # time.sleep(20)
         except socket.error:
             print("Error occuring sending file to server...\n")
             return
