@@ -407,7 +407,7 @@ class Client:
             try:
                 self.connection_server()
             except (KeyboardInterrupt, EOFError):
-                print("Closing server connection ...\n")
+                print("Closing server connection...\n")
                 # If we get an error or keyboard interrupt, make sure that we close the socket.
                 self.socket.close()
 
@@ -480,7 +480,7 @@ class Client:
                     self.llist()
                     continue
                 except Exception as msg:
-                    print(msg)
+                    # print(msg)
                     print("Error getting local file list, please try again.\n")
                     continue
 
@@ -489,9 +489,10 @@ class Client:
                     self.rlist()
                     continue
                 except Exception as msg:
-                    print(msg)
-                    print("Error getting remote file list from server, please try again.\n")
-                    continue
+                    # print(msg)
+                    print("Error getting remote file list from server, closing server connection.\n")
+                    self.socket.close()
+                    break
 
             try:
                 connection_cmd, self.filename, = self.send_input.split()
@@ -504,8 +505,9 @@ class Client:
                     self.get_file()
                 except Exception as msg:
                     print(msg)
-                    print("Error getting file from server, please try again.\n")
-                    continue
+                    print("Error getting file from server, closing server connection.\n")
+                    self.socket.close()
+                    break
 
             if connection_cmd == "put":
                 if not os.path.isfile(Client.FILE_DIRECTORY + self.filename):
@@ -516,8 +518,9 @@ class Client:
                     self.put_file()
                 except Exception as msg:
                     print(msg)
-                    print("Error putting file on server, please try again.\n")
-                    continue
+                    print("Error putting file on server, closing server connection.\n")
+                    self.socket.close()
+                    break
 
     def llist(self):
         try:
@@ -542,8 +545,8 @@ class Client:
         # Read the response size returned by the server.
         status, response_size_bytes = recv_bytes(self.socket, FILESIZE_FIELD_LEN)
         if not status:
-            print("No listing size returned by server...\n")
-            return
+            print("No response from server...\n")
+            raise Exception
 
         print("Response size bytes = ", response_size_bytes.hex())
         if len(response_size_bytes) == 0:
@@ -555,8 +558,8 @@ class Client:
 
         status, recvd_bytes_total = recv_bytes(self.socket, listing_size)
         if not status:
-            print("No listing returned by server...\n")
-            return
+            print("No response from server...\n")
+            raise Exception
         try:
             print(recvd_bytes_total.decode(MSG_ENCODING))
         except KeyboardInterrupt:
@@ -591,8 +594,8 @@ class Client:
         # Read the file size field returned by the server.
         status, file_size_bytes = recv_bytes(self.socket, FILESIZE_FIELD_LEN)
         if not status:
-            print("No file size returned by server...\n")
-            return
+            print("No response from server...\n")
+            raise Exception
 
         print("File size bytes = ", file_size_bytes.hex())
         if len(file_size_bytes) == 0:
@@ -604,8 +607,8 @@ class Client:
 
         status, recvd_bytes_total = recv_bytes(self.socket, file_size)
         if not status:
-            print("No file returned by server...\n")
-            return
+            print("No response from server...\n")
+            raise Exception
 
         # Receive the file itself.
         try:
