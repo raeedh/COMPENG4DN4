@@ -177,6 +177,10 @@ class Server:
             connection.close()
             return
 
+        self.get_file(connection)
+
+
+    def get_file(self, connection):
         # GET command is good. Read the filename size (bytes).
         status, filename_size_field = recv_bytes(connection, FILENAME_SIZE_FIELD_LEN)
         if not status:
@@ -268,8 +272,8 @@ class Client:
 
     def get_console_input(self):
         while True:
-            self.user_input = input(
-                "Use the scan command to find available file sharing services.\nUse the connect <ip address> <port> command to connect once the server is found.\n")
+            self.user_input = input("Use the scan command to find available file sharing services.\nUse the connect <ip address> <port> "
+                                    "command to connect once the server is found.\n")
 
             if self.user_input == "scan":
                 try:
