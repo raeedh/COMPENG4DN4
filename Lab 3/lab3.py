@@ -76,7 +76,7 @@ class Server:
     SCAN_CMD = "SERVICE DISCOVERY"
     SCAN_CMD_ENCODED = SCAN_CMD.encode(MSG_ENCODING)
 
-    MSG = "A&R's File Sharing Service Availabe on Port 30001 (connect 172.20.22.157 30001)"
+    MSG = "A&R's File Sharing Service Availabe on Port 30001 (connect 0.0.0.0 30001)"
     MSG_ENCODED = MSG.encode(MSG_ENCODING)
 
     LISTEN_PORT = 30001
@@ -118,7 +118,7 @@ class Server:
     def receive_udp_forever(self):
         while True:
             try:
-                print(Server.MSG, "listening on port {} ...".format(Server.SERVICE_SCAN_PORT))
+                print(Server.MSG, "Listening for service discovery messages on SDP port {}.".format(Server.SERVICE_SCAN_PORT))
                 recvd_bytes, address = self.udp_socket.recvfrom(Server.RECV_SIZE)
 
                 print("Received: ", recvd_bytes.decode('utf-8'), " Address:", address)
@@ -141,7 +141,7 @@ class Server:
             self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             self.socket.bind(Server.LISTEN_ADDRESS_PORT)
             self.socket.listen(Server.BACKLOG)
-            print("Listening on port {} ...".format(Server.LISTEN_PORT))
+            # print("Listening on port {} ...".format(Server.LISTEN_PORT))
         except Exception as msg:
             print(msg)
             exit()
@@ -149,6 +149,7 @@ class Server:
     def process_connections_forever(self):
         try:
             while True:
+                print("Listening for file sharing connections on port {}.".format(Server.LISTEN_ADDRESS_PORT))
                 self.connection_handler(self.socket.accept())
         except KeyboardInterrupt:
             print()
