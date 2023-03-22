@@ -2,31 +2,31 @@
 
 ########################################################################
 
-import socket
 import argparse
-import sys
-import time
 import os
+import socket
+import sys
 
 ########################################################################
 
 # Define all of the packet protocol field lengths.
 
-CMD_FIELD_LEN            = 1 # 1 byte commands sent from the client.
-FILENAME_SIZE_FIELD_LEN  = 1 # 1 byte file name size field.
-FILESIZE_FIELD_LEN       = 8 # 8 byte file size field.
-    
+CMD_FIELD_LEN = 1  # 1 byte commands sent from the client.
+FILENAME_SIZE_FIELD_LEN = 1  # 1 byte file name size field.
+FILESIZE_FIELD_LEN = 8  # 8 byte file size field.
+
 # Define a dictionary of commands. The actual command field value must
 # be a 1-byte integer.
 
 CMD = {
-    "get"  : b'\x01',
-    "put"  : b'\x02',
-    "list" : b'\x03'
+    "get": b'\x01',
+    "put": b'\x02',
+    "list": b'\x03'
 }
 
 MSG_ENCODING = "utf-8"
 SOCKET_TIMEOUT = 4
+
 
 ########################################################################
 # recv_bytes frontend to recv
@@ -39,47 +39,50 @@ def recv_bytes(sock, bytecount_target):
     # information.
     sock.settimeout(SOCKET_TIMEOUT)
     try:
-        byte_recv_count = 0 # total received bytes
-        recv_bytes = b''    # complete received message
+        byte_recv_count = 0  # total received bytes
+        recv_bytes = b''  # complete received message
         while byte_recv_count < bytecount_target:
             # Ask the socket for the remaining byte count.
-            new_bytes = sock.recv(bytecount_target-byte_recv_count)
+            new_bytes = sock.recv(bytecount_target - byte_recv_count)
             # If ever the other end closes on us before we are done,
             # give up and return a False status with zero bytes.
             if not new_bytes:
-                return(False, b'')
+                return False, b''
             byte_recv_count += len(new_bytes)
             recv_bytes += new_bytes
         # Turn off the socket timeout if we finish correctly.
-        sock.settimeout(None)            
-        return (True, recv_bytes)
+        sock.settimeout(None)
+        return True, recv_bytes
     # If the socket times out, something went wrong. Return a False
     # status.
     except socket.timeout:
-        sock.settimeout(None)        
+        sock.settimeout(None)
         print("recv_bytes: Recv socket timeout!")
-        return (False, b'')
+        return False, b''
+
 
 ########################################################################
 # SERVER
 ########################################################################
 
 class Server:
-
     ALL_IF_ADDRESS = "0.0.0.0"
     SERVICE_SCAN_PORT = 30000
     ADDRESS_PORT = (ALL_IF_ADDRESS, SERVICE_SCAN_PORT)
 
-    MSG_ENCODING = "utf-8"    
-    
+    MSG_ENCODING = "utf-8"
+
     SCAN_CMD = "SERVICE DISCOVERY"
     SCAN_CMD_ENCODED = SCAN_CMD.encode(MSG_ENCODING)
-    
-    MSG = "Mel's File Sharing Service"
+
+    MSG = "A&R's File Sharing Service"
     MSG_ENCODED = MSG.encode(MSG_ENCODING)
 
     RECV_SIZE = 1024
     BACKLOG = 10
+
+    FILE_DIRECTORY = "server_directory/"
+    FILE_NOT_FOUND_MSG = "Error: Requested file is not available!\n"
 
     def __init__(self):
         self.create_socket()
@@ -94,7 +97,7 @@ class Server:
             self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
             # Bind socket to socket address, i.e., IP address and port.
-            self.socket.bind( (Server.ALL_IF_ADDRESS, Server.SERVICE_SCAN_PORT) )
+            self.socket.bind((Server.ALL_IF_ADDRESS, Server.SERVICE_SCAN_PORT))
         except Exception as msg:
             print(msg)
             sys.exit(1)
@@ -106,7 +109,7 @@ class Server:
                 recvd_bytes, address = self.socket.recvfrom(Server.RECV_SIZE)
 
                 print("Received: ", recvd_bytes.decode('utf-8'), " Address:", address)
-            
+
                 # Decode the received bytes back into strings.
                 recvd_str = recvd_bytes.decode(Server.MSG_ENCODING)
 
@@ -120,17 +123,17 @@ class Server:
                 print()
                 sys.exit(1)
 
+
 ########################################################################
 # CLIENT
 ########################################################################
 
 class Client:
-
     FILE_DIRECTORY = "client_directory/"
     FILE_NOT_FOUND_MSG = "Error: Requested file is not available!\n"
 
     SCAN_RECV_SIZE = 1024
-    MSG_ENCODING = "utf-8"    
+    MSG_ENCODING = "utf-8"
 
     BROADCAST_ADDRESS = "255.255.255.255"
     SERVICE_PORT = 30000
@@ -149,9 +152,10 @@ class Client:
 
     def get_console_input(self):
         while True:
-            self.user_input = input("Use the scan command to find available file sharing services.\nUse the connect <ip address> <port> command to connect once the server is found.\n")
+            self.user_input = input(
+                "Use the scan command to find available file sharing services.\nUse the connect <ip address> <port> command to connect once the server is found.\n")
 
-            if (self.user_input == "scan"):
+            if self.user_input == "scan":
                 try:
                     self.connection_scan()
                     self.scan_for_service()
@@ -160,18 +164,18 @@ class Client:
                     print(msg)
                     print("Failed to scan for available servers, please try again.\n")
                     continue
-            
+
             try:
                 connect_cmd, self.server_ip_address, self.server_port = self.user_input.split()
             except Exception:
                 print("The input is invalid, please try again.\n")
                 continue
 
-            if (connect_cmd != "connect"):
+            if connect_cmd != "connect":
                 print("The command is invalid, please try again.\n")
                 continue
 
-            if (not self.server_port.isdigit()):
+            if not self.server_port.isdigit():
                 print("The port number is invalid, please try again.\n")
                 continue
 
@@ -199,7 +203,7 @@ class Client:
 
         # Set the socket for a socket.timeout if a scanning recv
         # fails.
-        self.scan_socket.settimeout(Client.SCAN_TIMEOUT);
+        self.scan_socket.settimeout(Client.SCAN_TIMEOUT)
 
     def scan_for_service(self):
         # Collect our scan results in a list.
@@ -209,9 +213,9 @@ class Client:
         for i in range(Client.SCAN_CYCLES):
 
             # Send a service discovery broadcast.
-            print("Sending broadcast scan {}".format(i))            
+            print("Sending broadcast scan {}".format(i))
             self.scan_socket.sendto(Client.SCAN_CMD_ENCODED, Client.ADDRESS_PORT)
-        
+
             while True:
                 # Listen for service responses. So long as we keep
                 # receiving responses, keep going. Timeout if none are
@@ -252,16 +256,16 @@ class Client:
         while True:
             self.send_input = input("Input a valid file service command.\n")
 
-            if (self.send_input == "bye"):
+            if self.send_input == "bye":
                 print("Closing server connection ...\n")
                 self.socket.close()
                 break
 
-            if (self.send_input == "llist"):
+            if self.send_input == "llist":
                 self.llist()
                 continue
 
-            if (self.send_input == "rlist"):
+            if self.send_input == "rlist":
                 try:
                     self.rlist()
                     continue
@@ -276,7 +280,7 @@ class Client:
                 print("The input is invalid, please try again.\n")
                 continue
 
-            if (connection_cmd == "get"):
+            if connection_cmd == "get":
                 try:
                     self.get_file()
                 except Exception as msg:
@@ -284,8 +288,8 @@ class Client:
                     print("Error getting file from server, please try again.\n")
                     continue
 
-            if (connection_cmd == "put"):
-                if (not os.path.isfile(Client.FILE_DIRECTORY + self.filename)):
+            if connection_cmd == "put":
+                if not os.path.isfile(Client.FILE_DIRECTORY + self.filename):
                     print(Client.FILE_NOT_FOUND_MSG)
                     continue
 
@@ -298,10 +302,12 @@ class Client:
 
     def llist(self):
         try:
-            if (not os.listdir(Client.FILE_DIRECTORY)): print("The client directory is empty.\n")
-            else: print(os.listdir(Client.FILE_DIRECTORY))
+            if not os.listdir(Client.FILE_DIRECTORY):
+                print("The client directory is empty.\n")
+            else:
+                print(os.listdir(Client.FILE_DIRECTORY))
         except FileNotFoundError:
-            print(Server.FILE_NOT_FOUND_MSG)
+            print(Client.FILE_NOT_FOUND_MSG)
             print("Client file directory does not exist!\n")
 
     def rlist(self):
@@ -317,7 +323,7 @@ class Client:
         # Read the response size returned by the server.
         status, response_size_bytes = recv_bytes(self.socket, FILESIZE_FIELD_LEN)
         if not status:
-            print("No listing size returned by server...\n")            
+            print("No listing size returned by server...\n")
             return
 
         print("Response size bytes = ", response_size_bytes.hex())
@@ -331,7 +337,7 @@ class Client:
         # self.socket.settimeout(4)                                  
         status, recvd_bytes_total = recv_bytes(self.socket, listing_size)
         if not status:
-            print("No listing returned by server...\n")            
+            print("No listing returned by server...\n")
             return
         try:
             print(recvd_bytes_total.decode(MSG_ENCODING))
@@ -341,7 +347,7 @@ class Client:
     def get_file(self):
         ################################################################
         # Generate a file transfer request to the server
-        
+
         # Create the packet cmd field.
         cmd_field = CMD["get"].to_bytes(CMD_FIELD_LEN, byteorder='big')
 
@@ -355,7 +361,7 @@ class Client:
         print("CMD field: ", cmd_field.hex())
         print("Filename_size_field: ", filename_size_field.hex())
         print("Filename field: ", filename_field_bytes.hex())
-        
+
         pkt = cmd_field + filename_size_field + filename_field_bytes
 
         # Send the request packet to the server.
@@ -363,11 +369,11 @@ class Client:
 
         ################################################################
         # Process the file transfer repsonse from the server
-        
+
         # Read the file size field returned by the server.
         status, file_size_bytes = recv_bytes(self.socket, FILESIZE_FIELD_LEN)
         if not status:
-            print("No file size returned by server...\n")            
+            print("No file size returned by server...\n")
             return
 
         print("File size bytes = ", file_size_bytes.hex())
@@ -381,7 +387,7 @@ class Client:
         # self.socket.settimeout(4)                                  
         status, recvd_bytes_total = recv_bytes(self.socket, file_size)
         if not status:
-            print("No file returned by server...\n")            
+            print("No file returned by server...\n")
             return
         # print("recvd_bytes_total = ", recvd_bytes_total)
         # Receive the file itself.
@@ -389,7 +395,7 @@ class Client:
             # Create a file using the received filename and store the
             # data.
             print("Received {} bytes. Creating file: {}" \
-                .format(len(recvd_bytes_total), self.filename))
+                  .format(len(recvd_bytes_total), self.filename))
 
             with open(self.filename, 'w') as f:
                 recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
@@ -401,7 +407,7 @@ class Client:
     def put_file(self):
         ################################################################
         # Generate a file transfer request to the server
-        
+
         # Create the packet cmd field.
         cmd_field = CMD["put"].to_bytes(CMD_FIELD_LEN, byteorder='big')
 
@@ -418,7 +424,7 @@ class Client:
 
         ################################################################
         # See if we can open the requested file. If so, send it.
-        
+
         # If we can't find the requested file, exit function
         try:
             file = open(Client.FILE_DIRECTORY + self.filename, 'r').read()
@@ -447,16 +453,17 @@ class Client:
         finally:
             return
 
+
 ########################################################################
 # Process command line arguments if run directly.
 ########################################################################
 
 if __name__ == '__main__':
-    roles = {'client': Client,'server': Server}
+    roles = {'client': Client, 'server': Server}
     parser = argparse.ArgumentParser()
 
     parser.add_argument('-r', '--role',
-                        choices=roles, 
+                        choices=roles,
                         help='server or client role',
                         required=True, type=str)
 
@@ -464,9 +471,3 @@ if __name__ == '__main__':
     roles[args.role]()
 
 ########################################################################
-
-
-
-
-
-
