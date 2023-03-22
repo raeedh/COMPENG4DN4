@@ -303,9 +303,9 @@ class Server:
         try:
             # Create a file using the received filename and store the data.
             print(f"Received {len(recvd_bytes_total)} bytes. Creating file: {filename}")
+            recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
 
             with open(filename, 'w') as f:
-                recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
                 f.write(recvd_file)
         except KeyboardInterrupt:
             print()
