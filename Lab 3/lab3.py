@@ -242,10 +242,6 @@ class Server:
             print("Closing client connection ...")
             connection.close()
             return
-        finally:
-            connection.close()
-            return
-
 
 ########################################################################
 # CLIENT
