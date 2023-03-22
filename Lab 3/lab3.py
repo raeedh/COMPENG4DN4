@@ -76,7 +76,7 @@ class Server:
     SCAN_CMD = "SERVICE DISCOVERY"
     SCAN_CMD_ENCODED = SCAN_CMD.encode(MSG_ENCODING)
 
-    MSG = "A&R's File Sharing Service"
+    MSG = "A&R's File Sharing Service Availabe on Port 30001 (connect 172.20.22.157 30001)"
     MSG_ENCODED = MSG.encode(MSG_ENCODING)
 
     LISTEN_PORT = 30001
