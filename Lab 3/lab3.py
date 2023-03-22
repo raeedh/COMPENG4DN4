@@ -89,6 +89,8 @@ class Server:
     FILE_NOT_FOUND_MSG = "Error: Requested file is not available!\n"
 
     def __init__(self):
+        print(os.listdir(Server.FILE_DIRECTORY)) 
+
         udp_thread = Thread(target=self.listen_for_udp)
         udp_thread.start()
 
@@ -163,26 +165,30 @@ class Server:
         ################################################################
         # Process a connection and see if the client wants a file that we have.
 
-        # Read the command and see if it is a GET command.
-        status, cmd_field = recv_bytes(connection, CMD_FIELD_LEN)
-        # If the read fails, give up.
-        if not status:
-            print("Closing connection ...")
-            connection.close()
-            return
-        # Convert the command to our native byte order.
-        cmd = int.from_bytes(cmd_field, byteorder='big')
-        # Give up if we don't get a GET command.
-        if cmd == CMD["get"]:
-            self.get_file(connection)
-        elif cmd == CMD["put"]:
-            self.put_file(connection)
-        elif cmd == CMD["list"]:
-            self.list(connection)
-        else:
-            print("Valid command not received. Closing connection ...")
-            connection.close()
-            return
+        try:
+            while True:
+                # Read the command and see if it is a GET command.
+                status, cmd_field = recv_bytes(connection, CMD_FIELD_LEN)
+                # If the read fails, give up.
+                if not status:
+                    print("Closing connection ...")
+                    connection.close()
+                    return
+                # Convert the command to our native byte order.
+                cmd = int.from_bytes(cmd_field, byteorder='big')
+                # Give up if we don't get a GET command.
+                if cmd == CMD["get"]:
+                    self.get_file(connection)
+                elif cmd == CMD["put"]:
+                    self.put_file(connection)
+                elif cmd == CMD["list"]:
+                    self.list(connection)
+                else:
+                    print("Valid command not received. Closing connection ...")
+                    connection.close()
+                    return
+        except KeyboardInterrupt:
+            print()
 
     def get_file(self, connection):
         # GET command is good. Read the filename size (bytes).
@@ -219,19 +225,19 @@ class Server:
 
         # If we can't find the requested file, shutdown the connection and wait for someone else.
         try:
-            file = open(Server.FILE_DIRECTORY + filename, 'r').read()
+            file = open(Server.FILE_DIRECTORY + filename, 'rb').read()
         except FileNotFoundError:
             print(Server.FILE_NOT_FOUND_MSG)
             connection.close()
             return
 
         # Encode the file contents into bytes, record its size and generate the file size field used for transmission.
-        file_bytes = file.encode(MSG_ENCODING)
-        file_size_bytes = len(file_bytes)
+        # file_bytes = file.encode(MSG_ENCODING)
+        file_size_bytes = len(file)
         file_size_field = file_size_bytes.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
 
         # Create the packet to be sent with the header field.
-        pkt = file_size_field + file_bytes
+        pkt = file_size_field + file
 
         try:
             # Send the packet to the connected client.
@@ -304,10 +310,10 @@ class Server:
         try:
             # Create a file using the received filename and store the data.
             print(f"Received {len(recvd_bytes_total)} bytes. Creating file: {filename}")
-            recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
+            # recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
 
-            with open(filename, 'w') as f:
-                f.write(recvd_file)
+            with open(filename, 'wb') as f:
+                f.write(recvd_bytes_total)
         except KeyboardInterrupt:
             print()
             exit(1)
@@ -317,7 +323,7 @@ class Server:
 
         try:
             if not os.listdir(Server.FILE_DIRECTORY):
-                print("The client directory is empty.\n")
+                print("The server directory is empty.\n")
                 file_size_field = num_files.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
                 connection.sendall(file_size_field)
             else:
@@ -328,7 +334,7 @@ class Server:
                 connection.sendall(pkt)
         except FileNotFoundError:
             print(Server.FILE_NOT_FOUND_MSG)
-            print("Client file directory does not exist!\n")
+            print("Server file directory does not exist!\n")
             file_size_field = num_files.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
             connection.sendall(file_size_field)
 
@@ -619,10 +625,10 @@ class Client:
             print("Received {} bytes. Creating file: {}" \
                   .format(len(recvd_bytes_total), self.filename))
 
-            with open(Client.FILE_DIRECTORY + self.filename, 'w') as f:
-                recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
-                f.write(recvd_file)
-            print(recvd_file)
+            with open(Client.FILE_DIRECTORY + self.filename, 'wb') as f:
+                # recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
+                f.write(recvd_bytes_total)
+            # print(recvd_bytes_total.decode(MSG_ENCODING))
         except KeyboardInterrupt:
             print()
 
@@ -649,19 +655,19 @@ class Client:
 
         # If we can't find the requested file, exit function
         try:
-            file = open(Client.FILE_DIRECTORY + self.filename, 'r').read()
+            file = open(Client.FILE_DIRECTORY + self.filename, 'rb').read()
         except FileNotFoundError:
             print(Client.FILE_NOT_FOUND_MSG)
             return
 
         # Encode the file contents into bytes, record its size and
         # generate the file size field used for transmission.
-        file_bytes = file.encode(MSG_ENCODING)
-        file_size_bytes = len(file_bytes)
+        # file_bytes = file.encode(MSG_ENCODING)
+        file_size_bytes = len(file)
         file_size_field = file_size_bytes.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
 
         # Create the packet to be sent with the header field.
-        pkt = cmd_field + filename_field_bytes + filename_size_field + file_size_field + file_bytes
+        pkt = cmd_field + filename_size_field + filename_field_bytes + file_size_field + file
 
         try:
             # Send the packet to the connected server.
