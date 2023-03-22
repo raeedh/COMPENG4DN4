@@ -1,0 +1,7 @@
+nslookup compeng4dn4.mooo.com
+Server:  mynetwork
+Address:  192.168.2.1
+
+Non-authoritative answer:
+Name:    compeng4dn4.mooo.com
+Address:  99.236.34.223
