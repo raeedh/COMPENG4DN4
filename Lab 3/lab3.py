@@ -356,6 +356,15 @@ class Client:
                     print("Failed to scan for available servers, please try again.\n")
                     continue
 
+            if self.user_input == "llist":
+                try:
+                    self.llist()
+                    continue
+                except Exception as msg:
+                    print(msg)
+                    print("Failed to scan local directory, please try again.\n")
+                    continue
+
             try:
                 connect_cmd, self.server_ip_address, self.server_port = self.user_input.split()
             except Exception:
@@ -453,8 +462,13 @@ class Client:
                 break
 
             if self.send_input == "llist":
-                self.llist()
-                continue
+                try:
+                    self.llist()
+                    continue
+                except Exception as msg:
+                    print(msg)
+                    print("Error getting local file list, please try again.\n")
+                    continue
 
             if self.send_input == "rlist":
                 try:
