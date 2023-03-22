@@ -312,8 +312,25 @@ class Server:
             exit(1)
 
     def list(self, connection):
+        num_files = 0
 
-        pass
+        try:
+            if not os.listdir(Server.FILE_DIRECTORY):
+                print("The client directory is empty.\n")
+                file_size_field = num_files.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
+                connection.sendall(file_size_field)
+            else:
+                files = "\n".join(os.listdir(Server.FILE_DIRECTORY)).encode(MSG_ENCODING)
+                file_size_field = len(files).to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
+
+                pkt = file_size_field + files
+                connection.sendall(pkt)
+        except FileNotFoundError:
+            print(Server.FILE_NOT_FOUND_MSG)
+            print("Client file directory does not exist!\n")
+            file_size_field = num_files.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
+            connection.sendall(file_size_field)
+
 
 ########################################################################
 # CLIENT
@@ -539,7 +556,6 @@ class Client:
         listing_size = int.from_bytes(response_size_bytes, byteorder='big')
         print("Listing size = ", listing_size)
 
-        # self.socket.settimeout(4)                                  
         status, recvd_bytes_total = recv_bytes(self.socket, listing_size)
         if not status:
             print("No listing returned by server...\n")
