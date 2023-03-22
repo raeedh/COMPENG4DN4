@@ -20,13 +20,13 @@ FILESIZE_FIELD_LEN = 8  # 8 byte file size field.
 # be a 1-byte integer.
 
 CMD = {
-    "get": b'\x01',
-    "put": b'\x02',
-    "list": b'\x03'
+    "get": 1,
+    "put": 2,
+    "list": 3
 }
 
 MSG_ENCODING = "utf-8"
-SOCKET_TIMEOUT = 4
+SOCKET_TIMEOUT = 60
 
 
 ########################################################################
@@ -217,7 +217,7 @@ class Server:
 
         # If we can't find the requested file, shutdown the connection and wait for someone else.
         try:
-            file = open(filename, 'r').read()
+            file = open(Server.FILE_DIRECTORY + filename, 'r').read()
         except FileNotFoundError:
             print(Server.FILE_NOT_FOUND_MSG)
             connection.close()
@@ -520,7 +520,7 @@ class Client:
             print("Received {} bytes. Creating file: {}" \
                   .format(len(recvd_bytes_total), self.filename))
 
-            with open(self.filename, 'w') as f:
+            with open(Client.FILE_DIRECTORY + self.filename, 'w') as f:
                 recvd_file = recvd_bytes_total.decode(MSG_ENCODING)
                 f.write(recvd_file)
             print(recvd_file)
