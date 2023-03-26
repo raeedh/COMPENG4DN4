@@ -7,7 +7,7 @@ The client will have file sharing commands available. It will be able to output 
 
 When a \texttt{rlist} command is issued, the client will send a single byte integer designated for the \texttt{list} command, and receive eight bytes from the server which encode the response size, and then will receive the number of bytes required for the listing response.
 
-When a \texttt{get} command is issued, the client will send a single byte integer designated for the \texttt{get} command, followed by one bytes that encodes the filename size, followed by the filename. The client will receive eight bytes from the server which encode the file size, and then will receive the number of bytes required for the file. The file will then be written to the local file sharing directory.
+When a \texttt{get} command is issued, the client will send a single byte integer designated for the \texttt{get} command, followed by one bytes that encodes the filename size, followed by the filename. The client will receive eight bytes from the server which encode the file size, and then will receive the number of bytes required for the file. The file will then be written to the local file sharing directory if the entire file was successfully transferred.
 
 When a \texttt{put} command is issued, the client will send a single byte integer designated for the \texttt{put} command, followed by one byte that encodes the filename size, followed by the filename, followed by eight bytes that encode the file size, followed by the file being sent to the server.
 

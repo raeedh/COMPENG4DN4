@@ -1,0 +1,16 @@
+\section*{Server Class}
+The server class code is run from the terminal and will have a local file sharing directory. It will have two threads, one thread will be responsible for responding to \texttt{SERVICE DISCOVERY} broadcasts from clients, and the other thread will handle connections from clients to enable file sharing operations.
+
+The server will have a thread listening for \texttt{SERVICE DISCOVERY} broadcasts. When a client requests a \texttt{scan} which the server intercepts, the server will respond to the broadcast with the name of the file sharing service.
+
+The server will have a thread that will handle creating IPv4 TCP sockets for client connections. The connection handler will attempt to receive bytes over the TCP connection. If no bytes are received from the connection, then we close the connection. Otherwise, we receive a command input from the client that we can use to perform file sharing operations.
+
+When a TDP connection is established with a client, the server will receive one byte from the client that will contain the command issued by the client. Depending on whether a \texttt{list}, \texttt{get}, or \texttt{put} command is received, the server will handle the operation requested by the client differently.
+
+When a \texttt{list} command is received, the server will send eight bytes to the client which encode the response size, and then will send the entire listing response which contains the filenames inside the local file sharing directory.
+
+When a \texttt{get} command is received, the server will receive one byte encoding the size of the filename requested, followed by the filename. The server will search for the file, and if found it will send eight bytes to the client which encode the file size, followed by the contents of the file.
+
+When a \texttt{put} command is received, the server will receive one byte from the client that encodes the filename size, followed by the filename, followed by eight bytes that encode the file size, followed by the file sent to the server. The file will then be written to the local file sharing directory if the entire file was successfully transferred.
+
+The server will close the connection on the socket when an error occurs, when no response is received from the client, or when the client has closed the connection on their end (\texttt{bye} command is issued by the client).
