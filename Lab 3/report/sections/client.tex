@@ -1,0 +1,14 @@
+\section*{Client Class}
+The client class code is run from the terminal and will have a local file sharing directory, and be able to scan for and connect to file sharing services to transfer files.
+
+The client will allow the user to scan for \texttt{SERVICE DISCOVERY} broadcasts. When the user requests a \texttt{scan}, the client will create a UDP socket, and broadcast a service discovery packet. The client will listen for service responses, and will return a list of the available file sharing services. The client will then be able to \texttt{connect} to a file sharing service by establishing a TDP connection.
+
+The client will have file sharing commands available. It will be able to output the contents of the local file sharing directory with the \texttt{llist} command. When the client has established a connection with a file sharing server, it will also have access to additional commands, \texttt{rlist}, \texttt{put}, and \texttt{get}. The three file sharing commands will send a packet with the format of the packet determined by the command.
+
+When a \texttt{rlist} command is issued, the client will send a single byte integer designated for the \texttt{list} command, and receive eight bytes from the server which encode the response size, and then will receive the number of bytes required for the listing response.
+
+When a \texttt{get} command is issued, the client will send a single byte integer designated for the \texttt{get} command, followed by one bytes that encodes the filename size, followed by the filename. The client will receive eight bytes from the server which encode the file size, and then will receive the number of bytes required for the file. The file will then be written to the local file sharing directory.
+
+When a \texttt{put} command is issued, the client will send a single byte integer designated for the \texttt{put} command, followed by one byte that encodes the filename size, followed by the filename, followed by eight bytes that encode the file size, followed by the file being sent to the server.
+
+The client will close the connection on the socket when an error occurs, or when no response is received from the server. The client will also close the connection when the \texttt{bye} command is issued.
