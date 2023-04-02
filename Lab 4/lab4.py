@@ -7,6 +7,25 @@ import os
 import socket
 import sys
 from threading import Thread
+import ipaddress
+
+########################################################################
+
+CRDS_PORT = 50001
+CRDS_ADDRESS = "0.0.0.0"
+CRDS_ADRESS_PORT = (CRDS_ADDRESS, CRDS_PORT)
+
+MULTICAST_ADDRESS = "239.0.0.10"
+MULTICAST_PORT    =  2000
+
+# Make them into a tuple.
+MULTICAST_ADDRESS_PORT = (MULTICAST_ADDRESS, MULTICAST_PORT)
+
+# Ethernet/Wi-Fi interface address
+IFACE_ADDRESS = "0.0.0.0"
+RX_IFACE_ADDRESS = "0.0.0.0"
+RX_BIND_ADDRESS = "0.0.0.0"
+RX_BIND_ADDRESS_PORT = (RX_BIND_ADDRESS, MULTICAST_PORT)
 
 ########################################################################
 
@@ -20,9 +39,9 @@ FILESIZE_FIELD_LEN = 8  # 8 byte file size field.
 # be a 1-byte integer.
 
 CMD = {
-    "get": 1,
-    "put": 2,
-    "list": 3
+    "getdir": 1,
+    "makeroom": 2,
+    "deleteroom": 3
 }
 
 MSG_ENCODING = "utf-8"
@@ -338,123 +357,48 @@ class Server:
 # CLIENT
 ########################################################################
 class Client:
-    FILE_DIRECTORY = "client_directory/"
-    FILE_NOT_FOUND_MSG = "Error: Requested file is not available!\n"
-
-    SCAN_RECV_SIZE = 1024
-    MSG_ENCODING = "utf-8"
-
-    BROADCAST_ADDRESS = "255.255.255.255"
-    SERVICE_PORT = 30000
-    ADDRESS_PORT = (BROADCAST_ADDRESS, SERVICE_PORT)
-
-    SCAN_CYCLES = 3
-    SCAN_TIMEOUT = 2
-
-    SCAN_CMD = "SERVICE DISCOVERY"
-    SCAN_CMD_ENCODED = SCAN_CMD.encode(MSG_ENCODING)
-
     CONNECT_TIMEOUT = 10
+    RECV_SIZE = 256
 
     def __init__(self):
         self.get_console_input()
 
     def get_console_input(self):
         while True:
-            self.user_input = input("Use the scan command to find available file sharing services.\nUse the connect <ip address> <port> "
-                                    "command to connect once the server is found.\n")
+            self.user_input = input("Use the connect command to issue CRDS commands, or enter a chat.\n")
 
-            if self.user_input == "scan":
+            if self.user_input == "connect":
                 try:
-                    self.connection_scan()
-                    self.scan_for_service()
-                    continue
+                    self.connect_to_server()
                 except Exception as msg:
                     print(msg)
-                    print("Failed to scan for available servers, please try again.\n")
+                    print("Connection to CRDS, please try again.\n")
                     continue
 
-            if self.user_input == "llist":
                 try:
-                    self.llist()
-                    continue
-                except Exception as msg:
-                    print(msg)
-                    print("Failed to scan local directory, please try again.\n")
+                    self.connection_server()
+                except (KeyboardInterrupt, EOFError):
+                    print("Closing server connection...\n")
+                    # If we get an error or keyboard interrupt, make sure that we close the socket.
+                    self.socket.close()
                     continue
 
             try:
-                connect_cmd, self.server_ip_address, self.server_port = self.user_input.split()
+                chat_cmd, name = self.user_input.split()
             except Exception:
                 print("The input is invalid, please try again.\n")
                 continue
 
-            if connect_cmd != "connect":
-                print("The command is invalid, please try again.\n")
-                continue
-
-            if not self.server_port.isdigit():
-                print("The port number is invalid, please try again.\n")
-                continue
-
-            try:
-                self.connect_to_server()
-            except Exception as msg:
-                print(msg)
-                print("Error connecting to server, please try again.\n")
-                continue
-
-            try:
-                self.connection_server()
-            except (KeyboardInterrupt, EOFError):
-                print("Closing server connection...\n")
-                # If we get an error or keyboard interrupt, make sure that we close the socket.
-                self.socket.close()
-
-    def connection_scan(self):
-        # Service discovery done using UDP packets.
-        self.scan_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.scan_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-
-        # Arrange to send a broadcast service discovery packet.
-        self.scan_socket.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-
-        # Set the socket for a socket.timeout if a scanning recv fails.
-        self.scan_socket.settimeout(Client.SCAN_TIMEOUT)
-
-    def scan_for_service(self):
-        # Collect our scan results in a list.
-        scan_results = []
-
-        # Repeat the scan procedure a preset number of times.
-        for i in range(Client.SCAN_CYCLES):
-
-            # Send a service discovery broadcast.
-            print("Sending broadcast scan {}".format(i))
-            self.scan_socket.sendto(Client.SCAN_CMD_ENCODED, Client.ADDRESS_PORT)
-
-            while True:
-                # Listen for service responses. So long as we keep receiving responses, keep going. Timeout if none are received and
-                # terminate the listening for this scan cycle.
+            if chat_cmd == "name":
+                self.chat_name = name + ": "
+            elif chat_cmd == "chat":
                 try:
-                    recvd_bytes, address = self.scan_socket.recvfrom(Client.SCAN_RECV_SIZE)
-                    recvd_msg = recvd_bytes.decode(Client.MSG_ENCODING)
+                    self.chatroom(name)
+                except (KeyboardInterrupt, EOFError):
+                    print("Closing chat connection...\n")
+                    continue
 
-                    # Record only unique services that are found.
-                    if (recvd_msg, address) not in scan_results:
-                        scan_results.append((recvd_msg, address))
-                        continue
-                # If we timeout listening for a new response, we are finished.
-                except socket.timeout:
-                    break
-
-        # Output all of our scan results, if any.
-        if scan_results:
-            for result in scan_results:
-                print(result)
-                print()
-        else:
-            print("No services found.\n")
+            print("The input is invalid, please try again.\n")
 
     def connect_to_server(self):
         # Create an IPv4 TCP socket.
@@ -463,78 +407,65 @@ class Client:
         self.socket.settimeout(Client.CONNECT_TIMEOUT)
 
         # Connect to the server using its socket address tuple.
-        self.socket.connect((self.server_ip_address, int(self.server_port)))
-        print(f"Connected to {self.server_ip_address} on port {self.server_port}\n")
+        self.socket.connect(CRDS_ADRESS_PORT)
+        print(f"Connected to {CRDS_ADDRESS} on port {CRDS_PORT}\n")
 
     def connection_server(self):
         while True:
-            self.send_input = input("Input a valid file service command.\n")
+            self.crds_input = input("Input a valid CRDS command.\n")
 
-            if self.send_input == "bye":
+            if self.crds_input == "bye":
                 print("Closing server connection ...\n")
                 self.socket.close()
                 break
-
-            if self.send_input == "llist":
+            elif self.crds_input == "getdir":
                 try:
-                    self.llist()
-                    continue
+                    self.getdir()
                 except Exception as msg:
-                    # print(msg)
-                    print("Error getting local file list, please try again.\n")
-                    continue
-
-            if self.send_input == "rlist":
-                try:
-                    self.rlist()
-                    continue
-                except Exception as msg:
-                    # print(msg)
-                    print("Error getting remote file list from server, closing server connection.\n")
+                    print(msg)
+                    print("Error excuting CRDS command, closing server connection.\n")
                     self.socket.close()
                     break
-
+            
             try:
-                connection_cmd, self.filename, = self.send_input.split()
+                crds_cmd, chat_room_name, chat_room_address, chat_room_port = self.crds_input.split()
+            except Exception:
+                print("The input is invalid, please try again.\n")
+                continue
+            
+            if crds_cmd == "makeroom":
+                if (ipaddress.ip_address(chat_room_address) in ipaddress.ip_network('239.0.0.0/8')) and (chat_room_port.isdigit()):
+                    try:
+                        self.makeroom(chat_room_name, chat_room_address, chat_room_port)
+                        continue
+                    except Exception as msg:
+                        print(msg)
+                        print("Error making room, closing server connection.\n")
+                        self.socket.close()
+                        break
+            
+            try:
+                crds_cmd, chat_room_name = self.crds_input.split()
             except Exception:
                 print("The input is invalid, please try again.\n")
                 continue
 
-            if connection_cmd == "get":
+            if crds_cmd == "deleteroom":
                 try:
-                    self.get_file()
-                except Exception as msg:
-                    print(msg)
-                    print("Error getting file from server, closing server connection.\n")
-                    self.socket.close()
-                    break
-
-            if connection_cmd == "put":
-                if not os.path.isfile(Client.FILE_DIRECTORY + self.filename):
-                    print(Client.FILE_NOT_FOUND_MSG)
+                    self.deleteroom(chat_room_name)
                     continue
-
-                try:
-                    self.put_file()
                 except Exception as msg:
-                    print(msg)
-                    print("Error putting file on server, closing server connection.\n")
-                    self.socket.close()
-                    break
+                        print(msg)
+                        print("Error deleting room, closing server connection.\n")
+                        self.socket.close()
+                        break
 
-    def llist(self):
-        try:
-            if not os.listdir(Client.FILE_DIRECTORY):
-                print("The client directory is empty.\n")
-            else:
-                print(os.listdir(Client.FILE_DIRECTORY))
-        except FileNotFoundError:
-            print(Client.FILE_NOT_FOUND_MSG)
-            print("Client file directory does not exist!\n")
 
-    def rlist(self):
+            print("Invalid command, please try again.\n")
+
+    def getdir(self):
         # Create the packet cmd field.
-        cmd_field = CMD["list"].to_bytes(CMD_FIELD_LEN, byteorder='big')
+        cmd_field = CMD["getdir"].to_bytes(CMD_FIELD_LEN, byteorder='big')
 
         # Send the request packet to the server.
         self.socket.sendall(cmd_field)
@@ -545,16 +476,16 @@ class Client:
         # Read the response size returned by the server.
         status, response_size_bytes = recv_bytes(self.socket, FILESIZE_FIELD_LEN)
         if not status:
-            print("No response from server...\n")
+            # print("No response from server...\n")
             raise Exception
 
-        print("Response size bytes = ", response_size_bytes.hex())
+        # print("Response size bytes = ", response_size_bytes.hex())
         if len(response_size_bytes) == 0:
             return
 
         # Make sure that you interpret it in host byte order.
         listing_size = int.from_bytes(response_size_bytes, byteorder='big')
-        print("Listing size = ", listing_size)
+        # print("Listing size = ", listing_size)
 
         status, recvd_bytes_total = recv_bytes(self.socket, listing_size)
         if not status:
@@ -565,105 +496,102 @@ class Client:
         except KeyboardInterrupt:
             print()
 
-    def get_file(self):
-        ################################################################
-        # Generate a file transfer request to the server
-
+    def makeroom(self, chat_room_name, chat_room_address, chat_room_port):
         # Create the packet cmd field.
-        cmd_field = CMD["get"].to_bytes(CMD_FIELD_LEN, byteorder='big')
+        cmd_field = CMD["makeroom"].to_bytes(CMD_FIELD_LEN, byteorder='big')
 
-        # Create the packet filename field.
-        filename_field_bytes = self.filename.encode(MSG_ENCODING)
+        chat_room_name_bytes = chat_room_name.encode(MSG_ENCODING)
+        chat_room_address_bytes = chat_room_address.encode(MSG_ENCODING)
+        chat_room_port_bytes = chat_room_port.encode(MSG_ENCODING)
 
-        # Create the packet filename size field.
-        filename_size_field = len(filename_field_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
+        chat_room_name_size_field = len(chat_room_name_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
+        chat_room_address_size_field = len(chat_room_address_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
+        chat_room_port_size_field = len(chat_room_port_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
 
-        # Create the packet.
-        print("CMD field: ", cmd_field.hex())
-        print("Filename_size_field: ", filename_size_field.hex())
-        print("Filename field: ", filename_field_bytes.hex())
-
-        pkt = cmd_field + filename_size_field + filename_field_bytes
+        pkt = cmd_field \
+            + chat_room_name_size_field + chat_room_name_bytes \
+            + chat_room_address_size_field + chat_room_address_bytes \
+            + chat_room_port_size_field + chat_room_port_bytes
 
         # Send the request packet to the server.
         self.socket.sendall(pkt)
 
-        ################################################################
-        # Process the file transfer response from the server
-
-        # Read the file size field returned by the server.
-        status, file_size_bytes = recv_bytes(self.socket, FILESIZE_FIELD_LEN)
-        if not status:
-            print("No response from server...\n")
-            raise Exception
-
-        print("File size bytes = ", file_size_bytes.hex())
-        if len(file_size_bytes) == 0:
-            return
-
-        # Make sure that you interpret it in host byte order.
-        file_size = int.from_bytes(file_size_bytes, byteorder='big')
-        print("File size = ", file_size)
-
-        status, recvd_bytes_total = recv_bytes(self.socket, file_size)
-        if not status:
-            print("No response from server...\n")
-            raise Exception
-
-        # Receive the file itself.
-        try:
-            # Create a file using the received filename and store the data.
-            print(f"Received {len(recvd_bytes_total)} bytes. Creating file: {self.filename}")
-
-            with open(Client.FILE_DIRECTORY + self.filename, 'wb') as f:
-                f.write(recvd_bytes_total)
-        except KeyboardInterrupt:
-            print()
-
-    def put_file(self):
-        ################################################################
-        # Generate a file transfer request to the server
-
+    def deleteroom(self, chat_room_name):
         # Create the packet cmd field.
-        cmd_field = CMD["put"].to_bytes(CMD_FIELD_LEN, byteorder='big')
+        cmd_field = CMD["makeroom"].to_bytes(CMD_FIELD_LEN, byteorder='big')
 
-        # Create the packet filename field.
-        filename_field_bytes = self.filename.encode(MSG_ENCODING)
+        chat_room_name_bytes = chat_room_name.encode(MSG_ENCODING)
 
-        # Create the packet filename size field.
-        filename_size_field = len(filename_field_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
+        chat_room_name_size_field = len(chat_room_name_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
 
-        # Create the packet.
-        print("CMD field: ", cmd_field.hex())
-        print("Filename_size_field: ", filename_size_field.hex())
-        print("Filename field: ", filename_field_bytes.hex())
+        pkt = cmd_field \
+            + chat_room_name_size_field + chat_room_name_bytes
 
-        ################################################################
-        # See if we can open the requested file. If so, send it. If we can't find the requested file, exit function
+        # Send the request packet to the server.
+        self.socket.sendall(pkt)
+
+    def chatroom(self, name):
+        self.get_socket()
+        self.receive_forever()
+
+    def get_socket(self):
         try:
-            file = open(Client.FILE_DIRECTORY + self.filename, 'rb').read()
-        except FileNotFoundError:
-            print(Client.FILE_NOT_FOUND_MSG)
-            return
+            self.chat_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            self.chat_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, True)
 
-        # Encode the file contents into bytes, record its size and generate the file size field used for transmission.
-        file_size_bytes = len(file)
-        file_size_field = file_size_bytes.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
+            ############################################################            
+            # Bind to an address/port. In multicast, this is viewed as
+            # a "filter" that deterimines what packets make it to the
+            # UDP app.
+            ############################################################            
+            self.chat_socket.bind(RX_BIND_ADDRESS_PORT)
 
-        # Create the packet to be sent with the header field.
-        pkt = cmd_field + filename_size_field + filename_field_bytes + file_size_field + file
+            ############################################################
+            # The multicast_request must contain a bytes object
+            # consisting of 8 bytes. The first 4 bytes are the
+            # multicast group address. The second 4 bytes are the
+            # interface address to be used. An all zeros I/F address
+            # means all network interfaces. They must be in network
+            # byte order.
+            ############################################################
+            multicast_group_bytes = socket.inet_aton(MULTICAST_ADDRESS)
+            # or
+            # multicast_group_int = int(ipaddress.IPv4Address(MULTICAST_ADDRESS))
+            # multicast_group_bytes = multicast_group_int.to_bytes(4, byteorder='big')
+            # or
+            # multicast_group_bytes = ipaddress.IPv4Address(MULTICAST_ADDRESS).packed
+            print("Multicast Group: ", MULTICAST_ADDRESS)
 
-        try:
-            # Send the packet to the connected server.
-            self.socket.sendall(pkt)
-            print("Sending file: ", self.filename)
-            print("file size field: ", file_size_field.hex(), "\n")
-        except socket.error:
-            print("Error occuring sending file to server...\n")
-            return
-        finally:
-            return
+            # Set up the interface to be used.
+            multicast_iface_bytes = socket.inet_aton(RX_IFACE_ADDRESS)
 
+            # Form the multicast request.
+            multicast_request = multicast_group_bytes + multicast_iface_bytes
+            print("multicast_request = ", multicast_request)
+
+            # You can use struct.pack to create the request, but it is more complicated, e.g.,
+            # 'struct.pack("<4sl", multicast_group_bytes,
+            # int.from_bytes(multicast_iface_bytes, byteorder='little'))'
+            # or 'struct.pack("<4sl", multicast_group_bytes, socket.INADDR_ANY)'
+
+            # Issue the Multicast IP Add Membership request.
+            print("Adding membership (address/interface): ", MULTICAST_ADDRESS,"/", RX_IFACE_ADDRESS)
+            self.chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, multicast_request)
+        except Exception as msg:
+            print(msg)
+            sys.exit(1)
+
+    def receive_forever(self):
+        while True:
+            try:
+                data, address_port = self.chat_socket.recvfrom(Client.RECV_SIZE)
+                address, port = address_port
+                print("Received: {} {}".format(data.decode('utf-8'), address_port))
+            except KeyboardInterrupt:
+                print(); exit()
+            except Exception as msg:
+                print(msg)
+                sys.exit(1)
 
 ########################################################################
 # Process command line arguments if run directly.
