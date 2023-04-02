@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{{./figures/}}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,   
+    urlcolor=blue,
+}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{listings}
+
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+\lstset{
+    % frame=single,
+    captionpos=t,   % sets the caption-position to bottom
+    breaklines=true,
+    % numbers=left,
+    % numbersep=5pt,
+    numberstyle=\tiny\color{gray},
+    tabsize=2,
+    basicstyle=\ttfamily\scriptsize,
+    showspaces=false,
+    showstringspaces=false,
+    backgroundcolor=\color{backgroundColour},
+    % keywordstyle=\color{Magenta},
+    % identifierstyle=\color{MidnightBlue},
+    % commentstyle=\color{Green},
+    % stringstyle=\color{Maroon}
+    }
+
+\titleformat*{\section}{\large\bfseries}
+%\allowdisplaybreaks
+
+% remove vertical spacing above top figure
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+%
+
+\title{COMPENG 4DN4 Lab 4 Report}
+\author{
+    Aaron Pinto \\
+    pintoa9 \\
+    400190637 \\
+    \and
+    Raeed Hassan \\
+    hassam41 \\
+    400188200 \\
+}
+
+\begin{document}
+
+\maketitle
+\clearpage
+
+\input{sections/server.tex}
+\input{sections/client.tex}
+\input{sections/contributions.tex}
+
+\end{document}
