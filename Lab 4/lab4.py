@@ -202,7 +202,9 @@ class Server:
                 elif cmd == CMD["deleteroom"]:
                     self.deleteroom(connection)
                 elif cmd == CMD["chat"]:
-                    print(cmd)
+                    self.chat(connection)
+                    connection.close()
+                    return
                 else:
                     print("Valid command not received. Closing connection ...")
                     connection.close()
@@ -212,7 +214,7 @@ class Server:
 
     def deleteroom(self, connection):
         print("deleteroom command received!")
-        # makeroom command is good. Read the chat room name size (bytes).
+        # deleteroom command is good. Read the chat room name size (bytes).
         status, chat_room_name_size_field = recv_bytes(connection, FILENAME_SIZE_FIELD_LEN)
         if not status:
             print("Closing connection ...")
@@ -249,7 +251,6 @@ class Server:
         except:
             print("Chat room does not exist!\n")
             return
-            
 
     def makeroom(self, connection):
         print("makeroom command received!")
@@ -357,6 +358,56 @@ class Server:
             pkt = response_size + response
             connection.sendall(pkt)
 
+    def chat(self, connection):
+        print("The chat command was received.")
+
+        status, chat_room_name_size_field = recv_bytes(connection, FILENAME_SIZE_FIELD_LEN)
+        if not status:
+            print("Closing connection ...")
+            connection.close()
+            return
+
+        chat_room_name_size_bytes = int.from_bytes(chat_room_name_size_field, byteorder='big')
+        if not chat_room_name_size_bytes:
+            print("Connection is closed!")
+            connection.close()
+            return
+
+        # Now read and decode the requested chat room name.
+        status, chat_room_name_bytes = recv_bytes(connection, chat_room_name_size_bytes)
+        if not status:
+            print("Closing connection ...")
+            connection.close()
+            return
+        if not chat_room_name_bytes:
+            print("Connection is closed!")
+            connection.close()
+            return
+
+        chat_room_name = chat_room_name_bytes.decode(MSG_ENCODING)
+        print('Requested chat name = ', chat_room_name)
+
+        chat_does_not_exist = 0
+
+        try:
+            address, port, sock = self.chat_rooms[chat_room_name]
+        except:
+            print("The chat room does not exist!\n")
+            response_size = chat_does_not_exist.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
+            connection.sendall(response_size)
+            return
+
+        chat_room_address_bytes = address.encode(MSG_ENCODING)
+        chat_room_port_bytes = str(port).encode(MSG_ENCODING)
+
+        chat_room_address_size_field = len(chat_room_address_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
+        chat_room_port_size_field = len(chat_room_port_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
+
+        pkt = chat_room_address_size_field + chat_room_address_bytes \
+            + chat_room_port_size_field + chat_room_port_bytes
+
+        # Send the request packet to the server.
+        connection.sendall(pkt)
 
 ########################################################################
 # CLIENT
@@ -368,6 +419,8 @@ class Client:
     def __init__(self):
         # Default chat name: user
         self.chat_name = "user: "
+        self.chat_address = ""
+        self.chat_port = 0
 
         self.get_console_input()
 
@@ -403,6 +456,7 @@ class Client:
             elif chat_cmd == "chat":
                 try:
                     self.chatroom(name)
+                    continue
                 except (KeyboardInterrupt, EOFError):
                     print("Closing chat connection...\n")
                     continue
@@ -574,7 +628,7 @@ class Client:
 
         chat_room_address_size_bytes = int.from_bytes(chat_room_address_size_field, byteorder='big')
         if not chat_room_address_size_bytes:
-            print("Connection is closed!\n")
+            print("The chat room does not exist!\n")
             self.socket.close()
             return
 
@@ -618,7 +672,7 @@ class Client:
         chat_room_port = chat_room_port_bytes.decode(MSG_ENCODING)
 
         self.chat_address = chat_room_address
-        self.chat_port = chat_room_port
+        self.chat_port = int(chat_room_port)
 
     def chatroom(self, name):
         try:
@@ -630,20 +684,16 @@ class Client:
 
         try:
             self.getchat(name)
+            self.get_socket()
         except Exception as msg:
             print(msg)
-            print("Unable to retrieve multicast address/port for the associated chat room, please try again.\n")
+            print("Unable to retrieve multicast address/port for the associated chat room or connect to chat room, please try again.\n")
             self.socket.close()
             return
 
         try:
-            self.get_socket()
-        except Exception as msg:
-            print(msg)
-            print("Error connecting to chat room, please try again.")
-            return
-        try:
             self.receive_forever()
+            return
         except Exception as msg:
             print(msg)
             print("Error connecting to chat room, please try again.")
@@ -674,6 +724,7 @@ class Client:
         self.chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, TTL_BYTE)
 
     def receive_forever(self):
+        print("Entering chat mode:")
         # Set stdin to non-blocking mode
         fd = sys.stdin.fileno()
         flags = fcntl.fcntl(fd, fcntl.F_GETFL)
@@ -683,8 +734,8 @@ class Client:
             sockets_list = [sys.stdin, self.chat_socket]
             read_ready, write_ready, except_ready = select.select(sockets_list, [], [])
 
-            for socket in read_ready:
-                if socket == self.chat_socket:
+            for sock in read_ready:
+                if sock == self.chat_socket:
                     try:
                         message, address = self.chat_socket.recvfrom(Client.RECV_SIZE)
                     except:
@@ -698,12 +749,19 @@ class Client:
                 # Send message to chat room
                 message = sys.stdin.readline()
                 if message:
-                    self.chat_socket.sendto(self.chat_name + message.encode(), (self.chat_address, self.chat_port))
+                    self.chat_socket.sendto((self.chat_name + message).encode(MSG_ENCODING), (self.chat_address, self.chat_port))
                     # sys.stdout.write(self.chat_name + message)
                     # sys.stdout.flush()
 
                     # Check for exit command
                     if message.strip() == 'exit!':
+                        print("Exitting chat room!\n")
+                        self.chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_DROP_MEMBERSHIP, socket.inet_aton(self.chat_address) + socket.inet_aton(RX_IFACE_ADDRESS))
+                        self.chat_socket.close()
+
+                        fd = sys.stdin.fileno()
+                        flags = fcntl.fcntl(fd, fcntl.F_GETFL)
+                        fcntl.fcntl(fd, fcntl.F_SETFL, flags & ~os.O_NONBLOCK)
                         return
             # try:
             #     data, address_port = self.chat_socket.recvfrom(Client.RECV_SIZE)
