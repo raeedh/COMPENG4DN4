@@ -200,7 +200,7 @@ class Server:
                 elif cmd == CMD["makeroom"]:
                     self.makeroom(connection)
                 elif cmd == CMD["deleteroom"]:
-                    print(cmd)
+                    self.deleteroom(connection)
                 elif cmd == CMD["chat"]:
                     print(cmd)
                 else:
@@ -210,64 +210,46 @@ class Server:
         except KeyboardInterrupt:
             print()
 
-    def get_file(self, connection):
-        # GET command is good. Read the filename size (bytes).
-        status, filename_size_field = recv_bytes(connection, FILENAME_SIZE_FIELD_LEN)
+    def deleteroom(self, connection):
+        print("deleteroom command received!")
+        # makeroom command is good. Read the chat room name size (bytes).
+        status, chat_room_name_size_field = recv_bytes(connection, FILENAME_SIZE_FIELD_LEN)
         if not status:
             print("Closing connection ...")
             connection.close()
             return
 
-        filename_size_bytes = int.from_bytes(filename_size_field, byteorder='big')
-        if not filename_size_bytes:
+        chat_room_name_size_bytes = int.from_bytes(chat_room_name_size_field, byteorder='big')
+        if not chat_room_name_size_bytes:
             print("Connection is closed!")
             connection.close()
             return
 
-        print('Filename size (bytes) = ', filename_size_bytes)
-
-        # Now read and decode the requested filename.
-        status, filename_bytes = recv_bytes(connection, filename_size_bytes)
+        # Now read and decode the requested chat room name.
+        status, chat_room_name_bytes = recv_bytes(connection, chat_room_name_size_bytes)
         if not status:
             print("Closing connection ...")
             connection.close()
             return
-        if not filename_bytes:
+        if not chat_room_name_bytes:
             print("Connection is closed!")
             connection.close()
             return
 
-        filename = filename_bytes.decode(MSG_ENCODING)
-        print('Requested filename = ', filename)
-
-        ################################################################
-        # See if we can open the requested file. If so, send it.
-
-        # If we can't find the requested file, shutdown the connection and wait for someone else.
-        try:
-            file = open(Server.FILE_DIRECTORY + filename, 'rb').read()
-        except FileNotFoundError:
-            print(Server.FILE_NOT_FOUND_MSG)
-            connection.close()
-            return
-
-        # Encode the file contents into bytes, record its size and generate the file size field used for transmission.
-        file_size_bytes = len(file)
-        file_size_field = file_size_bytes.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
-
-        # Create the packet to be sent with the header field.
-        pkt = file_size_field + file
+        chat_room_name = chat_room_name_bytes.decode(MSG_ENCODING)
+        print('Requested chat name = ', chat_room_name)
 
         try:
-            # Send the packet to the connected client.
-            connection.sendall(pkt)
-            print("Sending file: ", filename)
-            print("file size field: ", file_size_field.hex(), "\n")
-        except socket.error:
-            # If the client has closed the connection, close the socket on this end.
-            print("Closing client connection ...")
-            connection.close()
+            address, port, sock = self.chat_rooms[chat_room_name]
+
+            sock.setsockopt(socket.IPPROTO_IP, socket.IP_DROP_MEMBERSHIP, socket.inet_aton(address) + socket.inet_aton(RX_IFACE_ADDRESS))
+            sock.close()
+
+            self.chat_rooms.pop(chat_room_name)
+        except:
+            print("Chat room does not exist!\n")
             return
+            
 
     def makeroom(self, connection):
         print("makeroom command received!")
@@ -403,6 +385,7 @@ class Client:
 
                 try:
                     self.connection_server()
+                    continue
                 except (KeyboardInterrupt, EOFError):
                     print("Closing server connection...\n")
                     # If we get an error or keyboard interrupt, make sure that we close the socket.
@@ -441,7 +424,6 @@ class Client:
             if self.crds_input == "bye":
                 print("Closing server connection ...\n")
                 self.socket.close()
-                continue
                 break
             elif self.crds_input == "getdir":
                 try:
@@ -456,26 +438,25 @@ class Client:
             
             try:
                 crds_cmd, chat_room_name, chat_room_address, chat_room_port = self.crds_input.split()
+
+                if crds_cmd == "makeroom":
+                    try:
+                        if (ipaddress.ip_address(chat_room_address) in ipaddress.ip_network('239.0.0.0/8')) and (chat_room_port.isdigit()):
+                            try:
+                                self.makeroom(chat_room_name, chat_room_address, chat_room_port)
+                                print()
+                                continue
+                            except Exception as msg:
+                                print(msg)
+                                print("Error making room, closing server connection.\n")
+                                self.socket.close()
+                                break
+                    except Exception as msg:
+                        print(msg)
+                        print("The input is invalid, please try again.\n")
+                        continue
             except Exception:
-                print("The input is invalid, please try again.\n")
-                continue
-            
-            if crds_cmd == "makeroom":
-                try:
-                    if (ipaddress.ip_address(chat_room_address) in ipaddress.ip_network('239.0.0.0/8')) and (chat_room_port.isdigit()):
-                        try:
-                            self.makeroom(chat_room_name, chat_room_address, chat_room_port)
-                            print()
-                            continue
-                        except Exception as msg:
-                            print(msg)
-                            print("Error making room, closing server connection.\n")
-                            self.socket.close()
-                            break
-                except Exception as msg:
-                    print(msg)
-                    print("The input is invalid, please try again.\n")
-                    continue
+                pass          
             
             try:
                 crds_cmd, chat_room_name = self.crds_input.split()
