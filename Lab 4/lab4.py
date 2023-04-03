@@ -204,9 +204,11 @@ class Server:
                         self.deleteroom(read_socket)
                     elif cmd == CMD["chat"]:
                         self.chat(read_socket)
+                        self.read_list.remove(read_socket)
                         read_socket.close()
                     else:
                         print("Valid command not received. Closing connection ...")
+                        self.read_list.remove(read_socket)
                         read_socket.close()
                 else:
                     print("Closing client connection ...")
