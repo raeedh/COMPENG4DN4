@@ -103,7 +103,11 @@ class Server:
         self.chat_rooms = {}
 
         self.create_listen_socket()
-        self.process_connections_forever()
+        self.initialize_select_lists()
+
+        # self.process_connections_forever()
+        self.process_connections_forever_select()
+
 
         # udp_thread.join()
 
@@ -148,6 +152,23 @@ class Server:
             print(msg)
             exit()
 
+    def initialize_select_lists(self):
+        self.read_list = [self.socket]
+
+    def process_connections_forever_select(self):
+        try:
+            while True:
+                self.read_ready, self.write_ready, self.except_ready = select.select(
+                    self.read_list, [], [])
+
+                self.process_read_sockets()
+        except Exception as msg:
+            print(msg)
+        except KeyboardInterrupt:
+            print()
+        finally:
+            self.socket.close()
+
     def process_connections_forever(self):
         try:
             while True:
@@ -157,6 +178,44 @@ class Server:
             print()
         finally:
             self.socket.close()
+
+    def process_read_sockets(self):
+        # Iterate through the read ready sockets, processing each one
+        # in turn.
+        for read_socket in self.read_ready:
+            if read_socket is self.socket:
+                client, address = read_socket.accept()
+                print("-" * 72)
+                print("Connection received from {}.".format(address))
+                client.setblocking(False)
+                self.read_list.append(client)
+            else:
+                status, cmd_field = recv_bytes(read_socket, CMD_FIELD_LEN)
+
+                if status:
+                    cmd = int.from_bytes(cmd_field, byteorder='big')
+
+                    # Give up if we don't get a valid command.
+                    if cmd == CMD["getdir"]:
+                        self.getdir(read_socket)
+                    elif cmd == CMD["makeroom"]:
+                        self.makeroom(read_socket)
+                    elif cmd == CMD["deleteroom"]:
+                        self.deleteroom(read_socket)
+                    elif cmd == CMD["chat"]:
+                        self.chat(read_socket)
+                        read_socket.close()
+                    else:
+                        print("Valid command not received. Closing connection ...")
+                        read_socket.close()
+                else:
+                    print("Closing client connection ...")
+                    self.read_list.remove(read_socket)
+                    read_socket.close()
+
+
+    def connection_handler_select(self, client):
+        print("test")
 
     def connection_handler(self, client):
         connection, address = client
