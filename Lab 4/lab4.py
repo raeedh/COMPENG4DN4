@@ -135,26 +135,6 @@ class Server:
 
         self.chat_rooms[chatroom_name] = (chat_address, chat_port, chat_socket)
 
-    def send_messages_forever(self):
-        try:
-            beacon_sequence_number = 1
-            while True:
-                print("Sending multicast beacon {} {}".format(beacon_sequence_number, MULTICAST_ADDRESS_PORT))
-                beacon_bytes = Sender.MESSAGE_ENCODED + str(beacon_sequence_number).encode('utf-8')
-
-                ########################################################
-                # Send the multicast packet
-                self.socket.sendto(beacon_bytes, MULTICAST_ADDRESS_PORT)
-
-                beacon_sequence_number += 1
-        except Exception as msg:
-            print(msg)
-        except KeyboardInterrupt:
-            print()
-        finally:
-            self.socket.close()
-            sys.exit(1)
-
     def create_listen_socket(self):
         try:
             # Create the TCP server listen socket in the usual way.
@@ -162,6 +142,8 @@ class Server:
             self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             self.socket.bind(CRDS_ADRESS_PORT)
             self.socket.listen(Server.BACKLOG)
+
+            print("Chat Room Directory Server listening on port {}.".format(CRDS_ADRESS_PORT))
         except Exception as msg:
             print(msg)
             exit()
@@ -169,7 +151,7 @@ class Server:
     def process_connections_forever(self):
         try:
             while True:
-                print("Listening for CRDS connections on port {}.".format(CRDS_ADRESS_PORT))
+                # print("Chat Room Directory Server listening on port {}.".format(CRDS_ADRESS_PORT))
                 self.connection_handler(self.socket.accept())
         except KeyboardInterrupt:
             print()
