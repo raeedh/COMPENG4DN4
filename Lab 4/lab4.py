@@ -224,10 +224,10 @@ class Server:
         print('Requested chat name = ', chat_room_name)
 
         try:
-            address, port, sock = self.chat_rooms[chat_room_name]
+            address, port = self.chat_rooms[chat_room_name]
 
-            sock.setsockopt(socket.IPPROTO_IP, socket.IP_DROP_MEMBERSHIP, socket.inet_aton(address) + socket.inet_aton(RX_IFACE_ADDRESS))
-            sock.close()
+            # sock.setsockopt(socket.IPPROTO_IP, socket.IP_DROP_MEMBERSHIP, socket.inet_aton(address) + socket.inet_aton(RX_IFACE_ADDRESS))
+            # sock.close()
 
             self.chat_rooms.pop(chat_room_name)
         except:
@@ -317,7 +317,8 @@ class Server:
         chat_room_port = int(chat_room_port_bytes.decode(MSG_ENCODING))
         print('Requested chat port = ', chat_room_port, '\n')
 
-        self.get_socket(chat_room_address, chat_room_port, chat_room_name)        
+        # self.get_socket(chat_room_address, chat_room_port, chat_room_name)
+        self.chat_rooms[chat_room_name] = (chat_room_address, chat_room_port)
 
     def getdir(self, connection):
         print("The getdir command was received.")
@@ -325,7 +326,7 @@ class Server:
         num_chats = 0
         
         room_info_str = ""
-        for name, (address, port, socket) in self.chat_rooms.items():
+        for name, (address, port) in self.chat_rooms.items():
             room_info_str += f"{name}: {address}:{port}\n"
 
 
@@ -372,7 +373,7 @@ class Server:
         chat_does_not_exist = 0
 
         try:
-            address, port, sock = self.chat_rooms[chat_room_name]
+            address, port = self.chat_rooms[chat_room_name]
         except:
             print("The chat room does not exist!\n")
             response_size = chat_does_not_exist.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
