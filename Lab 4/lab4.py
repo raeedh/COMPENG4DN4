@@ -3,14 +3,13 @@
 ########################################################################
 
 import argparse
+import fcntl
+import ipaddress
 import os
 import socket
 import sys
-from threading import Thread
-import ipaddress
+
 import select
-import fcntl
-import os
 
 ########################################################################
 
@@ -19,7 +18,7 @@ CRDS_ADDRESS = "0.0.0.0"
 CRDS_ADRESS_PORT = (CRDS_ADDRESS, CRDS_PORT)
 
 MULTICAST_ADDRESS = "239.0.0.10"
-MULTICAST_PORT    =  2000
+MULTICAST_PORT = 2000
 
 # Make them into a tuple.
 MULTICAST_ADDRESS_PORT = (MULTICAST_ADDRESS, MULTICAST_PORT)
@@ -32,7 +31,7 @@ RX_BIND_ADDRESS_PORT = (RX_BIND_ADDRESS, MULTICAST_PORT)
 
 # Create a 1-byte maximum hop count byte used in the multicast
 # packets (i.e., TTL, time-to-live).
-TTL = 1 # Hops
+TTL = 1  # Hops
 TTL_BYTE = TTL.to_bytes(1, byteorder='big')
 
 ########################################################################
@@ -108,7 +107,6 @@ class Server:
         # self.process_connections_forever()
         self.process_connections_forever_select()
 
-
         # udp_thread.join()
 
     def listen_for_udp(self):
@@ -118,7 +116,7 @@ class Server:
     def get_socket(self, chat_address, chat_port, chatroom_name):
         chat_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         chat_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, True)
-        
+
         chat_socket.bind((RX_BIND_ADDRESS, chat_port))
 
         multicast_group_bytes = socket.inet_aton(chat_address)
@@ -214,7 +212,6 @@ class Server:
                     print("Closing client connection ...")
                     self.read_list.remove(read_socket)
                     read_socket.close()
-
 
     def connection_handler_select(self, client):
         print("test")
@@ -385,11 +382,10 @@ class Server:
         print("The getdir command was received.")
 
         num_chats = 0
-        
+
         room_info_str = ""
         for name, (address, port) in self.chat_rooms.items():
             room_info_str += f"{name}: {address}:{port}\n"
-
 
         if not room_info_str:
             print("The chat directory is empty.\n")
@@ -448,10 +444,11 @@ class Server:
         chat_room_port_size_field = len(chat_room_port_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
 
         pkt = chat_room_address_size_field + chat_room_address_bytes \
-            + chat_room_port_size_field + chat_room_port_bytes
+              + chat_room_port_size_field + chat_room_port_bytes
 
         # Send the request packet to the server.
         connection.sendall(pkt)
+
 
 ########################################################################
 # CLIENT
@@ -533,7 +530,7 @@ class Client:
                     print("Error excuting CRDS command, closing server connection.\n")
                     self.socket.close()
                     break
-            
+
             try:
                 crds_cmd, chat_room_name, chat_room_address, chat_room_port = self.crds_input.split()
 
@@ -554,8 +551,8 @@ class Client:
                         print("The input is invalid, please try again.\n")
                         continue
             except Exception:
-                pass          
-            
+                pass
+
             try:
                 crds_cmd, chat_room_name = self.crds_input.split()
             except Exception:
@@ -568,11 +565,10 @@ class Client:
                     print()
                     continue
                 except Exception as msg:
-                        print(msg)
-                        print("Error deleting room, closing server connection.\n")
-                        self.socket.close()
-                        break
-
+                    print(msg)
+                    print("Error deleting room, closing server connection.\n")
+                    self.socket.close()
+                    break
 
             print("Invalid command, please try again.\n")
 
@@ -625,9 +621,9 @@ class Client:
         chat_room_port_size_field = len(chat_room_port_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
 
         pkt = cmd_field \
-            + chat_room_name_size_field + chat_room_name_bytes \
-            + chat_room_address_size_field + chat_room_address_bytes \
-            + chat_room_port_size_field + chat_room_port_bytes
+              + chat_room_name_size_field + chat_room_name_bytes \
+              + chat_room_address_size_field + chat_room_address_bytes \
+              + chat_room_port_size_field + chat_room_port_bytes
 
         # Send the request packet to the server.
         self.socket.sendall(pkt)
@@ -641,7 +637,7 @@ class Client:
         chat_room_name_size_field = len(chat_room_name_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
 
         pkt = cmd_field \
-            + chat_room_name_size_field + chat_room_name_bytes
+              + chat_room_name_size_field + chat_room_name_bytes
 
         # Send the request packet to the server.
         self.socket.sendall(pkt)
@@ -655,7 +651,7 @@ class Client:
         chat_room_name_size_field = len(chat_room_name_bytes).to_bytes(FILENAME_SIZE_FIELD_LEN, byteorder='big')
 
         pkt = cmd_field \
-            + chat_room_name_size_field + chat_room_name_bytes
+              + chat_room_name_size_field + chat_room_name_bytes
 
         # Send the request packet to the server.
         self.socket.sendall(pkt)
@@ -741,14 +737,15 @@ class Client:
         except Exception as msg:
             print(msg)
             print("Error connecting to chat room, please try again.")
-            self.chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_DROP_MEMBERSHIP, socket.inet_aton(self.chat_address) + socket.inet_aton(RX_IFACE_ADDRESS))
+            self.chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_DROP_MEMBERSHIP,
+                                        socket.inet_aton(self.chat_address) + socket.inet_aton(RX_IFACE_ADDRESS))
             self.chat_socket.close()
             return
 
     def get_socket(self):
         self.chat_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.chat_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, True)
-        
+
         self.chat_socket.bind((RX_BIND_ADDRESS, self.chat_port))
 
         multicast_group_bytes = socket.inet_aton(self.chat_address)
@@ -800,7 +797,8 @@ class Client:
                     # Check for exit command
                     if message.strip() == 'exit!':
                         print("Exitting chat room!\n")
-                        self.chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_DROP_MEMBERSHIP, socket.inet_aton(self.chat_address) + socket.inet_aton(RX_IFACE_ADDRESS))
+                        self.chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_DROP_MEMBERSHIP,
+                                                    socket.inet_aton(self.chat_address) + socket.inet_aton(RX_IFACE_ADDRESS))
                         self.chat_socket.close()
 
                         fd = sys.stdin.fileno()
@@ -816,6 +814,7 @@ class Client:
             # except Exception as msg:
             #     print(msg)
             #     sys.exit(1)
+
 
 ########################################################################
 # Process command line arguments if run directly.
