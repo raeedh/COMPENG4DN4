@@ -30,6 +30,11 @@ RX_IFACE_ADDRESS = "0.0.0.0"
 RX_BIND_ADDRESS = "0.0.0.0"
 RX_BIND_ADDRESS_PORT = (RX_BIND_ADDRESS, MULTICAST_PORT)
 
+# Create a 1-byte maximum hop count byte used in the multicast
+# packets (i.e., TTL, time-to-live).
+TTL = 1 # Hops
+TTL_BYTE = TTL.to_bytes(1, byteorder='big')
+
 ########################################################################
 
 # Define all of the packet protocol field lengths.
@@ -95,6 +100,7 @@ class Server:
     def __init__(self):
         # udp_thread = Thread(target=self.listen_for_udp)
         # udp_thread.start()
+        self.chat_rooms = {}
 
         self.create_listen_socket()
         self.process_connections_forever()
@@ -105,38 +111,49 @@ class Server:
         self.create_udp_socket()
         self.receive_udp_forever()
 
-    def create_udp_socket(self):
+    def get_socket(self, chat_address, chat_port, chatroom_name):
+        chat_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        chat_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, True)
+        
+        chat_socket.bind((RX_BIND_ADDRESS, chat_port))
+
+        multicast_group_bytes = socket.inet_aton(chat_address)
+        # print("Multicast Group: ", MULTICAST_ADDRESS)
+
+        # Set up the interface to be used.
+        multicast_iface_bytes = socket.inet_aton(RX_IFACE_ADDRESS)
+
+        # Form the multicast request.
+        multicast_request = multicast_group_bytes + multicast_iface_bytes
+        # print("multicast_request = ", multicast_request)
+
+        # Issue the Multicast IP Add Membership request.
+        # print("Adding membership (address/interface): ", MULTICAST_ADDRESS,"/", RX_IFACE_ADDRESS)
+        chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, multicast_request)
+
+        chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, TTL_BYTE)
+
+        self.chat_rooms[chatroom_name] = (chat_address, chat_port, chat_socket)
+
+    def send_messages_forever(self):
         try:
-            # Create an IPv4 UDP socket.
-            self.udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            beacon_sequence_number = 1
+            while True:
+                print("Sending multicast beacon {} {}".format(beacon_sequence_number, MULTICAST_ADDRESS_PORT))
+                beacon_bytes = Sender.MESSAGE_ENCODED + str(beacon_sequence_number).encode('utf-8')
 
-            # Get socket layer socket options.
-            self.udp_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                ########################################################
+                # Send the multicast packet
+                self.socket.sendto(beacon_bytes, MULTICAST_ADDRESS_PORT)
 
-            # Bind socket to socket address, i.e., IP address and port.
-            self.udp_socket.bind(Server.SCAN_ADDRESS_PORT)
+                beacon_sequence_number += 1
         except Exception as msg:
             print(msg)
+        except KeyboardInterrupt:
+            print()
+        finally:
+            self.socket.close()
             sys.exit(1)
-
-    def receive_udp_forever(self):
-        while True:
-            try:
-                print(Server.MSG, "Listening for service discovery messages on SDP port {}.".format(Server.SERVICE_SCAN_PORT))
-                recvd_bytes, address = self.udp_socket.recvfrom(Server.RECV_SIZE)
-
-                print("Received: ", recvd_bytes.decode('utf-8'), " Address:", address)
-
-                # Decode the received bytes back into strings.
-                recvd_str = recvd_bytes.decode(Server.MSG_ENCODING)
-
-                # Check if the received packet contains a service scan command.
-                if Server.SCAN_CMD in recvd_str:
-                    # Send the service advertisement message back to the client.
-                    self.udp_socket.sendto(Server.MSG_ENCODED, address)
-            except KeyboardInterrupt:
-                print()
-                sys.exit(1)
 
     def create_listen_socket(self):
         try:
@@ -179,9 +196,9 @@ class Server:
 
                 # Give up if we don't get a valid command.
                 if cmd == CMD["getdir"]:
-                    print(cmd)
+                    self.getdir(connection)
                 elif cmd == CMD["makeroom"]:
-                    print(cmd)
+                    self.makeroom(connection)
                 elif cmd == CMD["deleteroom"]:
                     print(cmd)
                 elif cmd == CMD["chat"]:
@@ -252,91 +269,111 @@ class Server:
             connection.close()
             return
 
-    def put_file(self, connection):
-        # PUT command is good. Read the filename size (bytes).
-        status, filename_size_field = recv_bytes(connection, FILENAME_SIZE_FIELD_LEN)
+    def makeroom(self, connection):
+        print("makeroom command received!")
+        # makeroom command is good. Read the chat room name size (bytes).
+        status, chat_room_name_size_field = recv_bytes(connection, FILENAME_SIZE_FIELD_LEN)
         if not status:
             print("Closing connection ...")
             connection.close()
             return
 
-        filename_size_bytes = int.from_bytes(filename_size_field, byteorder='big')
-        if not filename_size_bytes:
+        chat_room_name_size_bytes = int.from_bytes(chat_room_name_size_field, byteorder='big')
+        if not chat_room_name_size_bytes:
             print("Connection is closed!")
             connection.close()
             return
 
-        print('Filename size (bytes) = ', filename_size_bytes)
-
-        # Now read and decode the requested filename.
-        status, filename_bytes = recv_bytes(connection, filename_size_bytes)
+        # Now read and decode the requested chat room name.
+        status, chat_room_name_bytes = recv_bytes(connection, chat_room_name_size_bytes)
         if not status:
             print("Closing connection ...")
             connection.close()
             return
-        if not filename_bytes:
+        if not chat_room_name_bytes:
             print("Connection is closed!")
             connection.close()
             return
 
-        filename = filename_bytes.decode(MSG_ENCODING)
-        print('Requested filename = ', filename)
+        chat_room_name = chat_room_name_bytes.decode(MSG_ENCODING)
+        print('Requested chat name = ', chat_room_name)
 
-        ################################################################
-        # Process the file transfer response from the client
-
-        # Read the file size field returned by the server.
-        status, file_size_bytes = recv_bytes(connection, FILESIZE_FIELD_LEN)
+        # chat room address
+        status, chat_room_address_size_field = recv_bytes(connection, FILENAME_SIZE_FIELD_LEN)
         if not status:
             print("Closing connection ...")
             connection.close()
             return
 
-        print("File size bytes = ", file_size_bytes.hex())
-        if len(file_size_bytes) == 0:
+        chat_room_address_size_bytes = int.from_bytes(chat_room_address_size_field, byteorder='big')
+        if not chat_room_address_size_bytes:
+            print("Connection is closed!")
             connection.close()
             return
 
-        # Make sure that you interpret it in host byte order.
-        file_size = int.from_bytes(file_size_bytes, byteorder='big')
-        print("File size = ", file_size)
+        # Now read and decode the requested chat room address.
+        status, chat_room_address_bytes = recv_bytes(connection, chat_room_address_size_bytes)
+        if not status:
+            print("Closing connection ...")
+            connection.close()
+            return
+        if not chat_room_address_bytes:
+            print("Connection is closed!")
+            connection.close()
+            return
 
-        status, recvd_bytes_total = recv_bytes(connection, file_size)
+        chat_room_address = chat_room_address_bytes.decode(MSG_ENCODING)
+        print('Requested chat address = ', chat_room_address)
+
+        # chat room port
+        status, chat_room_port_size_field = recv_bytes(connection, FILENAME_SIZE_FIELD_LEN)
         if not status:
             print("Closing connection ...")
             connection.close()
             return
 
-        # Receive the file itself.
-        try:
-            # Create a file using the received filename and store the data.
-            print(f"Received {len(recvd_bytes_total)} bytes. Creating file: {filename}")
+        chat_room_port_size_bytes = int.from_bytes(chat_room_port_size_field, byteorder='big')
+        if not chat_room_port_size_bytes:
+            print("Connection is closed!")
+            connection.close()
+            return
 
-            with open(Server.FILE_DIRECTORY + filename, 'wb') as f:
-                f.write(recvd_bytes_total)
-        except KeyboardInterrupt:
-            print()
-            exit(1)
+        # Now read and decode the requested chat room address.
+        status, chat_room_port_bytes = recv_bytes(connection, chat_room_port_size_bytes)
+        if not status:
+            print("Closing connection ...")
+            connection.close()
+            return
+        if not chat_room_port_bytes:
+            print("Connection is closed!")
+            connection.close()
+            return
 
-    def list(self, connection):
-        num_files = 0
+        chat_room_port = int(chat_room_port_bytes.decode(MSG_ENCODING))
+        print('Requested chat port = ', chat_room_port, '\n')
 
-        try:
-            if not os.listdir(Server.FILE_DIRECTORY):
-                print("The server directory is empty.\n")
-                file_size_field = num_files.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
-                connection.sendall(file_size_field)
-            else:
-                files = "\n".join(os.listdir(Server.FILE_DIRECTORY)).encode(MSG_ENCODING)
-                file_size_field = len(files).to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
+        self.get_socket(chat_room_address, chat_room_port, chat_room_name)        
 
-                pkt = file_size_field + files
-                connection.sendall(pkt)
-        except FileNotFoundError:
-            print(Server.FILE_NOT_FOUND_MSG)
-            print("Server file directory does not exist!\n")
-            file_size_field = num_files.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
-            connection.sendall(file_size_field)
+    def getdir(self, connection):
+        print("The getdir command was received.")
+
+        num_chats = 0
+        
+        room_info_str = ""
+        for name, (address, port, socket) in self.chat_rooms.items():
+            room_info_str += f"{name}: {address}:{port}\n"
+
+
+        if not room_info_str:
+            print("The chat directory is empty.\n")
+            response_size = num_chats.to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
+            connection.sendall(response_size)
+        else:
+            response_size = len(room_info_str).to_bytes(FILESIZE_FIELD_LEN, byteorder='big')
+            response = room_info_str.encode(MSG_ENCODING)
+
+            pkt = response_size + response
+            connection.sendall(pkt)
 
 
 ########################################################################
@@ -404,6 +441,7 @@ class Client:
             if self.crds_input == "bye":
                 print("Closing server connection ...\n")
                 self.socket.close()
+                continue
                 break
             elif self.crds_input == "getdir":
                 try:
@@ -475,13 +513,16 @@ class Client:
             # print("No response from server...\n")
             raise Exception
 
-        # print("Response size bytes = ", response_size_bytes.hex())
+        # print("Response size bytes = ", response_size_bytes)
         if len(response_size_bytes) == 0:
             return
 
         # Make sure that you interpret it in host byte order.
         listing_size = int.from_bytes(response_size_bytes, byteorder='big')
         # print("Listing size = ", listing_size)
+        if listing_size == 0:
+            print("The chat directory is empty!\n")
+            return
 
         status, recvd_bytes_total = recv_bytes(self.socket, listing_size)
         if not status:
@@ -625,6 +666,7 @@ class Client:
         except Exception as msg:
             print(msg)
             print("Error connecting to chat room, please try again.")
+            self.chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_DROP_MEMBERSHIP, socket.inet_aton(self.chat_address) + socket.inet_aton(RX_IFACE_ADDRESS))
             self.chat_socket.close()
             return
 
@@ -647,6 +689,8 @@ class Client:
         # Issue the Multicast IP Add Membership request.
         # print("Adding membership (address/interface): ", MULTICAST_ADDRESS,"/", RX_IFACE_ADDRESS)
         self.chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, multicast_request)
+
+        self.chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, TTL_BYTE)
 
     def receive_forever(self):
         # Set stdin to non-blocking mode
@@ -673,12 +717,12 @@ class Client:
                 # Send message to chat room
                 message = sys.stdin.readline()
                 if message:
-                    self.chat_socket.sendto((self.chat_name + message).encode(), (self.chat_address, self.chat_port))
+                    self.chat_socket.sendto(self.chat_name + message.encode(), (self.chat_address, self.chat_port))
                     # sys.stdout.write(self.chat_name + message)
                     # sys.stdout.flush()
 
                     # Check for exit command
-                    if message.strip() == 'exit':
+                    if message.strip() == 'exit!':
                         return
             # try:
             #     data, address_port = self.chat_socket.recvfrom(Client.RECV_SIZE)
