@@ -17,17 +17,10 @@ CRDS_PORT = 50001
 CRDS_ADDRESS = "0.0.0.0"
 CRDS_ADRESS_PORT = (CRDS_ADDRESS, CRDS_PORT)
 
-MULTICAST_ADDRESS = "239.0.0.10"
-MULTICAST_PORT = 2000
-
-# Make them into a tuple.
-MULTICAST_ADDRESS_PORT = (MULTICAST_ADDRESS, MULTICAST_PORT)
-
 # Ethernet/Wi-Fi interface address
 IFACE_ADDRESS = "0.0.0.0"
 RX_IFACE_ADDRESS = "0.0.0.0"
 RX_BIND_ADDRESS = "0.0.0.0"
-RX_BIND_ADDRESS_PORT = (RX_BIND_ADDRESS, MULTICAST_PORT)
 
 # Create a 1-byte maximum hop count byte used in the multicast
 # packets (i.e., TTL, time-to-live).
