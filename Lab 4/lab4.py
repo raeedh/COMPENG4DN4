@@ -89,37 +89,17 @@ def recv_bytes(sock, bytecount_target):
 # SERVER
 ########################################################################
 class Server:
-    ALL_IF_ADDRESS = "0.0.0.0"
-    SERVICE_SCAN_PORT = 30000
-    SCAN_ADDRESS_PORT = (ALL_IF_ADDRESS, SERVICE_SCAN_PORT)
-
-    MSG_ENCODING = "utf-8"
-
-    SCAN_CMD = "SERVICE DISCOVERY"
-    SCAN_CMD_ENCODED = SCAN_CMD.encode(MSG_ENCODING)
-
-    MSG = "A&R's File Sharing Service Availabe on Port 30001 (connect 0.0.0.0 30001)"
-    MSG_ENCODED = MSG.encode(MSG_ENCODING)
-
-    LISTEN_PORT = 30001
-    LISTEN_ADDRESS_PORT = (ALL_IF_ADDRESS, LISTEN_PORT)
-
     RECV_SIZE = 1024
     BACKLOG = 10
 
-    FILE_DIRECTORY = "server_directory/"
-    FILE_NOT_FOUND_MSG = "Error: Requested file is not available!\n"
-
     def __init__(self):
-        print(os.listdir(Server.FILE_DIRECTORY)) 
-
-        udp_thread = Thread(target=self.listen_for_udp)
-        udp_thread.start()
+        # udp_thread = Thread(target=self.listen_for_udp)
+        # udp_thread.start()
 
         self.create_listen_socket()
         self.process_connections_forever()
 
-        udp_thread.join()
+        # udp_thread.join()
 
     def listen_for_udp(self):
         self.create_udp_socket()
@@ -163,7 +143,7 @@ class Server:
             # Create the TCP server listen socket in the usual way.
             self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            self.socket.bind(Server.LISTEN_ADDRESS_PORT)
+            self.socket.bind(CRDS_ADRESS_PORT)
             self.socket.listen(Server.BACKLOG)
         except Exception as msg:
             print(msg)
@@ -172,7 +152,7 @@ class Server:
     def process_connections_forever(self):
         try:
             while True:
-                print("Listening for file sharing connections on port {}.".format(Server.LISTEN_ADDRESS_PORT))
+                print("Listening for CRDS connections on port {}.".format(CRDS_ADRESS_PORT))
                 self.connection_handler(self.socket.accept())
         except KeyboardInterrupt:
             print()
@@ -198,12 +178,14 @@ class Server:
                 cmd = int.from_bytes(cmd_field, byteorder='big')
 
                 # Give up if we don't get a valid command.
-                if cmd == CMD["get"]:
-                    self.get_file(connection)
-                elif cmd == CMD["put"]:
-                    self.put_file(connection)
-                elif cmd == CMD["list"]:
-                    self.list(connection)
+                if cmd == CMD["getdir"]:
+                    print(cmd)
+                elif cmd == CMD["makeroom"]:
+                    print(cmd)
+                elif cmd == CMD["deleteroom"]:
+                    print(cmd)
+                elif cmd == CMD["chat"]:
+                    print(cmd)
                 else:
                     print("Valid command not received. Closing connection ...")
                     connection.close()
@@ -426,6 +408,8 @@ class Client:
             elif self.crds_input == "getdir":
                 try:
                     self.getdir()
+                    print()
+                    continue
                 except Exception as msg:
                     print(msg)
                     print("Error excuting CRDS command, closing server connection.\n")
@@ -439,15 +423,21 @@ class Client:
                 continue
             
             if crds_cmd == "makeroom":
-                if (ipaddress.ip_address(chat_room_address) in ipaddress.ip_network('239.0.0.0/8')) and (chat_room_port.isdigit()):
-                    try:
-                        self.makeroom(chat_room_name, chat_room_address, chat_room_port)
-                        continue
-                    except Exception as msg:
-                        print(msg)
-                        print("Error making room, closing server connection.\n")
-                        self.socket.close()
-                        break
+                try:
+                    if (ipaddress.ip_address(chat_room_address) in ipaddress.ip_network('239.0.0.0/8')) and (chat_room_port.isdigit()):
+                        try:
+                            self.makeroom(chat_room_name, chat_room_address, chat_room_port)
+                            print()
+                            continue
+                        except Exception as msg:
+                            print(msg)
+                            print("Error making room, closing server connection.\n")
+                            self.socket.close()
+                            break
+                except Exception as msg:
+                    print(msg)
+                    print("The input is invalid, please try again.\n")
+                    continue
             
             try:
                 crds_cmd, chat_room_name = self.crds_input.split()
@@ -458,6 +448,7 @@ class Client:
             if crds_cmd == "deleteroom":
                 try:
                     self.deleteroom(chat_room_name)
+                    print()
                     continue
                 except Exception as msg:
                         print(msg)
