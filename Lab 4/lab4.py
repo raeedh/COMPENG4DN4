@@ -97,45 +97,12 @@ class Server:
     BACKLOG = 10
 
     def __init__(self):
-        # udp_thread = Thread(target=self.listen_for_udp)
-        # udp_thread.start()
         self.chat_rooms = {}
 
         self.create_listen_socket()
         self.initialize_select_lists()
 
-        # self.process_connections_forever()
         self.process_connections_forever_select()
-
-        # udp_thread.join()
-
-    def listen_for_udp(self):
-        self.create_udp_socket()
-        self.receive_udp_forever()
-
-    def get_socket(self, chat_address, chat_port, chatroom_name):
-        chat_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        chat_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, True)
-
-        chat_socket.bind((RX_BIND_ADDRESS, chat_port))
-
-        multicast_group_bytes = socket.inet_aton(chat_address)
-        # print("Multicast Group: ", MULTICAST_ADDRESS)
-
-        # Set up the interface to be used.
-        multicast_iface_bytes = socket.inet_aton(RX_IFACE_ADDRESS)
-
-        # Form the multicast request.
-        multicast_request = multicast_group_bytes + multicast_iface_bytes
-        # print("multicast_request = ", multicast_request)
-
-        # Issue the Multicast IP Add Membership request.
-        # print("Adding membership (address/interface): ", MULTICAST_ADDRESS,"/", RX_IFACE_ADDRESS)
-        chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, multicast_request)
-
-        chat_socket.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, TTL_BYTE)
-
-        self.chat_rooms[chatroom_name] = (chat_address, chat_port, chat_socket)
 
     def create_listen_socket(self):
         try:
@@ -162,16 +129,6 @@ class Server:
                 self.process_read_sockets()
         except Exception as msg:
             print(msg)
-        except KeyboardInterrupt:
-            print()
-        finally:
-            self.socket.close()
-
-    def process_connections_forever(self):
-        try:
-            while True:
-                # print("Chat Room Directory Server listening on port {}.".format(CRDS_ADRESS_PORT))
-                self.connection_handler(self.socket.accept())
         except KeyboardInterrupt:
             print()
         finally:
@@ -213,45 +170,6 @@ class Server:
                     self.read_list.remove(read_socket)
                     read_socket.close()
 
-    def connection_handler_select(self, client):
-        print("test")
-
-    def connection_handler(self, client):
-        connection, address = client
-        print("Connection received from {}.".format(address))
-
-        ################################################################
-        # Process a connection and see if the client wants a file that we have.
-        try:
-            while True:
-                # Read the command and see if it is a GET command.
-                status, cmd_field = recv_bytes(connection, CMD_FIELD_LEN)
-                # If the read fails, give up.
-                if not status:
-                    print("Closing connection ...")
-                    connection.close()
-                    return
-                # Convert the command to our native byte order.
-                cmd = int.from_bytes(cmd_field, byteorder='big')
-
-                # Give up if we don't get a valid command.
-                if cmd == CMD["getdir"]:
-                    self.getdir(connection)
-                elif cmd == CMD["makeroom"]:
-                    self.makeroom(connection)
-                elif cmd == CMD["deleteroom"]:
-                    self.deleteroom(connection)
-                elif cmd == CMD["chat"]:
-                    self.chat(connection)
-                    connection.close()
-                    return
-                else:
-                    print("Valid command not received. Closing connection ...")
-                    connection.close()
-                    return
-        except KeyboardInterrupt:
-            print()
-
     def deleteroom(self, connection):
         print("deleteroom command received!")
         # deleteroom command is good. Read the chat room name size (bytes).
@@ -282,11 +200,6 @@ class Server:
         print('Requested chat name = ', chat_room_name)
 
         try:
-            address, port = self.chat_rooms[chat_room_name]
-
-            # sock.setsockopt(socket.IPPROTO_IP, socket.IP_DROP_MEMBERSHIP, socket.inet_aton(address) + socket.inet_aton(RX_IFACE_ADDRESS))
-            # sock.close()
-
             self.chat_rooms.pop(chat_room_name)
         except:
             print("Chat room does not exist!\n")
@@ -375,7 +288,6 @@ class Server:
         chat_room_port = int(chat_room_port_bytes.decode(MSG_ENCODING))
         print('Requested chat port = ', chat_room_port, '\n')
 
-        # self.get_socket(chat_room_address, chat_room_port, chat_room_name)
         self.chat_rooms[chat_room_name] = (chat_room_address, chat_room_port)
 
     def getdir(self, connection):
