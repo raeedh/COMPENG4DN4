@@ -1,1 +1,14 @@
 \section*{Client Class}
+The client class code is run from the terminal and will be access the Chat Room Directory Server (CRDS) and to chat with other clients using IP multicast communications.
+
+The client will allow the user to connect to the CRDS on the CRDP port, and establish a TCP connection using the \texttt{connect} command. This will establish a connection with the CRDS and allow the user to input client-to-CRDS commands. When the client has established a connection with the CRDS, it will have access to additional commands, \texttt{getdir}, \texttt{makeroom}, and \texttt{deleteroom}. The three commands will send a packet with the format of the packet determined by the command.
+
+When a \texttt{getdir} command is issued, the client will send a single byte integer designated for the \texttt{getdir} command, and receive eight bytes from the server which encode the response size, and then will receive the number of bytes required for the listing response.
+
+When a \texttt{makeroom} command is issued, the client will send a single byte integer designated for the \texttt{makeroom} command, one byte encoding the size of the chat room name requested, followed by the chat room name, followed by the same for the chat room address and port (one byte for size, followed by contents for each address and port). The client will be able to confirm the chat room has been created with the \texttt{getdir} command.
+
+When a \texttt{deleteroom} command is issued, the client will send a single byte integer designated for the \texttt{deleteroom} command, followed by one byte that encodes the chat room name size, followed by the chat room name. The client will be able to confirm the chat room has been deleted with the \texttt{getdir} command.
+
+The client will close the connection on the socket when an error occurs, or when no response is received from the server. The client will also close the connection when the \texttt{bye} command is issued.
+
+Outside of the client-to-CRDS communications, the client can allow issue \texttt{chat} and \texttt{name} commands. The \texttt{name} command simply changes the displayed name of the user when chatting, stored as a string on the client. The \texttt{chat} command will create a TCP connection the CRDS, request a specific chat room (similar to the \texttt{deleteroom} command) and receive the address and port (similar to the \texttt{getdir} command) to connect to, and then immediately close the TCP connection. The client will then transmit multicast broadcasts on the chat room's associated address and port.
