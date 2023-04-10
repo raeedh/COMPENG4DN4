@@ -1,1 +1,16 @@
 \section*{Server Class}
+The server class code is run from the terminal and will run a Chat Room Directory Server (CRDS) whose function is to main a chat room directory (CRD) for the clients. The server listens for client connections on its Chat Room Directory port (CRDP), which is port 50001, and accepts CRDS commands from clients that involve listing, creating and deleting chat rooms.
+
+One startup, the client will create a TCP listening socket on port 50001. This socket will handle client connections and handle client commands. The server is also able to handle multiple client connections at the same time. This is achieved by using the \texttt{select} module, where multiple client connections are added to a list of read sockets, which are then monitored by the \texttt{select} module. When something is available on one of these sockets to read, the server will process the received commands from the client without interrupting any other client connection.
+
+When a command is read from a client, the connection handler will attempt to receive bytes over the TCP connection. If no bytes are received from the connection, then we close the connection. Otherwise, we receive a command input from the client that we can use to perform CRD operations. The server will receive one byte from the client that will contain the command issued by the client. Depending on whether a \texttt{getdir}, \texttt{makeroom}, \texttt{deleteroom}, or \texttt{chat} command is received, the server will handle the operation requested by the client differently.
+
+When a \texttt{getdir} command is received, the server will send eight bytes to the client which encode the response size, and then will send the entire listing response which contains the chat room names, chat room addresses, and chat room ports.
+
+When a \texttt{makeroom} command is received, the server will receive one byte encoding the size of the chat room name requested, followed by the chat room name, followed by the same for the chat room address and port (one byte for size, followed by contents for each address and port). The new chat room will be added to a dictionary on the server that contains all the available chat rooms.
+
+When a \texttt{deleteroom} command is received, the server will receive one byte encoding the size of the chat room name requested, followed by the chat room name. The server will search for the chat room in its dictionary, and if found it will remove the chat room from the dictionary.
+
+When a \texttt{chat} command is received, the server will receive one byte encoding the size of the chat room name requested, followed by the chat room name. The server will search for the chat room in its dictionary, and if found it will send one byte encoding the chat room address, followed by the address, then one byte encoding the chat room port. If the chat room is not found, it will return a 0 encoded to a single byte.
+
+The server will close the connection on the socket when an error occurs, when no response is received from the client, or when the client has closed the connection on their end (\texttt{bye} command is issued by the client).
